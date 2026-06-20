@@ -32,8 +32,9 @@ export function FlokkaLogo({
     lg: 'text-4xl',
   }
   const s = sizes[size]
-  const solidColor = dark ? '#160f29' : '#FCFBFF'
-  const fill = gradient ? `url(#${gradId})` : solidColor
+  const solidColor = dark ? '#15243B' : '#F6F4EC'
+  // On dark backgrounds (dark=false) keep the mark solid off-white so it stays legible.
+  const fill = gradient && dark ? `url(#${gradId})` : solidColor
 
   const logo = (
     <div className={cn('flex flex-col items-start gap-0.5', className)}>
@@ -47,9 +48,8 @@ export function FlokkaLogo({
       >
         <defs>
           <linearGradient id={gradId} x1="0" y1="0" x2="110" y2="120" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#6366f1" />
-            <stop offset="0.5" stopColor="#8b5cf6" />
-            <stop offset="1" stopColor="#ec4899" />
+            <stop stopColor="#1f3a5f" />
+            <stop offset="1" stopColor="#15243B" />
           </linearGradient>
         </defs>
         <path
@@ -61,7 +61,7 @@ export function FlokkaLogo({
         className={cn(
           textSizes[size],
           'font-display font-extrabold uppercase leading-none',
-          gradient ? 'text-gradient' : dark ? 'text-brand-black' : 'text-brand-white',
+          gradient && dark ? 'text-gradient' : dark ? 'text-brand-black' : 'text-brand-white',
         )}
         style={{ letterSpacing: '0.22em' }}
       >

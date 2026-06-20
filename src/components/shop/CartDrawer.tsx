@@ -25,7 +25,7 @@ export function CartDrawer({ slug }: CartDrawerProps) {
       {/* Drawer */}
       <div className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white z-50 flex flex-col shadow-2xl animate-slide-in">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 bg-brand-gradient-soft border-b border-violet-100">
+        <div className="flex items-center justify-between px-6 py-4 bg-brand-gradient-soft border-b border-brand-gray-dark">
           <div className="flex items-center gap-2">
             <span className="w-9 h-9 rounded-xl bg-brand-gradient flex items-center justify-center shadow-soft">
               <ShoppingBag size={16} className="text-white" />
@@ -67,14 +67,14 @@ export function CartDrawer({ slug }: CartDrawerProps) {
                       <div className="flex items-center rounded-full border border-brand-gray-dark overflow-hidden">
                         <button
                           onClick={() => updateQuantity(index, item.quantity - 1)}
-                          className="w-7 h-7 flex items-center justify-center text-sm text-brand-violet-dark hover:bg-violet-50 transition-colors"
+                          className="w-7 h-7 flex items-center justify-center text-sm text-brand-violet-dark hover:bg-brand-gray transition-colors"
                         >
                           −
                         </button>
                         <span className="w-8 text-center text-sm font-semibold">{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(index, item.quantity + 1)}
-                          className="w-7 h-7 flex items-center justify-center text-sm text-brand-violet-dark hover:bg-violet-50 transition-colors"
+                          className="w-7 h-7 flex items-center justify-center text-sm text-brand-violet-dark hover:bg-brand-gray transition-colors"
                         >
                           +
                         </button>

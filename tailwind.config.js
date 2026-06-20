@@ -13,32 +13,35 @@ module.exports = {
       },
       colors: {
         brand: {
-          black: '#160f29',
-          white: '#FCFBFF',
-          gray: '#f4f2fb',
-          'gray-dark': '#e4e0f1',
-          'gray-medium': '#c5bedd',
-          'gray-text': '#6b6783',
-          // Vibrant accent palette
-          violet: '#7c3aed',
-          'violet-dark': '#5b21b6',
-          indigo: '#4f46e5',
-          fuchsia: '#d946ef',
-          pink: '#ec4899',
-          coral: '#fb7185',
-          amber: '#f59e0b',
-          cyan: '#06b6d4',
-          teal: '#14b8a6',
-          lime: '#84cc16',
+          // Sober palette: dark navy + warm off-white (blanc cassé)
+          black: '#15243B', // deep navy — primary text & buttons
+          navy: '#1f3a5f',
+          'navy-light': '#2d4a73',
+          white: '#F6F4EC', // blanc cassé (warm off-white)
+          gray: '#ECEAE0', // off-white surface
+          'gray-dark': '#d9d5c8', // subtle borders
+          'gray-medium': '#b7b2a3',
+          'gray-text': '#5a6373', // muted slate body text
+          // Legacy accent tokens remapped to the sober palette so any
+          // remaining references stay on-brand (navy / light steel).
+          violet: '#1f3a5f',
+          'violet-dark': '#15243B',
+          indigo: '#1f3a5f',
+          fuchsia: '#1f3a5f',
+          pink: '#9aa6bd',
+          coral: '#9aa6bd',
+          amber: '#9aa6bd',
+          cyan: '#9aa6bd',
+          teal: '#9aa6bd',
+          lime: '#9aa6bd',
         },
       },
       backgroundImage: {
-        'brand-gradient': 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 45%, #ec4899 100%)',
-        'brand-gradient-soft':
-          'linear-gradient(135deg, #eef2ff 0%, #f5f0ff 45%, #fdf2f8 100%)',
-        'brand-gradient-warm': 'linear-gradient(135deg, #f59e0b 0%, #ec4899 60%, #8b5cf6 100%)',
-        'brand-gradient-cool': 'linear-gradient(135deg, #06b6d4 0%, #6366f1 55%, #8b5cf6 100%)',
-        'dark-gradient': 'linear-gradient(150deg, #1e1248 0%, #2d1b69 40%, #160f29 100%)',
+        'brand-gradient': 'linear-gradient(135deg, #1f3a5f 0%, #15243B 100%)',
+        'brand-gradient-soft': 'linear-gradient(135deg, #F1EFE6 0%, #E7E4D8 100%)',
+        'brand-gradient-warm': 'linear-gradient(135deg, #1f3a5f 0%, #15243B 100%)',
+        'brand-gradient-cool': 'linear-gradient(135deg, #1f3a5f 0%, #15243B 100%)',
+        'dark-gradient': 'linear-gradient(150deg, #1f3a5f 0%, #15243B 60%, #101d31 100%)',
       },
       letterSpacing: {
         'widest-2': '0.25em',
@@ -49,10 +52,10 @@ module.exports = {
         '5xl': '2.5rem',
       },
       boxShadow: {
-        soft: '0 10px 40px -12px rgba(99, 102, 241, 0.18)',
-        card: '0 18px 50px -20px rgba(91, 33, 182, 0.28)',
-        glow: '0 0 0 1px rgba(124, 58, 237, 0.12), 0 20px 60px -18px rgba(124, 58, 237, 0.45)',
-        'glow-pink': '0 18px 55px -18px rgba(236, 72, 153, 0.5)',
+        soft: '0 10px 40px -16px rgba(21, 36, 59, 0.20)',
+        card: '0 18px 50px -24px rgba(21, 36, 59, 0.30)',
+        glow: '0 1px 2px rgba(21, 36, 59, 0.10), 0 18px 50px -22px rgba(21, 36, 59, 0.45)',
+        'glow-pink': '0 18px 55px -22px rgba(21, 36, 59, 0.45)',
       },
       animation: {
         'fade-in': 'fadeIn 0.3s ease-in-out',

@@ -70,8 +70,8 @@ function ShopContent({ slug, club, products }: {
       </header>
 
       {/* Club banner */}
-      <div className="relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 bg-brand-gradient-soft border-b border-violet-100">
-        <div className="pointer-events-none absolute -top-10 right-10 w-72 h-72 rounded-full bg-brand-violet/15 blur-3xl" />
+      <div className="relative overflow-hidden py-12 px-4 sm:px-6 lg:px-8 bg-brand-gradient-soft border-b border-brand-gray-dark">
+        <div className="pointer-events-none absolute -top-10 right-10 w-72 h-72 rounded-full bg-brand-violet/6 blur-3xl" />
         <div className="relative max-w-7xl mx-auto">
           <div className="flex items-center gap-2 text-xs text-brand-gray-text mb-2">
             <span>Boutique privée</span>
@@ -143,7 +143,7 @@ function ShopContent({ slug, club, products }: {
 function ProductCard({ product, slug }: { product: ShopProduct; slug: string }) {
   return (
     <Link href={`/boutique/${slug}/produit/${product.id}`} className="group block">
-      <div className="aspect-square rounded-3xl bg-brand-gradient-soft ring-1 ring-violet-100 flex items-center justify-center mb-3 overflow-hidden shadow-soft group-hover:shadow-card group-hover:-translate-y-1 transition-all duration-300">
+      <div className="aspect-square rounded-3xl bg-brand-gradient-soft ring-1 ring-brand-gray-dark flex items-center justify-center mb-3 overflow-hidden shadow-soft group-hover:shadow-card group-hover:-translate-y-1 transition-all duration-300">
         {product.images[0] ? (
           <img
             src={product.images[0]}

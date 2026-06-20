@@ -9,20 +9,20 @@ const steps = [
     title: 'Une boutique dédiée',
     description:
       "On crée la boutique de votre structure avec vos produits et un code d'accès unique.",
-    gradient: 'from-indigo-500 to-violet-500',
+    gradient: 'from-brand-navy to-brand-black',
   },
   {
     number: '02',
     title: 'Les membres commandent',
     description: 'Chacun commande son article quand il veut, à son nom, avec sa taille.',
-    gradient: 'from-violet-500 to-fuchsia-500',
+    gradient: 'from-brand-navy to-brand-black',
   },
   {
     number: '03',
     title: 'Réassort à la demande',
     description:
       "Chaque commande est floquée et expédiée à l'unité. Commandez juste ce qu'il faut, quand il le faut.",
-    gradient: 'from-fuchsia-500 to-pink-500',
+    gradient: 'from-brand-navy to-brand-black',
   },
 ]
 
@@ -48,13 +48,13 @@ export default function HomePage() {
         {/* Hero */}
         <section className="relative overflow-hidden mesh-bg">
           {/* Animated blobs */}
-          <div className="pointer-events-none absolute top-10 -left-20 w-96 h-96 rounded-full bg-brand-violet/25 blur-3xl animate-blob" />
-          <div className="pointer-events-none absolute top-40 right-0 w-96 h-96 rounded-full bg-brand-pink/20 blur-3xl animate-blob" style={{ animationDelay: '3s' }} />
-          <div className="pointer-events-none absolute -bottom-20 left-1/3 w-96 h-96 rounded-full bg-brand-cyan/20 blur-3xl animate-blob" style={{ animationDelay: '6s' }} />
+          <div className="pointer-events-none absolute top-10 -left-20 w-96 h-96 rounded-full bg-brand-violet/6 blur-3xl animate-blob" />
+          <div className="pointer-events-none absolute top-40 right-0 w-96 h-96 rounded-full bg-brand-pink/6 blur-3xl animate-blob" style={{ animationDelay: '3s' }} />
+          <div className="pointer-events-none absolute -bottom-20 left-1/3 w-96 h-96 rounded-full bg-brand-cyan/6 blur-3xl animate-blob" style={{ animationDelay: '6s' }} />
 
           <div className="relative min-h-[calc(100vh-64px)] flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div className="max-w-4xl py-20 animate-fade-up">
-              <div className="inline-flex items-center gap-2 mb-8 rounded-full bg-white/70 backdrop-blur px-4 py-2 shadow-soft ring-1 ring-violet-100">
+              <div className="inline-flex items-center gap-2 mb-8 rounded-full bg-white/70 backdrop-blur px-4 py-2 shadow-soft ring-1 ring-brand-gray-dark">
                 <span className="flex h-2 w-2 rounded-full bg-brand-gradient" />
                 <span className="text-xs font-bold tracking-widest uppercase text-brand-violet-dark">
                   Atelier textile · Andlau, Alsace
@@ -79,7 +79,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-brand-black font-semibold px-8 py-4 rounded-full ring-1 ring-violet-200 hover:ring-brand-violet hover:text-brand-violet-dark transition-all text-sm tracking-wide shadow-soft"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-brand-black font-semibold px-8 py-4 rounded-full ring-1 ring-brand-gray-medium hover:ring-brand-violet hover:text-brand-violet-dark transition-all text-sm tracking-wide shadow-soft"
                 >
                   Créer la boutique de mon club
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -89,7 +89,7 @@ export default function HomePage() {
               {/* Stats */}
               <div className="mt-16 grid grid-cols-3 gap-4 max-w-2xl">
                 {stats.map((stat) => (
-                  <div key={stat.label} className="rounded-2xl bg-white/70 backdrop-blur p-5 ring-1 ring-violet-100 shadow-soft">
+                  <div key={stat.label} className="rounded-2xl bg-white/70 backdrop-blur p-5 ring-1 ring-brand-gray-dark shadow-soft">
                     <p className={`font-display text-2xl sm:text-3xl font-extrabold ${stat.color}`}>{stat.value}</p>
                     <p className="text-xs text-brand-gray-text mt-1">{stat.label}</p>
                   </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="group relative rounded-3xl bg-white p-8 ring-1 ring-violet-100 shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300"
+                className="group relative rounded-3xl bg-white p-8 ring-1 ring-brand-gray-dark shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300"
               >
                 <span
                   className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${step.gradient} text-white font-display text-xl font-extrabold shadow-soft mb-6`}
@@ -180,8 +180,8 @@ export default function HomePage() {
         {/* CTA section */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-[2.5rem] bg-dark-gradient px-6 py-20 text-center shadow-card">
-            <div className="pointer-events-none absolute -top-16 -left-10 w-72 h-72 rounded-full bg-brand-violet/40 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-16 -right-10 w-72 h-72 rounded-full bg-brand-pink/30 blur-3xl" />
+            <div className="pointer-events-none absolute -top-16 -left-10 w-72 h-72 rounded-full bg-brand-violet/8 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-16 -right-10 w-72 h-72 rounded-full bg-brand-pink/8 blur-3xl" />
             <div className="relative">
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
                 Votre club mérite sa propre boutique

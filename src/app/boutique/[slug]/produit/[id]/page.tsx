@@ -82,7 +82,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Images */}
           <div>
-            <div className="aspect-square rounded-[2rem] bg-brand-gradient-soft ring-1 ring-violet-100 shadow-soft flex items-center justify-center mb-3 overflow-hidden">
+            <div className="aspect-square rounded-[2rem] bg-brand-gradient-soft ring-1 ring-brand-gray-dark shadow-soft flex items-center justify-center mb-3 overflow-hidden">
               {product.images[activeImg] ? (
                 <img
                   src={product.images[activeImg]}
@@ -176,7 +176,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
 
             {/* Personnalisation */}
             {product.hasNameNumber && (
-              <div className="mb-6 p-5 rounded-2xl bg-brand-gradient-soft border border-violet-100 ring-1 ring-violet-100">
+              <div className="mb-6 p-5 rounded-2xl bg-brand-gradient-soft border border-brand-gray-dark ring-1 ring-brand-gray-dark">
                 <p className="text-sm font-bold text-brand-violet-dark mb-3">Personnalisation</p>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
@@ -186,7 +186,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
                       value={customName}
                       onChange={(e) => setCustomName(e.target.value)}
                       placeholder="Ex : DUPONT"
-                      className="w-full rounded-xl border border-brand-gray-dark bg-white px-3 py-2 text-sm uppercase focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 transition-all"
+                      className="w-full rounded-xl border border-brand-gray-dark bg-white px-3 py-2 text-sm uppercase focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-brand-gray-medium transition-all"
                     />
                   </div>
                   <div>
@@ -196,7 +196,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
                       value={customNumber}
                       onChange={(e) => setCustomNumber(e.target.value)}
                       placeholder="Ex : 10"
-                      className="w-full rounded-xl border border-brand-gray-dark bg-white px-3 py-2 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 transition-all"
+                      className="w-full rounded-xl border border-brand-gray-dark bg-white px-3 py-2 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-brand-gray-medium transition-all"
                     />
                   </div>
                 </div>
@@ -209,14 +209,14 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
               <div className="flex items-center rounded-full border border-brand-gray-dark bg-white overflow-hidden">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-10 h-10 flex items-center justify-center text-brand-violet-dark hover:bg-violet-50 transition-colors"
+                  className="w-10 h-10 flex items-center justify-center text-brand-violet-dark hover:bg-brand-gray transition-colors"
                 >
                   <Minus size={14} />
                 </button>
                 <span className="w-12 text-center text-sm font-bold">{quantity}</span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="w-10 h-10 flex items-center justify-center text-brand-violet-dark hover:bg-violet-50 transition-colors"
+                  className="w-10 h-10 flex items-center justify-center text-brand-violet-dark hover:bg-brand-gray transition-colors"
                 >
                   <Plus size={14} />
                 </button>
@@ -229,7 +229,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
               onClick={handleAdd}
               className={`w-full flex items-center justify-center gap-2 py-4 rounded-full font-semibold text-sm shadow-glow hover:-translate-y-0.5 transition-all duration-300 ${
                 added
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white'
+                  ? 'bg-gradient-to-r from-brand-navy to-brand-black text-white'
                   : 'bg-brand-gradient text-white'
               }`}
             >

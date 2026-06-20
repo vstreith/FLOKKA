@@ -46,10 +46,10 @@ export default function BoutiquePriveePage() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="relative flex-1 pt-16 flex items-center justify-center overflow-hidden mesh-bg">
-        <div className="pointer-events-none absolute top-20 -left-20 w-96 h-96 rounded-full bg-brand-violet/25 blur-3xl animate-blob" />
-        <div className="pointer-events-none absolute bottom-10 -right-20 w-96 h-96 rounded-full bg-brand-pink/20 blur-3xl animate-blob" style={{ animationDelay: '4s' }} />
+        <div className="pointer-events-none absolute top-20 -left-20 w-96 h-96 rounded-full bg-brand-violet/6 blur-3xl animate-blob" />
+        <div className="pointer-events-none absolute bottom-10 -right-20 w-96 h-96 rounded-full bg-brand-pink/6 blur-3xl animate-blob" style={{ animationDelay: '4s' }} />
         <section className="relative w-full max-w-md px-4 py-24 animate-fade-up">
-          <div className="rounded-[2rem] bg-white/80 backdrop-blur p-8 sm:p-10 ring-1 ring-violet-100 shadow-card">
+          <div className="rounded-[2rem] bg-white/80 backdrop-blur p-8 sm:p-10 ring-1 ring-brand-gray-dark shadow-card">
             <div className="text-center mb-10">
               <div className="w-16 h-16 rounded-2xl bg-brand-gradient flex items-center justify-center mx-auto mb-6 shadow-glow">
                 <Lock size={24} className="text-white" />
@@ -70,7 +70,7 @@ export default function BoutiquePriveePage() {
                 onChange={(e) => setCode(e.target.value.toUpperCase())}
                 placeholder="Votre code d'accès"
                 maxLength={8}
-                className="w-full rounded-2xl border-2 border-brand-gray-dark bg-brand-gray/40 px-4 py-4 text-center text-2xl font-black tracking-[0.3em] uppercase focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all placeholder:text-gray-300 placeholder:text-base placeholder:tracking-normal placeholder:font-normal"
+                className="w-full rounded-2xl border-2 border-brand-gray-dark bg-brand-gray/40 px-4 py-4 text-center text-2xl font-black tracking-[0.3em] uppercase focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-brand-gray-medium focus:bg-white transition-all placeholder:text-gray-300 placeholder:text-base placeholder:tracking-normal placeholder:font-normal"
               />
 
               {error && <p className="text-red-500 text-sm text-center">{error}</p>}

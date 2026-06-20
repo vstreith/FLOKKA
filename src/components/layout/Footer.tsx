@@ -6,8 +6,8 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-dark-gradient text-white mt-auto">
       {/* Decorative glow */}
-      <div className="pointer-events-none absolute -top-24 -left-24 w-80 h-80 rounded-full bg-brand-violet/30 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 right-0 w-80 h-80 rounded-full bg-brand-pink/20 blur-3xl" />
+      <div className="pointer-events-none absolute -top-24 -left-24 w-80 h-80 rounded-full bg-brand-violet/8 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 right-0 w-80 h-80 rounded-full bg-brand-pink/6 blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">

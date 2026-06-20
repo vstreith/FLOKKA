@@ -58,7 +58,7 @@ function CheckoutContent({ slug }: { slug: string }) {
   if (submitted) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-center p-8 mesh-bg">
-        <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-6 shadow-glow">
+        <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-brand-navy to-brand-black flex items-center justify-center mb-6 shadow-glow">
           <CheckCircle2 size={40} className="text-white" />
         </div>
         <h1 className="font-display text-3xl font-extrabold text-brand-black mb-2">Commande confirmée !</h1>
@@ -96,25 +96,25 @@ function CheckoutContent({ slug }: { slug: string }) {
 
             <div>
               <label className="block text-sm font-semibold mb-1.5">Nom complet <span className="text-red-500">*</span></label>
-              <input {...register('name')} placeholder="Prénom Nom" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all" />
+              <input {...register('name')} placeholder="Prénom Nom" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-brand-gray-medium focus:bg-white transition-all" />
               {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
             </div>
             <div>
               <label className="block text-sm font-semibold mb-1.5">Email <span className="text-red-500">*</span></label>
-              <input {...register('email')} type="email" placeholder="votre@email.fr" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all" />
+              <input {...register('email')} type="email" placeholder="votre@email.fr" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-brand-gray-medium focus:bg-white transition-all" />
               {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
             </div>
             <div>
               <label className="block text-sm font-semibold mb-1.5">Téléphone</label>
-              <input {...register('phone')} type="tel" placeholder="06 00 00 00 00" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all" />
+              <input {...register('phone')} type="tel" placeholder="06 00 00 00 00" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-brand-gray-medium focus:bg-white transition-all" />
             </div>
             <div>
               <label className="block text-sm font-semibold mb-1.5">Adresse de livraison</label>
-              <textarea {...register('address')} rows={2} placeholder="Rue, Code postal, Ville" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all resize-none" />
+              <textarea {...register('address')} rows={2} placeholder="Rue, Code postal, Ville" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-brand-gray-medium focus:bg-white transition-all resize-none" />
             </div>
             <div>
               <label className="block text-sm font-semibold mb-1.5">Remarques</label>
-              <textarea {...register('notes')} rows={2} placeholder="Instructions particulières..." className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all resize-none" />
+              <textarea {...register('notes')} rows={2} placeholder="Instructions particulières..." className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-brand-gray-medium focus:bg-white transition-all resize-none" />
             </div>
 
             {serverError && <p className="text-red-500 text-sm">{serverError}</p>}
@@ -131,7 +131,7 @@ function CheckoutContent({ slug }: { slug: string }) {
           {/* Order summary */}
           <div>
             <h2 className="text-lg font-bold text-brand-black mb-4">Récapitulatif</h2>
-            <div className="rounded-2xl bg-white ring-1 ring-violet-100 shadow-soft divide-y divide-brand-gray-dark overflow-hidden">
+            <div className="rounded-2xl bg-white ring-1 ring-brand-gray-dark shadow-soft divide-y divide-brand-gray-dark overflow-hidden">
               {items.map((item, i) => (
                 <div key={i} className="flex gap-3 p-4">
                   <div className="w-10 h-10 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">

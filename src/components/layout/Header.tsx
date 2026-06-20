@@ -51,7 +51,7 @@ export function Header() {
                   className={cn(
                     'relative text-sm font-medium tracking-wide px-4 py-2 rounded-full transition-all',
                     active
-                      ? 'text-brand-violet-dark bg-violet-100/70'
+                      ? 'text-brand-violet-dark bg-brand-gray'
                       : 'text-brand-gray-text hover:text-brand-black hover:bg-white/60',
                   )}
                 >
@@ -92,7 +92,7 @@ export function Header() {
                 className={cn(
                   'text-base font-medium py-2.5 px-4 rounded-xl transition-colors',
                   pathname === link.href
-                    ? 'text-brand-violet-dark bg-violet-100/70'
+                    ? 'text-brand-violet-dark bg-brand-gray'
                     : 'text-brand-gray-text hover:bg-white/60',
                 )}
               >
