@@ -4,8 +4,12 @@ import { MapPin, Mail, Phone } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="bg-brand-black text-white mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="relative overflow-hidden bg-dark-gradient text-white mt-auto">
+      {/* Decorative glow */}
+      <div className="pointer-events-none absolute -top-24 -left-24 w-80 h-80 rounded-full bg-brand-violet/30 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 right-0 w-80 h-80 rounded-full bg-brand-pink/20 blur-3xl" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-1">
@@ -18,7 +22,9 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-xs font-bold tracking-widest uppercase mb-5 text-white/40">Navigation</h4>
+            <h4 className="text-xs font-bold tracking-widest uppercase mb-5 text-brand-pink">
+              Navigation
+            </h4>
             <ul className="space-y-3">
               {[
                 { href: '/a-propos', label: 'À propos' },
@@ -26,7 +32,10 @@ export function Footer() {
                 { href: '/partenaires', label: 'Partenaires' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-white/70 hover:text-white transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/70 hover:text-white hover:translate-x-1 inline-block transition-all"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -36,7 +45,7 @@ export function Footer() {
 
           {/* Espaces */}
           <div>
-            <h4 className="text-xs font-bold tracking-widest uppercase mb-5 text-white/40">Espaces</h4>
+            <h4 className="text-xs font-bold tracking-widest uppercase mb-5 text-brand-cyan">Espaces</h4>
             <ul className="space-y-3">
               {[
                 { href: '/boutique-privee', label: 'Boutique privée' },
@@ -44,7 +53,10 @@ export function Footer() {
                 { href: '/mentions-legales', label: 'Mentions légales & CGV' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-white/70 hover:text-white transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/70 hover:text-white hover:translate-x-1 inline-block transition-all"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -54,20 +66,20 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-bold tracking-widest uppercase mb-5 text-white/40">Contact</h4>
+            <h4 className="text-xs font-bold tracking-widest uppercase mb-5 text-brand-amber">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-white/70">
-                <MapPin size={14} className="shrink-0" />
+                <MapPin size={14} className="shrink-0 text-brand-pink" />
                 Andlau, Alsace
               </li>
               <li className="flex items-center gap-2 text-sm text-white/70">
-                <Mail size={14} className="shrink-0" />
+                <Mail size={14} className="shrink-0 text-brand-cyan" />
                 <a href="mailto:contact@flokka.fr" className="hover:text-white transition-colors">
                   contact@flokka.fr
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-white/70">
-                <Phone size={14} className="shrink-0" />
+                <Phone size={14} className="shrink-0 text-brand-amber" />
                 <a href="tel:0600000000" className="hover:text-white transition-colors">
                   06 00 00 00 00
                 </a>

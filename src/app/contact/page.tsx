@@ -46,13 +46,15 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1 pt-16">
-        <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="max-w-xl mb-16">
-            <span className="text-xs font-bold tracking-widest uppercase text-brand-gray-text block mb-4">
+        <section className="relative overflow-hidden mesh-bg py-24 px-4 sm:px-6 lg:px-8">
+          <div className="pointer-events-none absolute -top-10 right-10 w-80 h-80 rounded-full bg-brand-violet/20 blur-3xl animate-blob" />
+          <div className="relative max-w-7xl mx-auto">
+          <div className="max-w-xl mb-16 animate-fade-up">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/70 backdrop-blur px-4 py-2 text-xs font-bold tracking-widest uppercase text-brand-violet-dark ring-1 ring-violet-100 mb-6">
               Contact
             </span>
-            <h1 className="text-4xl sm:text-5xl font-black text-brand-black leading-tight mb-4">
-              Parlons de votre projet.
+            <h1 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-black leading-tight mb-4">
+              Parlons de <span className="text-gradient">votre projet.</span>
             </h1>
             <p className="text-brand-gray-text text-lg">
               Un club à équiper, une boutique privée à créer, une question ? Écrivez-moi, je réponds
@@ -64,15 +66,17 @@ export default function ContactPage() {
             {/* Form */}
             <div>
               {submitted ? (
-                <div className="flex flex-col items-center justify-center py-16 text-center">
-                  <CheckCircle2 size={48} className="text-green-500 mb-4" />
-                  <h3 className="text-2xl font-black text-brand-black mb-2">Message envoyé !</h3>
+                <div className="flex flex-col items-center justify-center py-16 text-center rounded-3xl bg-white ring-1 ring-violet-100 shadow-soft">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-5 shadow-soft">
+                    <CheckCircle2 size={30} className="text-white" />
+                  </div>
+                  <h3 className="font-display text-2xl font-extrabold text-brand-black mb-2">Message envoyé !</h3>
                   <p className="text-brand-gray-text">
                     Merci pour votre message. Je vous répondrai dans les plus brefs délais.
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 rounded-3xl bg-white p-8 ring-1 ring-violet-100 shadow-soft">
                   <div>
                     <label className="block text-sm font-semibold text-brand-black mb-1.5">
                       Nom <span className="text-red-500">*</span>
@@ -80,7 +84,7 @@ export default function ContactPage() {
                     <input
                       {...register('name')}
                       placeholder="Votre nom"
-                      className="w-full border border-brand-gray-dark px-4 py-3 text-sm focus:outline-none focus:border-brand-black transition-colors"
+                      className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all"
                     />
                     {errors.name && (
                       <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>
@@ -94,7 +98,7 @@ export default function ContactPage() {
                     <input
                       {...register('structure')}
                       placeholder="Nom de votre club, association..."
-                      className="w-full border border-brand-gray-dark px-4 py-3 text-sm focus:outline-none focus:border-brand-black transition-colors"
+                      className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all"
                     />
                   </div>
 
@@ -106,7 +110,7 @@ export default function ContactPage() {
                       {...register('email')}
                       type="email"
                       placeholder="votre@email.fr"
-                      className="w-full border border-brand-gray-dark px-4 py-3 text-sm focus:outline-none focus:border-brand-black transition-colors"
+                      className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all"
                     />
                     {errors.email && (
                       <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
@@ -121,7 +125,7 @@ export default function ContactPage() {
                       {...register('message')}
                       rows={5}
                       placeholder="Décrivez votre projet..."
-                      className="w-full border border-brand-gray-dark px-4 py-3 text-sm focus:outline-none focus:border-brand-black transition-colors resize-none"
+                      className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all resize-none"
                     />
                     {errors.message && (
                       <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>
@@ -133,7 +137,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-brand-black text-white font-semibold py-4 text-sm hover:bg-gray-800 transition-colors disabled:opacity-60"
+                    className="w-full bg-brand-gradient text-white font-semibold py-4 text-sm rounded-full shadow-glow hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:translate-y-0"
                   >
                     {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                   </button>
@@ -143,38 +147,47 @@ export default function ContactPage() {
 
             {/* Info */}
             <div>
-              <h2 className="text-2xl font-black text-brand-black mb-8">Coordonnées</h2>
+              <h2 className="font-display text-2xl font-extrabold text-brand-black mb-8">Coordonnées</h2>
               <ul className="space-y-5 mb-10">
-                <li className="flex items-start gap-3">
-                  <MapPin size={18} className="text-brand-black mt-0.5 shrink-0" />
+                <li className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shrink-0 shadow-soft">
+                    <MapPin size={16} className="text-white" />
+                  </span>
                   <span className="text-brand-gray-text">Andlau, Alsace (67)</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <Mail size={18} className="text-brand-black mt-0.5 shrink-0" />
-                  <a href="mailto:contact@flokka.fr" className="text-brand-gray-text hover:text-brand-black transition-colors">
+                <li className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center shrink-0 shadow-soft">
+                    <Mail size={16} className="text-white" />
+                  </span>
+                  <a href="mailto:contact@flokka.fr" className="text-brand-gray-text hover:text-brand-violet-dark transition-colors">
                     contact@flokka.fr
                   </a>
                 </li>
-                <li className="flex items-start gap-3">
-                  <Phone size={18} className="text-brand-black mt-0.5 shrink-0" />
-                  <a href="tel:0600000000" className="text-brand-gray-text hover:text-brand-black transition-colors">
+                <li className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-fuchsia-500 to-pink-500 flex items-center justify-center shrink-0 shadow-soft">
+                    <Phone size={16} className="text-white" />
+                  </span>
+                  <a href="tel:0600000000" className="text-brand-gray-text hover:text-brand-violet-dark transition-colors">
                     06 00 00 00 00
                   </a>
                 </li>
-                <li className="flex items-start gap-3">
-                  <Clock size={18} className="text-brand-black mt-0.5 shrink-0" />
+                <li className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shrink-0 shadow-soft">
+                    <Clock size={16} className="text-white" />
+                  </span>
                   <span className="text-brand-gray-text">Horaires flexibles — sur rendez-vous</span>
                 </li>
               </ul>
 
-              <div className="bg-brand-gray border-l-4 border-brand-black p-6">
-                <h3 className="font-bold text-brand-black mb-2">Vous représentez un club ?</h3>
+              <div className="rounded-3xl bg-brand-gradient-soft border-l-4 border-brand-violet p-6 ring-1 ring-violet-100">
+                <h3 className="font-display font-bold text-brand-black mb-2">Vous représentez un club ?</h3>
                 <p className="text-sm text-brand-gray-text leading-relaxed">
                   Dites-moi simplement quelle structure vous représentez. On met en place votre
                   boutique privée et votre code d&apos;accès, sans engagement.
                 </p>
               </div>
             </div>
+          </div>
           </div>
         </section>
       </main>

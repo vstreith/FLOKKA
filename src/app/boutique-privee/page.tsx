@@ -45,57 +45,59 @@ export default function BoutiquePriveePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-1 pt-16 flex items-center justify-center">
-        <section className="w-full max-w-md px-4 py-24">
-          <div className="text-center mb-10">
-            <div className="w-16 h-16 bg-brand-black flex items-center justify-center mx-auto mb-6">
-              <Lock size={24} className="text-white" />
+      <main className="relative flex-1 pt-16 flex items-center justify-center overflow-hidden mesh-bg">
+        <div className="pointer-events-none absolute top-20 -left-20 w-96 h-96 rounded-full bg-brand-violet/25 blur-3xl animate-blob" />
+        <div className="pointer-events-none absolute bottom-10 -right-20 w-96 h-96 rounded-full bg-brand-pink/20 blur-3xl animate-blob" style={{ animationDelay: '4s' }} />
+        <section className="relative w-full max-w-md px-4 py-24 animate-fade-up">
+          <div className="rounded-[2rem] bg-white/80 backdrop-blur p-8 sm:p-10 ring-1 ring-violet-100 shadow-card">
+            <div className="text-center mb-10">
+              <div className="w-16 h-16 rounded-2xl bg-brand-gradient flex items-center justify-center mx-auto mb-6 shadow-glow">
+                <Lock size={24} className="text-white" />
+              </div>
+              <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-black mb-3">
+                Accès <span className="text-gradient">boutique privée</span>
+              </h1>
+              <p className="text-brand-gray-text">
+                Entrez le code unique fourni par votre club, association ou structure pour accéder à
+                votre boutique dédiée.
+              </p>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-black text-brand-black mb-3">
-              Accès boutique privée
-            </h1>
-            <p className="text-brand-gray-text">
-              Entrez le code unique fourni par votre club, association ou structure pour accéder à
-              votre boutique dédiée.
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                value={code}
+                onChange={(e) => setCode(e.target.value.toUpperCase())}
+                placeholder="Votre code d'accès"
+                maxLength={8}
+                className="w-full rounded-2xl border-2 border-brand-gray-dark bg-brand-gray/40 px-4 py-4 text-center text-2xl font-black tracking-[0.3em] uppercase focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all placeholder:text-gray-300 placeholder:text-base placeholder:tracking-normal placeholder:font-normal"
+              />
+
+              {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+
+              <button
+                type="submit"
+                disabled={loading || !code.trim()}
+                className="w-full bg-brand-gradient text-white font-semibold py-4 text-sm rounded-full shadow-glow hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:translate-y-0 flex items-center justify-center gap-2"
+              >
+                {loading ? 'Vérification...' : 'Accéder à la boutique'}
+                {!loading && <ArrowRight size={16} />}
+              </button>
+            </form>
+
+            <p className="text-center text-sm text-brand-gray-text mt-8">
+              Pas encore de code ?{' '}
+              <Link href="/contact" className="font-semibold text-brand-violet-dark hover:underline">
+                Contactez-nous
+              </Link>{' '}
+              pour créer la boutique de votre structure.
             </p>
-          </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              value={code}
-              onChange={(e) => setCode(e.target.value.toUpperCase())}
-              placeholder="Votre code d'accès"
-              maxLength={8}
-              className="w-full border-2 border-brand-gray-dark px-4 py-4 text-center text-2xl font-black tracking-[0.3em] uppercase focus:outline-none focus:border-brand-black transition-colors placeholder:text-gray-300 placeholder:text-base placeholder:tracking-normal placeholder:font-normal"
-            />
-
-            {error && (
-              <p className="text-red-500 text-sm text-center">{error}</p>
-            )}
-
-            <button
-              type="submit"
-              disabled={loading || !code.trim()}
-              className="w-full bg-brand-black text-white font-semibold py-4 text-sm hover:bg-gray-800 transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
-            >
-              {loading ? 'Vérification...' : 'Accéder à la boutique'}
-              {!loading && <ArrowRight size={16} />}
-            </button>
-          </form>
-
-          <p className="text-center text-sm text-brand-gray-text mt-8">
-            Pas encore de code ?{' '}
-            <Link href="/contact" className="font-semibold text-brand-black hover:underline">
-              Contactez-nous
-            </Link>{' '}
-            pour créer la boutique de votre structure.
-          </p>
-
-          <div className="mt-8 pt-6 border-t border-brand-gray-dark text-center">
-            <p className="text-xs text-brand-gray-text">
-              FLOKKA · Boutiques réservées aux structures partenaires.
-            </p>
+            <div className="mt-8 pt-6 border-t border-brand-gray-dark text-center">
+              <p className="text-xs text-brand-gray-text">
+                FLOKKA · Boutiques réservées aux structures partenaires.
+              </p>
+            </div>
           </div>
         </section>
       </main>

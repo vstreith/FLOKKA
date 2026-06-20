@@ -25,14 +25,16 @@ export function CartDrawer({ slug }: CartDrawerProps) {
       {/* Drawer */}
       <div className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white z-50 flex flex-col shadow-2xl animate-slide-in">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-brand-gray-dark">
+        <div className="flex items-center justify-between px-6 py-4 bg-brand-gradient-soft border-b border-violet-100">
           <div className="flex items-center gap-2">
-            <ShoppingBag size={18} />
-            <span className="font-bold text-brand-black">
+            <span className="w-9 h-9 rounded-xl bg-brand-gradient flex items-center justify-center shadow-soft">
+              <ShoppingBag size={16} className="text-white" />
+            </span>
+            <span className="font-display font-bold text-brand-black">
               Panier {itemCount > 0 && `(${itemCount})`}
             </span>
           </div>
-          <button onClick={() => setIsOpen(false)} className="p-1 hover:opacity-70 transition-opacity">
+          <button onClick={() => setIsOpen(false)} className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/70 transition-colors">
             <X size={20} />
           </button>
         </div>
@@ -62,22 +64,22 @@ export function CartDrawer({ slug }: CartDrawerProps) {
                       <p className="text-xs text-brand-gray-text">Numéro : {item.customNumber}</p>
                     )}
                     <div className="flex items-center gap-3 mt-2">
-                      <div className="flex items-center border border-brand-gray-dark">
+                      <div className="flex items-center rounded-full border border-brand-gray-dark overflow-hidden">
                         <button
                           onClick={() => updateQuantity(index, item.quantity - 1)}
-                          className="w-7 h-7 flex items-center justify-center text-sm hover:bg-brand-gray transition-colors"
+                          className="w-7 h-7 flex items-center justify-center text-sm text-brand-violet-dark hover:bg-violet-50 transition-colors"
                         >
                           −
                         </button>
                         <span className="w-8 text-center text-sm font-semibold">{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(index, item.quantity + 1)}
-                          className="w-7 h-7 flex items-center justify-center text-sm hover:bg-brand-gray transition-colors"
+                          className="w-7 h-7 flex items-center justify-center text-sm text-brand-violet-dark hover:bg-violet-50 transition-colors"
                         >
                           +
                         </button>
                       </div>
-                      <span className="text-sm font-semibold text-brand-black">
+                      <span className="text-sm font-bold text-gradient">
                         {formatPrice(item.unitPrice * item.quantity)}
                       </span>
                     </div>
@@ -99,12 +101,12 @@ export function CartDrawer({ slug }: CartDrawerProps) {
           <div className="px-6 py-5 border-t border-brand-gray-dark">
             <div className="flex items-center justify-between mb-4">
               <span className="font-semibold text-brand-black">Total</span>
-              <span className="text-xl font-black text-brand-black">{formatPrice(total)}</span>
+              <span className="font-display text-2xl font-extrabold text-gradient">{formatPrice(total)}</span>
             </div>
             <Link
               href={`/boutique/${slug}/commander`}
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-center gap-2 w-full bg-brand-black text-white font-semibold py-4 text-sm hover:bg-gray-800 transition-colors"
+              className="flex items-center justify-center gap-2 w-full bg-brand-gradient text-white font-semibold py-4 text-sm rounded-full shadow-glow hover:-translate-y-0.5 transition-all duration-300"
             >
               Commander
               <ArrowRight size={16} />

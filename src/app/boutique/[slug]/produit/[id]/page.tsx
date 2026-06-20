@@ -56,21 +56,21 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="sticky top-0 z-40 bg-white border-b border-brand-gray-dark">
+      <header className="sticky top-0 z-40 glass border-b border-white/40 shadow-soft">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link href={`/boutique/${slug}`} className="flex items-center gap-2 text-sm text-brand-gray-text hover:text-brand-black transition-colors">
+          <Link href={`/boutique/${slug}`} className="flex items-center gap-2 text-sm text-brand-gray-text hover:text-brand-violet-dark transition-colors">
             <ArrowLeft size={16} />
             Retour à la boutique
           </Link>
           <FlokkaLogo size="sm" href="/" />
           <button
             onClick={() => setIsOpen(true)}
-            className="relative flex items-center gap-2 bg-brand-black text-white px-4 py-2 text-sm font-semibold hover:bg-gray-800 transition-colors"
+            className="relative flex items-center gap-2 bg-brand-gradient text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-soft hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300"
           >
             <ShoppingBag size={16} />
             Panier
             {itemCount > 0 && (
-              <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-red-500 text-white rounded-full text-xs flex items-center justify-center font-bold">
+              <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-white text-brand-violet-dark ring-2 ring-brand-pink rounded-full text-xs flex items-center justify-center font-bold">
                 {itemCount}
               </span>
             )}
@@ -82,7 +82,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Images */}
           <div>
-            <div className="aspect-square bg-brand-gray flex items-center justify-center mb-3 overflow-hidden">
+            <div className="aspect-square rounded-[2rem] bg-brand-gradient-soft ring-1 ring-violet-100 shadow-soft flex items-center justify-center mb-3 overflow-hidden">
               {product.images[activeImg] ? (
                 <img
                   src={product.images[activeImg]}
@@ -90,7 +90,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <ShoppingBag size={64} className="text-brand-gray-dark" />
+                <ShoppingBag size={64} className="text-brand-violet/40" />
               )}
             </div>
             {product.images.length > 1 && (
@@ -99,7 +99,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
                   <button
                     key={i}
                     onClick={() => setActiveImg(i)}
-                    className={`w-16 h-16 border-2 overflow-hidden ${i === activeImg ? 'border-brand-black' : 'border-brand-gray-dark'}`}
+                    className={`w-16 h-16 rounded-xl border-2 overflow-hidden transition-colors ${i === activeImg ? 'border-brand-violet' : 'border-brand-gray-dark'}`}
                   >
                     <img src={img} alt="" className="w-full h-full object-cover" />
                   </button>
@@ -111,14 +111,14 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
           {/* Details */}
           <div>
             {product.category?.name && (
-              <p className="text-xs text-brand-gray-text uppercase tracking-widest mb-2">
+              <p className="text-xs text-brand-violet font-semibold uppercase tracking-widest mb-2">
                 {product.category.name}
               </p>
             )}
-            <h1 className="text-3xl sm:text-4xl font-black text-brand-black mb-3">
+            <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-black mb-3">
               {product.name}
             </h1>
-            <p className="text-2xl font-bold text-brand-black mb-6">
+            <p className="font-display text-3xl font-extrabold text-gradient mb-6">
               {formatPrice(product.effectivePrice)}
             </p>
 
@@ -139,10 +139,10 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
                     <button
                       key={v.id}
                       onClick={() => setSelectedVariant(v.name)}
-                      className={`min-w-[3rem] h-10 px-3 border text-sm font-semibold transition-colors ${
+                      className={`min-w-[3rem] h-10 px-3 rounded-xl border text-sm font-semibold transition-all ${
                         selectedVariant === v.name
-                          ? 'bg-brand-black text-white border-brand-black'
-                          : 'bg-white text-brand-black border-brand-gray-dark hover:border-brand-black'
+                          ? 'bg-brand-gradient text-white border-transparent shadow-soft'
+                          : 'bg-white text-brand-black border-brand-gray-dark hover:border-brand-violet'
                       }`}
                     >
                       {v.name}
@@ -161,10 +161,10 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
                     <button
                       key={v.id}
                       onClick={() => setSelectedVariant(v.name)}
-                      className={`px-3 h-9 border text-sm font-medium transition-colors ${
+                      className={`px-3 h-9 rounded-xl border text-sm font-medium transition-all ${
                         selectedVariant === v.name
-                          ? 'bg-brand-black text-white border-brand-black'
-                          : 'bg-white text-brand-black border-brand-gray-dark hover:border-brand-black'
+                          ? 'bg-brand-gradient text-white border-transparent shadow-soft'
+                          : 'bg-white text-brand-black border-brand-gray-dark hover:border-brand-violet'
                       }`}
                     >
                       {v.name}
@@ -176,8 +176,8 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
 
             {/* Personnalisation */}
             {product.hasNameNumber && (
-              <div className="mb-6 p-4 bg-brand-gray border border-brand-gray-dark">
-                <p className="text-sm font-bold text-brand-black mb-3">Personnalisation</p>
+              <div className="mb-6 p-5 rounded-2xl bg-brand-gradient-soft border border-violet-100 ring-1 ring-violet-100">
+                <p className="text-sm font-bold text-brand-violet-dark mb-3">Personnalisation</p>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className="text-xs text-brand-gray-text block mb-1">Nom</label>
@@ -186,7 +186,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
                       value={customName}
                       onChange={(e) => setCustomName(e.target.value)}
                       placeholder="Ex : DUPONT"
-                      className="w-full border border-brand-gray-dark px-3 py-2 text-sm uppercase focus:outline-none focus:border-brand-black"
+                      className="w-full rounded-xl border border-brand-gray-dark bg-white px-3 py-2 text-sm uppercase focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 transition-all"
                     />
                   </div>
                   <div>
@@ -196,7 +196,7 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
                       value={customNumber}
                       onChange={(e) => setCustomNumber(e.target.value)}
                       placeholder="Ex : 10"
-                      className="w-full border border-brand-gray-dark px-3 py-2 text-sm focus:outline-none focus:border-brand-black"
+                      className="w-full rounded-xl border border-brand-gray-dark bg-white px-3 py-2 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 transition-all"
                     />
                   </div>
                 </div>
@@ -206,17 +206,17 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
             {/* Quantité */}
             <div className="flex items-center gap-4 mb-6">
               <p className="text-sm font-semibold text-brand-black">Quantité</p>
-              <div className="flex items-center border border-brand-gray-dark">
+              <div className="flex items-center rounded-full border border-brand-gray-dark bg-white overflow-hidden">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-10 h-10 flex items-center justify-center hover:bg-brand-gray transition-colors"
+                  className="w-10 h-10 flex items-center justify-center text-brand-violet-dark hover:bg-violet-50 transition-colors"
                 >
                   <Minus size={14} />
                 </button>
                 <span className="w-12 text-center text-sm font-bold">{quantity}</span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="w-10 h-10 flex items-center justify-center hover:bg-brand-gray transition-colors"
+                  className="w-10 h-10 flex items-center justify-center text-brand-violet-dark hover:bg-violet-50 transition-colors"
                 >
                   <Plus size={14} />
                 </button>
@@ -227,10 +227,10 @@ function ProductDetailContent({ product, slug }: { product: ShopProduct; slug: s
 
             <button
               onClick={handleAdd}
-              className={`w-full flex items-center justify-center gap-2 py-4 font-semibold text-sm transition-colors ${
+              className={`w-full flex items-center justify-center gap-2 py-4 rounded-full font-semibold text-sm shadow-glow hover:-translate-y-0.5 transition-all duration-300 ${
                 added
-                  ? 'bg-green-600 text-white'
-                  : 'bg-brand-black text-white hover:bg-gray-800'
+                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white'
+                  : 'bg-brand-gradient text-white'
               }`}
             >
               {added ? (
@@ -285,8 +285,8 @@ export default function ProductDetailPage({ params }: { params: { slug: string; 
 
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-brand-black border-t-transparent rounded-full animate-spin" />
+      <div className="min-h-screen flex items-center justify-center mesh-bg">
+        <div className="w-10 h-10 border-[3px] border-brand-violet border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }

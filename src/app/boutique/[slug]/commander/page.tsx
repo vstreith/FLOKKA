@@ -57,16 +57,18 @@ function CheckoutContent({ slug }: { slug: string }) {
 
   if (submitted) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center text-center p-8">
-        <CheckCircle2 size={64} className="text-green-500 mb-6" />
-        <h1 className="text-3xl font-black text-brand-black mb-2">Commande confirmée !</h1>
+      <div className="min-h-screen flex flex-col items-center justify-center text-center p-8 mesh-bg">
+        <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-6 shadow-glow">
+          <CheckCircle2 size={40} className="text-white" />
+        </div>
+        <h1 className="font-display text-3xl font-extrabold text-brand-black mb-2">Commande confirmée !</h1>
         <p className="text-brand-gray-text mb-2">
-          Votre commande <span className="font-bold text-brand-black">{orderNumber}</span> a bien été enregistrée.
+          Votre commande <span className="font-bold text-brand-violet-dark">{orderNumber}</span> a bien été enregistrée.
         </p>
         <p className="text-brand-gray-text mb-8 max-w-sm">
           Vous recevrez un email de confirmation. FLOKKA vous contactera pour les détails de livraison.
         </p>
-        <Link href={`/boutique/${slug}`} className="bg-brand-black text-white font-semibold px-6 py-3 text-sm hover:bg-gray-800 transition-colors">
+        <Link href={`/boutique/${slug}`} className="bg-brand-gradient text-white font-semibold px-8 py-4 rounded-full text-sm shadow-glow hover:-translate-y-0.5 transition-all duration-300">
           Retour à la boutique
         </Link>
       </div>
@@ -75,9 +77,9 @@ function CheckoutContent({ slug }: { slug: string }) {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="sticky top-0 z-40 bg-white border-b border-brand-gray-dark">
+      <header className="sticky top-0 z-40 glass border-b border-white/40 shadow-soft">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href={`/boutique/${slug}`} className="flex items-center gap-2 text-sm text-brand-gray-text hover:text-brand-black">
+          <Link href={`/boutique/${slug}`} className="flex items-center gap-2 text-sm text-brand-gray-text hover:text-brand-violet-dark transition-colors">
             <ArrowLeft size={16} /> Retour au catalogue
           </Link>
           <FlokkaLogo size="sm" href="/" />
@@ -85,7 +87,7 @@ function CheckoutContent({ slug }: { slug: string }) {
       </header>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-        <h1 className="text-3xl font-black text-brand-black mb-10">Commander</h1>
+        <h1 className="font-display text-3xl font-extrabold text-brand-black mb-10">Commander</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
@@ -94,30 +96,30 @@ function CheckoutContent({ slug }: { slug: string }) {
 
             <div>
               <label className="block text-sm font-semibold mb-1.5">Nom complet <span className="text-red-500">*</span></label>
-              <input {...register('name')} placeholder="Prénom Nom" className="w-full border border-brand-gray-dark px-4 py-3 text-sm focus:outline-none focus:border-brand-black" />
+              <input {...register('name')} placeholder="Prénom Nom" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all" />
               {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
             </div>
             <div>
               <label className="block text-sm font-semibold mb-1.5">Email <span className="text-red-500">*</span></label>
-              <input {...register('email')} type="email" placeholder="votre@email.fr" className="w-full border border-brand-gray-dark px-4 py-3 text-sm focus:outline-none focus:border-brand-black" />
+              <input {...register('email')} type="email" placeholder="votre@email.fr" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all" />
               {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
             </div>
             <div>
               <label className="block text-sm font-semibold mb-1.5">Téléphone</label>
-              <input {...register('phone')} type="tel" placeholder="06 00 00 00 00" className="w-full border border-brand-gray-dark px-4 py-3 text-sm focus:outline-none focus:border-brand-black" />
+              <input {...register('phone')} type="tel" placeholder="06 00 00 00 00" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all" />
             </div>
             <div>
               <label className="block text-sm font-semibold mb-1.5">Adresse de livraison</label>
-              <textarea {...register('address')} rows={2} placeholder="Rue, Code postal, Ville" className="w-full border border-brand-gray-dark px-4 py-3 text-sm focus:outline-none focus:border-brand-black resize-none" />
+              <textarea {...register('address')} rows={2} placeholder="Rue, Code postal, Ville" className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all resize-none" />
             </div>
             <div>
               <label className="block text-sm font-semibold mb-1.5">Remarques</label>
-              <textarea {...register('notes')} rows={2} placeholder="Instructions particulières..." className="w-full border border-brand-gray-dark px-4 py-3 text-sm focus:outline-none focus:border-brand-black resize-none" />
+              <textarea {...register('notes')} rows={2} placeholder="Instructions particulières..." className="w-full rounded-xl border border-brand-gray-dark bg-brand-gray/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-violet focus:ring-2 focus:ring-violet-200 focus:bg-white transition-all resize-none" />
             </div>
 
             {serverError && <p className="text-red-500 text-sm">{serverError}</p>}
 
-            <button type="submit" disabled={isSubmitting} className="w-full bg-brand-black text-white font-semibold py-4 text-sm hover:bg-gray-800 transition-colors disabled:opacity-60">
+            <button type="submit" disabled={isSubmitting} className="w-full bg-brand-gradient text-white font-semibold py-4 text-sm rounded-full shadow-glow hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:translate-y-0">
               {isSubmitting ? 'Envoi...' : `Passer la commande — ${formatPrice(total)}`}
             </button>
 
@@ -129,11 +131,11 @@ function CheckoutContent({ slug }: { slug: string }) {
           {/* Order summary */}
           <div>
             <h2 className="text-lg font-bold text-brand-black mb-4">Récapitulatif</h2>
-            <div className="border border-brand-gray-dark divide-y divide-brand-gray-dark">
+            <div className="rounded-2xl bg-white ring-1 ring-violet-100 shadow-soft divide-y divide-brand-gray-dark overflow-hidden">
               {items.map((item, i) => (
                 <div key={i} className="flex gap-3 p-4">
-                  <div className="w-10 h-10 bg-brand-gray flex items-center justify-center shrink-0">
-                    <ShoppingBag size={14} className="text-brand-gray-dark" />
+                  <div className="w-10 h-10 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
+                    <ShoppingBag size={14} className="text-brand-violet" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold text-brand-black">{item.productName}</p>
@@ -147,9 +149,9 @@ function CheckoutContent({ slug }: { slug: string }) {
                   </p>
                 </div>
               ))}
-              <div className="p-4 flex justify-between">
+              <div className="p-4 flex justify-between items-center bg-brand-gradient-soft">
                 <span className="font-bold text-brand-black">Total</span>
-                <span className="text-xl font-black text-brand-black">{formatPrice(total)}</span>
+                <span className="font-display text-2xl font-extrabold text-gradient">{formatPrice(total)}</span>
               </div>
             </div>
           </div>

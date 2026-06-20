@@ -32,47 +32,46 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-200',
-        scrolled
-          ? 'border-b border-brand-gray-dark shadow-sm'
-          : 'border-b border-brand-gray-dark'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass',
+        scrolled ? 'border-b border-white/40 shadow-soft' : 'border-b border-transparent',
       )}
-      style={{ backgroundColor: '#FCFBF8' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <FlokkaLogo size="sm" href="/" />
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  'text-sm font-medium tracking-wide transition-colors hover:text-brand-black',
-                  pathname === link.href
-                    ? 'text-brand-black'
-                    : 'text-brand-gray-text'
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center gap-1">
+            {navLinks.map((link) => {
+              const active = pathname === link.href
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    'relative text-sm font-medium tracking-wide px-4 py-2 rounded-full transition-all',
+                    active
+                      ? 'text-brand-violet-dark bg-violet-100/70'
+                      : 'text-brand-gray-text hover:text-brand-black hover:bg-white/60',
+                  )}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </nav>
 
           {/* CTA + Mobile menu */}
           <div className="flex items-center gap-3">
             <Link
               href="/boutique-privee"
-              className="hidden md:inline-flex items-center gap-2 bg-brand-black text-white text-sm font-semibold px-4 py-2 hover:bg-gray-800 transition-colors"
+              className="hidden md:inline-flex items-center gap-2 bg-brand-gradient text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-soft hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300"
             >
               <Store size={14} />
               Boutique privée
             </Link>
             <button
-              className="md:hidden p-2"
+              className="md:hidden p-2 rounded-full hover:bg-white/60 transition-colors"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Menu"
             >
@@ -84,15 +83,17 @@ export function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-brand-gray-dark animate-fade-in" style={{ backgroundColor: '#FCFBF8' }}>
-          <div className="px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t border-white/40 glass animate-fade-in">
+          <div className="px-4 py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'text-base font-medium py-1 border-b border-brand-gray-dark pb-3',
-                  pathname === link.href ? 'text-brand-black' : 'text-brand-gray-text'
+                  'text-base font-medium py-2.5 px-4 rounded-xl transition-colors',
+                  pathname === link.href
+                    ? 'text-brand-violet-dark bg-violet-100/70'
+                    : 'text-brand-gray-text hover:bg-white/60',
                 )}
               >
                 {link.label}
@@ -100,7 +101,7 @@ export function Header() {
             ))}
             <Link
               href="/boutique-privee"
-              className="inline-flex items-center justify-center gap-2 bg-brand-black text-white text-sm font-semibold px-4 py-3 mt-2"
+              className="inline-flex items-center justify-center gap-2 bg-brand-gradient text-white text-sm font-semibold px-4 py-3 mt-2 rounded-full shadow-soft"
             >
               <Store size={14} />
               Boutique privée
