@@ -33,8 +33,11 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-200',
-        scrolled ? 'bg-white border-b border-brand-gray-dark shadow-sm' : 'bg-white border-b border-brand-gray-dark'
+        scrolled
+          ? 'border-b border-brand-gray-dark shadow-sm'
+          : 'border-b border-brand-gray-dark'
       )}
+      style={{ backgroundColor: '#FCFBF8' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -81,7 +84,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-brand-gray-dark animate-fade-in">
+        <div className="md:hidden border-t border-brand-gray-dark animate-fade-in" style={{ backgroundColor: '#FCFBF8' }}>
           <div className="px-4 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link

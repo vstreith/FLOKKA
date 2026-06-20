@@ -12,40 +12,55 @@ interface FlokkaLogoProps {
 
 export function FlokkaLogo({ className, href = '/', dark = true, size = 'md' }: FlokkaLogoProps) {
   const sizes = {
-    sm: { icon: 36, text: 'text-lg' },
-    md: { icon: 48, text: 'text-2xl' },
-    lg: { icon: 64, text: 'text-4xl' },
+    sm: { width: 32, height: 36 },
+    md: { width: 46, height: 52 },
+    lg: { width: 66, height: 74 },
+  }
+  const textSizes = {
+    sm: 'text-base',
+    md: 'text-2xl',
+    lg: 'text-4xl',
   }
   const s = sizes[size]
-  const color = dark ? '#0A0A0A' : '#FFFFFF'
+  const color = dark ? '#1b1b1b' : '#FCFBF8'
 
+  /*
+   * The Flokka F: a bold architectural letter with a distinctive
+   * rounded arch (like a Romanesque doorway) at the inner top corner.
+   *
+   * Path (clockwise from bottom-left):
+   * - Up the full left side
+   * - Right along the top bar (full width)
+   * - Down the right side of the top bar to y=42
+   * - ARC counterclockwise (sweep=0) from (110,42) back to (35,42)
+   *   going UP through (72.5,12) — this creates the arch ceiling
+   * - Down the inner-right edge to the middle bar (y=78)
+   * - Right along top of middle bar
+   * - Down and left along middle bar bottom
+   * - Down to bottom, close
+   */
   const logo = (
-    <div className={cn('flex flex-col items-start gap-1', className)}>
+    <div className={cn('flex flex-col items-start gap-0.5', className)}>
       <svg
-        width={s.icon}
-        height={s.icon}
-        viewBox="0 0 100 110"
+        width={s.width}
+        height={s.height}
+        viewBox="0 0 110 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
-        {/* Stylized F icon */}
-        {/* Top horizontal bar */}
-        <rect x="0" y="0" width="100" height="32" fill={color} />
-        {/* Left vertical bar */}
-        <rect x="0" y="0" width="33" height="110" fill={color} />
-        {/* Arch cutout at inner top corner — concave quarter-circle */}
-        <circle cx="33" cy="32" r="22" fill={dark ? '#FFFFFF' : '#0A0A0A'} />
-        {/* Restore the top bar above the arch */}
-        <rect x="33" y="0" width="67" height="10" fill={color} />
-        {/* Middle horizontal bar */}
-        <rect x="0" y="58" width="70" height="25" fill={color} />
+        <path
+          d="M 0 120 L 0 0 L 110 0 L 110 42 A 37.5 30 0 0 0 35 42 L 35 78 L 78 78 L 78 98 L 35 98 L 35 120 Z"
+          fill={color}
+        />
       </svg>
       <span
         className={cn(
-          s.text,
-          'font-black tracking-[0.25em] uppercase leading-none',
-          dark ? 'text-brand-black' : 'text-white'
+          textSizes[size],
+          'font-black uppercase leading-none',
+          dark ? 'text-brand-black' : 'text-brand-white',
         )}
+        style={{ letterSpacing: '0.22em' }}
       >
         FLOKKA
       </span>
@@ -53,7 +68,7 @@ export function FlokkaLogo({ className, href = '/', dark = true, size = 'md' }: 
   )
 
   if (href) {
-    return <Link href={href}>{logo}</Link>
+    return <Link href={href} aria-label="FLOKKA — Accueil">{logo}</Link>
   }
 
   return logo

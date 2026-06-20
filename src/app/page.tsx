@@ -73,19 +73,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Marquee */}
-        <div className="bg-brand-black text-white py-4 overflow-hidden">
-          <div className="flex whitespace-nowrap animate-marquee">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <span
-                key={i}
-                className="text-sm font-bold tracking-[0.2em] uppercase mx-8"
-              >
-                FLOKKA · Fait à Andlau · Flocage propre &amp; soigné · Le concept ·
-              </span>
-            ))}
-          </div>
-        </div>
+        {/* Divider */}
+        <div className="border-t border-brand-gray-dark" />
 
         {/* Steps section */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">

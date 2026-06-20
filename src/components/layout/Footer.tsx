@@ -5,17 +5,6 @@ import { MapPin, Mail, Phone } from 'lucide-react'
 export function Footer() {
   return (
     <footer className="bg-brand-black text-white mt-auto">
-      {/* Marquee */}
-      <div className="border-b border-white/10 overflow-hidden py-3">
-        <div className="flex whitespace-nowrap animate-marquee">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <span key={i} className="text-sm font-medium tracking-widest uppercase mx-8 opacity-60">
-              FLOKKA · Atelier textile · Andlau · Flocage à la demande · Réassort à l&apos;unité ·
-            </span>
-          ))}
-        </div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}

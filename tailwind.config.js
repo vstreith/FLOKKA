@@ -12,12 +12,12 @@ module.exports = {
       },
       colors: {
         brand: {
-          black: '#0A0A0A',
-          white: '#FFFFFF',
-          gray: '#F5F5F5',
-          'gray-dark': '#E8E8E8',
-          'gray-medium': '#9CA3AF',
-          'gray-text': '#6B7280',
+          black: '#1b1b1b',
+          white: '#FCFBF8',
+          gray: '#F5F3EE',
+          'gray-dark': '#dcdad5',
+          'gray-medium': '#c5c1b9',
+          'gray-text': '#7a7570',
         },
       },
       letterSpacing: {
@@ -25,16 +25,10 @@ module.exports = {
         'widest-3': '0.35em',
       },
       animation: {
-        marquee: 'marquee 30s linear infinite',
-        'marquee-pause': 'marquee 30s linear infinite paused',
         'fade-in': 'fadeIn 0.3s ease-in-out',
         'slide-in': 'slideIn 0.3s ease-out',
       },
       keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },

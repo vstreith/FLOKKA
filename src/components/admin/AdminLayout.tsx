@@ -55,7 +55,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
   if (!user) return null
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="min-h-screen bg-[#F5F3EE] flex">
       {/* Sidebar */}
       <aside
         className={cn(

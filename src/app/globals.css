@@ -5,10 +5,19 @@
 @layer base {
   :root {
     --font-inter: 'Inter', system-ui, sans-serif;
+    --color-bg: #FCFBF8;
+    --color-fg: #1b1b1b;
+    --color-border: #dcdad5;
   }
 
   html {
     scroll-behavior: smooth;
+    background-color: #FCFBF8;
+  }
+
+  body {
+    background-color: #FCFBF8;
+    color: #1b1b1b;
   }
 
   * {
@@ -16,8 +25,8 @@
   }
 
   ::selection {
-    background-color: #0A0A0A;
-    color: #FFFFFF;
+    background-color: #1b1b1b;
+    color: #FCFBF8;
   }
 }
 
