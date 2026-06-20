@@ -1,0 +1,129 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Club {
+  id           String        @id @default(cuid())
+  name         String
+  slug         String        @unique
+  code         String        @unique
+  description  String?
+  logo         String?
+  primaryColor String        @default("#000000")
+  type         String        @default("club")
+  email        String?
+  phone        String?
+  address      String?
+  isActive     Boolean       @default(true)
+  margin       Float         @default(0)
+  products     ClubProduct[]
+  orders       Order[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model Category {
+  id       String    @id @default(cuid())
+  name     String
+  slug     String    @unique
+  icon     String?
+  products Product[]
+}
+
+model Product {
+  id             String           @id @default(cuid())
+  name           String
+  description    String?
+  basePrice      Float
+  images         String           @default("[]")
+  categoryId     String
+  category       Category         @relation(fields: [categoryId], references: [id])
+  isCustomizable Boolean          @default(true)
+  hasNameNumber  Boolean          @default(false)
+  variants       ProductVariant[]
+  clubProducts   ClubProduct[]
+  orderItems     OrderItem[]
+  isActive       Boolean          @default(true)
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+}
+
+model ProductVariant {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name      String
+  type      String   @default("size")
+  isActive  Boolean  @default(true)
+}
+
+model ClubProduct {
+  id          String   @id @default(cuid())
+  clubId      String
+  club        Club     @relation(fields: [clubId], references: [id], onDelete: Cascade)
+  productId   String
+  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  customPrice Float?
+  isActive    Boolean  @default(true)
+
+  @@unique([clubId, productId])
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  orderNumber     String      @unique
+  clubId          String
+  club            Club        @relation(fields: [clubId], references: [id])
+  customerName    String
+  customerEmail   String
+  customerPhone   String?
+  customerAddress String?
+  notes           String?
+  items           OrderItem[]
+  subtotal        Float
+  total           Float
+  status          String      @default("pending")
+  paymentStatus   String      @default("unpaid")
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
+model OrderItem {
+  id           String   @id @default(cuid())
+  orderId      String
+  order        Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId    String
+  product      Product  @relation(fields: [productId], references: [id])
+  productName  String
+  variant      String?
+  quantity     Int
+  unitPrice    Float
+  customName   String?
+  customNumber String?
+  createdAt    DateTime @default(now())
+}
+
+model ContactRequest {
+  id        String   @id @default(cuid())
+  name      String
+  structure String?
+  email     String
+  message   String
+  status    String   @default("new")
+  createdAt DateTime @default(now())
+}
