@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { computeEffectivePrice } from '@/lib/utils'
 
 export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
   const club = await prisma.club.findUnique({
@@ -24,7 +25,7 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
   const products = club.products.map((cp) => ({
     ...cp.product,
     images: JSON.parse(cp.product.images || '[]'),
-    effectivePrice: cp.customPrice ?? cp.product.basePrice * (1 + club.margin / 100),
+    effectivePrice: computeEffectivePrice(cp.product.basePrice, club.margin, cp.customPrice),
     customPrice: cp.customPrice,
     clubProductId: cp.id,
   }))

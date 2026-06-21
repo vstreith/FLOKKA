@@ -263,14 +263,14 @@ export default function ProductDetailPage({ params }: { params: { slug: string; 
   const [error, setError] = useState('')
 
   useEffect(() => {
-    fetch(`/api/products/${params.id}`)
+    fetch(`/api/shop/${params.slug}/product/${params.id}`)
       .then((r) => r.json())
       .then((d) => {
         if (d.error) { setError('Produit introuvable.'); return }
         setProduct(d.product)
       })
       .catch(() => setError('Erreur de chargement.'))
-  }, [params.id])
+  }, [params.slug, params.id])
 
   if (error) {
     return (

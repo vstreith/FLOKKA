@@ -12,6 +12,23 @@ export function formatPrice(price: number): string {
   }).format(price)
 }
 
+/**
+ * Prix affiché au client final.
+ * = prix fournisseur (basePrice) + marge du club (%),
+ * sauf si un prix spécial (customPrice) est défini pour ce club/produit.
+ */
+export function computeEffectivePrice(
+  basePrice: number,
+  margin: number | null | undefined,
+  customPrice?: number | null
+): number {
+  if (customPrice !== null && customPrice !== undefined) {
+    return Math.round(customPrice * 100) / 100
+  }
+  const withMargin = basePrice * (1 + (margin || 0) / 100)
+  return Math.round(withMargin * 100) / 100
+}
+
 export function formatDate(date: string | Date): string {
   return new Intl.DateTimeFormat('fr-FR', {
     day: '2-digit',
