@@ -1,8 +1,9 @@
 generator client {
   provider = "prisma-client-js"
-  // "native" pour le dev local ; la cible rhel-openssl est requise pour les
-  // fonctions serverless Netlify (AWS Lambda / Amazon Linux, OpenSSL 3).
-  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+  // "native" pour le dev local ; les cibles rhel-openssl sont requises pour les
+  // fonctions serverless (Vercel / AWS Lambda — Amazon Linux). On inclut 1.0.x et
+  // 3.0.x pour couvrir les différentes versions du runtime Vercel.
+  binaryTargets = ["native", "rhel-openssl-1.0.x", "rhel-openssl-3.0.x"]
 }
 
 datasource db {

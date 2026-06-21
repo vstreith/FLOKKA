@@ -29,10 +29,11 @@ FLOKKA is a French e-commerce platform for custom-printed textile (sports clubs 
 - Client-facing price = supplier `basePrice` + club `margin %`, unless a per-club `customPrice` override exists. Single source of truth: `computeEffectivePrice()` in `src/lib/utils.ts`.
 - No online payment. Orders are created as `pending`/`unpaid`; the customer pays their club directly. The order API (`/api/shop/[slug]/order`) **recomputes prices server-side** — never trust client-sent prices.
 
-### Production (Supabase + Netlify)
-- Prisma `datasource` uses `url = DATABASE_URL` (Supabase pooler, port 6543, `?pgbouncer=true&connection_limit=1`) and `directUrl = DIRECT_URL` (direct, port 5432) for migrations.
-- `netlify.toml` build command: `prisma generate` → `prisma migrate deploy` → `next build`, with `@netlify/plugin-nextjs`. Set `DATABASE_URL`, `DIRECT_URL`, `JWT_SECRET` in Netlify env vars.
-- Prisma generator `binaryTargets` includes `rhel-openssl-3.0.x` for Netlify serverless functions — keep it.
+### Production (Vercel + Neon)
+- Prisma `datasource` uses `url = DATABASE_URL` (Neon **pooled** endpoint, host with `-pooler`, `?sslmode=require`) and `directUrl = DIRECT_URL` (Neon **direct** endpoint, no `-pooler`) for migrations.
+- `vercel.json` build command: `prisma generate && prisma migrate deploy && next build`. Set `DATABASE_URL`, `DIRECT_URL`, `JWT_SECRET` in Vercel env vars **before** the first deploy (the build runs migrations).
+- Prisma generator `binaryTargets` includes `rhel-openssl-1.0.x` and `rhel-openssl-3.0.x` for Vercel serverless functions — keep them.
+- One-time prod seeding (admin user + sample data): run `DATABASE_URL="<neon-direct-url>" DIRECT_URL="<neon-direct-url>" npm run db:seed` once.
 
 ### Gotchas
 - `npm run lint` (`next lint`) is INTERACTIVE and hangs (no committed ESLint config). Avoid in non-interactive contexts unless a config is added.
