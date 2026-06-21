@@ -16,7 +16,7 @@ import { cn } from '@/lib/utils'
  * Tant qu'aucun fichier n'est présent, on affiche proprement le mot
  * « FLOKKA » (aucun visuel cassé).
  */
-const LOGO_SOURCES = ['/brand/logo.svg', '/brand/logo.png']
+const LOGO_SOURCES = ['/brand/logo.png', '/brand/logo.svg']
 
 interface FlokkaLogoProps {
   className?: string
@@ -29,7 +29,7 @@ interface FlokkaLogoProps {
 export function FlokkaLogo({ className, href = '/', dark = true, size = 'md' }: FlokkaLogoProps) {
   const [srcIndex, setSrcIndex] = useState(0)
 
-  const heights = { sm: 34, md: 44, lg: 64 }
+  const heights = { sm: 40, md: 48, lg: 72 }
   const textSizes = { sm: 'text-lg', md: 'text-2xl', lg: 'text-4xl' }
   const h = heights[size]
   const exhausted = srcIndex >= LOGO_SOURCES.length
