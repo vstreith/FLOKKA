@@ -1,10 +1,16 @@
 generator client {
   provider = "prisma-client-js"
+  // "native" pour le dev local ; la cible rhel-openssl est requise pour les
+  // fonctions serverless Netlify (AWS Lambda / Amazon Linux, OpenSSL 3).
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  // Connexion runtime : utiliser le pooler Supabase (port 6543, pgbouncer) en production.
+  url       = env("DATABASE_URL")
+  // Connexion directe (port 5432) : utilisée pour les migrations.
+  directUrl = env("DIRECT_URL")
 }
 
 model User {
