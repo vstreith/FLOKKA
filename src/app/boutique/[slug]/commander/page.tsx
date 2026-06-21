@@ -21,7 +21,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>
 
 function CheckoutContent({ slug }: { slug: string }) {
-  const { items, total, clearCart } = useCart()
+  const { items, total, clearCart, hydrated } = useCart()
   const router = useRouter()
   const [submitted, setSubmitted] = useState(false)
   const [orderNumber, setOrderNumber] = useState('')
@@ -32,10 +32,12 @@ function CheckoutContent({ slug }: { slug: string }) {
   })
 
   useEffect(() => {
-    if (items.length === 0 && !submitted) {
+    // On attend l'hydratation du panier (localStorage) avant de rediriger,
+    // sinon on repart au shop alors que le panier n'est pas encore chargé.
+    if (hydrated && items.length === 0 && !submitted) {
       router.push(`/boutique/${slug}`)
     }
-  }, [items, submitted, slug, router])
+  }, [hydrated, items, submitted, slug, router])
 
   const onSubmit = async (data: FormData) => {
     setServerError('')
@@ -73,6 +75,14 @@ function CheckoutContent({ slug }: { slug: string }) {
         <Link href={`/boutique/${slug}`} className="bg-brand-gradient text-white font-semibold px-8 py-4 rounded-full text-sm shadow-glow hover:-translate-y-0.5 transition-all duration-300">
           Retour à la boutique
         </Link>
+      </div>
+    )
+  }
+
+  if (!hydrated) {
+    return (
+      <div className="min-h-screen flex items-center justify-center mesh-bg">
+        <div className="w-10 h-10 border-[3px] border-brand-navy border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }

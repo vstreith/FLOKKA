@@ -13,6 +13,8 @@ interface CartContextValue {
   itemCount: number
   isOpen: boolean
   setIsOpen: (open: boolean) => void
+  /** true une fois le panier chargé depuis le localStorage (évite les redirections prématurées). */
+  hydrated: boolean
 }
 
 const CartContext = createContext<CartContextValue | null>(null)
@@ -20,10 +22,30 @@ const CartContext = createContext<CartContextValue | null>(null)
 export function CartProvider({ children, slug }: { children: React.ReactNode; slug: string }) {
   const [items, setItems] = useState<CartItem[]>([])
   const [isOpen, setIsOpen] = useState(false)
+  const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
     const stored = localStorage.getItem(`flokka_cart_${slug}`)
-    if (stored) setItems(JSON.parse(stored))
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored)
+        // Nettoyage défensif : on écarte les entrées corrompues (prix/quantité invalides)
+        // afin que l'interface n'affiche jamais "NaN".
+        const clean: CartItem[] = Array.isArray(parsed)
+          ? parsed
+              .map((i: CartItem) => ({
+                ...i,
+                unitPrice: Number(i.unitPrice),
+                quantity: Math.max(1, Math.floor(Number(i.quantity) || 1)),
+              }))
+              .filter((i) => i.productId && Number.isFinite(i.unitPrice) && i.unitPrice >= 0)
+          : []
+        setItems(clean)
+      } catch {
+        setItems([])
+      }
+    }
+    setHydrated(true)
   }, [slug])
 
   const persist = useCallback(
@@ -68,12 +90,15 @@ export function CartProvider({ children, slug }: { children: React.ReactNode; sl
 
   const clearCart = () => persist([])
 
-  const total = items.reduce((sum, i) => sum + i.unitPrice * i.quantity, 0)
-  const itemCount = items.reduce((sum, i) => sum + i.quantity, 0)
+  const total = items.reduce(
+    (sum, i) => sum + (Number(i.unitPrice) || 0) * (Number(i.quantity) || 0),
+    0
+  )
+  const itemCount = items.reduce((sum, i) => sum + (Number(i.quantity) || 0), 0)
 
   return (
     <CartContext.Provider
-      value={{ items, addItem, removeItem, updateQuantity, clearCart, total, itemCount, isOpen, setIsOpen }}
+      value={{ items, addItem, removeItem, updateQuantity, clearCart, total, itemCount, isOpen, setIsOpen, hydrated }}
     >
       {children}
     </CartContext.Provider>
