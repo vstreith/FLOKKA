@@ -1,29 +1,66 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { generateOrderNumber } from '@/lib/utils'
+import { generateOrderNumber, computeEffectivePrice } from '@/lib/utils'
+
+interface IncomingItem {
+  productId: string
+  variant?: string
+  quantity: number
+  customName?: string
+  customNumber?: string
+}
 
 export async function POST(req: NextRequest, { params }: { params: { slug: string } }) {
   try {
     const { customer, items } = await req.json()
 
-    const { name, email, phone, address, notes } = customer
+    const { name, email, phone, address, notes } = customer || {}
 
-    if (!name || !email || !items?.length) {
+    if (!name || !email || !Array.isArray(items) || items.length === 0) {
       return NextResponse.json({ error: 'Données manquantes' }, { status: 400 })
     }
 
     const club = await prisma.club.findUnique({
       where: { slug: params.slug, isActive: true },
+      include: {
+        products: { include: { product: true } },
+      },
     })
 
     if (!club) return NextResponse.json({ error: 'Boutique non trouvée' }, { status: 404 })
 
-    const subtotal = items.reduce(
-      (sum: number, item: { unitPrice: number; quantity: number }) =>
-        sum + item.unitPrice * item.quantity,
-      0
+    // Index des produits réellement proposés par ce club (avec leur prix spécial éventuel).
+    const clubProductByProductId = new Map(
+      club.products
+        .filter((cp) => cp.isActive && cp.product.isActive)
+        .map((cp) => [cp.productId, cp])
     )
-    const total = subtotal
+
+    // Prix recalculés côté serveur (on ne fait jamais confiance au prix envoyé par le client).
+    const orderItems = []
+    for (const raw of items as IncomingItem[]) {
+      const cp = clubProductByProductId.get(raw.productId)
+      if (!cp) {
+        return NextResponse.json(
+          { error: 'Un produit de votre panier n\'est plus disponible.' },
+          { status: 400 }
+        )
+      }
+      const quantity = Math.max(1, Math.floor(Number(raw.quantity) || 1))
+      const unitPrice = computeEffectivePrice(cp.product.basePrice, club.margin, cp.customPrice)
+      orderItems.push({
+        productId: cp.productId,
+        productName: cp.product.name,
+        variant: raw.variant || null,
+        quantity,
+        unitPrice,
+        customName: raw.customName || null,
+        customNumber: raw.customNumber || null,
+      })
+    }
+
+    const subtotal = orderItems.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0)
+    const total = Math.round(subtotal * 100) / 100
 
     const order = await prisma.order.create({
       data: {
@@ -34,27 +71,12 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
         customerPhone: phone,
         customerAddress: address,
         notes,
-        subtotal,
+        subtotal: total,
         total,
-        items: {
-          create: items.map((item: {
-            productId: string
-            productName: string
-            variant?: string
-            quantity: number
-            unitPrice: number
-            customName?: string
-            customNumber?: string
-          }) => ({
-            productId: item.productId,
-            productName: item.productName,
-            variant: item.variant,
-            quantity: item.quantity,
-            unitPrice: item.unitPrice,
-            customName: item.customName,
-            customNumber: item.customNumber,
-          })),
-        },
+        status: 'pending',
+        // Pas de paiement en ligne : le client règle directement auprès de son club.
+        paymentStatus: 'unpaid',
+        items: { create: orderItems },
       },
       include: { items: true },
     })

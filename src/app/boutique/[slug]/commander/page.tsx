@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { ArrowLeft, CheckCircle2, ShoppingBag } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, ShoppingBag, Info } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -65,8 +65,10 @@ function CheckoutContent({ slug }: { slug: string }) {
         <p className="text-brand-gray-text mb-2">
           Votre commande <span className="font-bold text-brand-violet-dark">{orderNumber}</span> a bien été enregistrée.
         </p>
-        <p className="text-brand-gray-text mb-8 max-w-sm">
-          Vous recevrez un email de confirmation. FLOKKA vous contactera pour les détails de livraison.
+        <p className="text-brand-gray-text mb-8 max-w-md">
+          Aucun paiement n&apos;est requis sur le site : le règlement se fait directement auprès de
+          votre club. Votre club et FLOKKA reçoivent votre commande et vous recontacteront pour la
+          suite (paiement, retrait ou livraison).
         </p>
         <Link href={`/boutique/${slug}`} className="bg-brand-gradient text-white font-semibold px-8 py-4 rounded-full text-sm shadow-glow hover:-translate-y-0.5 transition-all duration-300">
           Retour à la boutique
@@ -87,7 +89,17 @@ function CheckoutContent({ slug }: { slug: string }) {
       </header>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-        <h1 className="font-display text-3xl font-extrabold text-brand-black mb-10">Commander</h1>
+        <h1 className="font-display text-3xl font-extrabold text-brand-black mb-4">Valider ma commande</h1>
+
+        <div className="mb-10 flex items-start gap-3 rounded-2xl bg-brand-gradient-soft ring-1 ring-brand-gray-dark p-4 max-w-2xl">
+          <Info size={18} className="text-brand-navy shrink-0 mt-0.5" />
+          <p className="text-sm text-brand-gray-text leading-relaxed">
+            <span className="font-semibold text-brand-black">Aucun paiement en ligne.</span>{' '}
+            Vous validez simplement votre commande ici. Le règlement se fait{' '}
+            <span className="font-semibold text-brand-black">directement auprès de votre club</span>,
+            qui vous communiquera les modalités.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
@@ -120,11 +132,11 @@ function CheckoutContent({ slug }: { slug: string }) {
             {serverError && <p className="text-red-500 text-sm">{serverError}</p>}
 
             <button type="submit" disabled={isSubmitting} className="w-full bg-brand-gradient text-white font-semibold py-4 text-sm rounded-full shadow-glow hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:translate-y-0">
-              {isSubmitting ? 'Envoi...' : `Passer la commande — ${formatPrice(total)}`}
+              {isSubmitting ? 'Envoi...' : `Valider ma commande — ${formatPrice(total)}`}
             </button>
 
             <p className="text-xs text-brand-gray-text text-center">
-              Articles produits à la demande. Paiement à la livraison ou sur devis.
+              Articles produits à la demande. Aucun paiement en ligne — règlement directement auprès de votre club.
             </p>
           </form>
 
