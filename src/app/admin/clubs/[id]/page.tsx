@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Copy, Check, Store, Package, ShoppingCart, Pencil, Plus, Trash2 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
-import { formatPrice, formatDate, ORDER_STATUS_LABELS, ORDER_STATUS_COLORS, CLUB_TYPE_LABELS } from '@/lib/utils'
+import { formatPrice, formatDate, computeEffectivePrice, ORDER_STATUS_LABELS, ORDER_STATUS_COLORS, CLUB_TYPE_LABELS } from '@/lib/utils'
 import type { Order } from '@/types'
 
 interface ClubDetail {
@@ -224,24 +224,27 @@ export default function ClubDetailPage({ params }: { params: { id: string } }) {
                 <div className="px-5 py-8 text-center text-brand-gray-text text-sm">Aucun produit assigné</div>
               ) : (
                 <div className="divide-y divide-brand-gray-dark">
-                  {club.products.map((cp) => (
+                  {club.products.map((cp) => {
+                    const clientPrice = computeEffectivePrice(cp.product.basePrice, club.margin, cp.customPrice)
+                    return (
                     <div key={cp.id} className="flex items-center gap-3 px-5 py-3">
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-semibold text-brand-black">{cp.product.name}</p>
                         <p className="text-xs text-brand-gray-text">{cp.product.category?.name}</p>
                       </div>
                       <div className="text-sm text-right">
-                        {cp.customPrice ? (
-                          <span className="font-bold text-brand-black">{formatPrice(cp.customPrice)}</span>
-                        ) : (
-                          <span className="text-brand-gray-text">{formatPrice(cp.product.basePrice)}</span>
-                        )}
+                        <p className="font-bold text-brand-black">{formatPrice(clientPrice)}</p>
+                        <p className="text-xs text-brand-gray-text">
+                          {cp.customPrice != null
+                            ? 'prix spécial'
+                            : `base ${formatPrice(cp.product.basePrice)} +${club.margin}%`}
+                        </p>
                       </div>
                       <button onClick={() => removeProduct(cp.product.id)} className="p-1.5 text-brand-gray-text hover:text-red-500 transition-colors">
                         <Trash2 size={14} />
                       </button>
                     </div>
-                  ))}
+                  )})}
                 </div>
               )}
             </div>
