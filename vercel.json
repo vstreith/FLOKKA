@@ -1,0 +1,6 @@
+{
+  "buildCommand": "prisma db push && next build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["cdg1"]
+}
