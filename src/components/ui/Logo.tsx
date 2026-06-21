@@ -5,43 +5,47 @@ import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
 /**
- * Logo FLOKKA.
+ * Logo FLOKKA — votre vrai logo (version bleu marine).
  *
- * Pour utiliser le vrai logo, déposez vos fichiers dans `public/brand/` :
- *   - `public/brand/logo.svg`        → version foncée (pour fonds clairs : header, boutiques)
- *   - `public/brand/logo-white.svg`  → version claire (pour fonds foncés : footer)
- * (Le format SVG est idéal ; un PNG transparent haute résolution fonctionne aussi —
- *  dans ce cas renommez en `logo.png` / `logo-white.png` et changez LOGO_* ci-dessous.)
+ * Déposez UN seul fichier : `public/brand/logo.svg` (idéal, vectoriel) ou
+ * `public/brand/logo.png` (PNG transparent haute résolution).
+ *  - Sur fond clair (header, boutiques) : le logo s'affiche tel quel.
+ *  - Sur fond foncé (footer) : il est automatiquement rendu en blanc
+ *    (filtre CSS), inutile de fournir une seconde version.
  *
- * Tant qu'aucun fichier n'est présent, on affiche proprement le mot « FLOKKA »
- * (aucun visuel cassé).
+ * Tant qu'aucun fichier n'est présent, on affiche proprement le mot
+ * « FLOKKA » (aucun visuel cassé).
  */
-const LOGO_LIGHT_BG = '/brand/logo.svg' // logo foncé, sur fond clair
-const LOGO_DARK_BG = '/brand/logo-white.svg' // logo clair, sur fond foncé
+const LOGO_SOURCES = ['/brand/logo.svg', '/brand/logo.png']
 
 interface FlokkaLogoProps {
   className?: string
   href?: string
-  /** true = sur fond clair (logo foncé) ; false = sur fond foncé (logo clair). */
+  /** true = sur fond clair (logo marine) ; false = sur fond foncé (logo blanchi). */
   dark?: boolean
   size?: 'sm' | 'md' | 'lg'
 }
 
 export function FlokkaLogo({ className, href = '/', dark = true, size = 'md' }: FlokkaLogoProps) {
-  const [imgOk, setImgOk] = useState(true)
+  const [srcIndex, setSrcIndex] = useState(0)
 
-  const heights = { sm: 30, md: 40, lg: 56 }
+  const heights = { sm: 34, md: 44, lg: 64 }
   const textSizes = { sm: 'text-lg', md: 'text-2xl', lg: 'text-4xl' }
   const h = heights[size]
-  const src = dark ? LOGO_LIGHT_BG : LOGO_DARK_BG
+  const exhausted = srcIndex >= LOGO_SOURCES.length
 
-  const content = imgOk ? (
+  const content = !exhausted ? (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={src}
+      src={LOGO_SOURCES[srcIndex]}
       alt="FLOKKA"
-      onError={() => setImgOk(false)}
-      style={{ height: h, width: 'auto' }}
+      onError={() => setSrcIndex((i) => i + 1)}
+      style={{
+        height: h,
+        width: 'auto',
+        // Sur fond foncé, on blanchit le logo monochrome (pas besoin d'un 2e fichier).
+        ...(dark ? {} : { filter: 'brightness(0) invert(1)' }),
+      }}
       className={cn('block w-auto object-contain', className)}
     />
   ) : (
