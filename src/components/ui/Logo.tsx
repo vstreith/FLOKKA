@@ -1,82 +1,70 @@
 'use client'
 
 import Link from 'next/link'
-import { useId } from 'react'
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
+
+/**
+ * Logo FLOKKA.
+ *
+ * Pour utiliser le vrai logo, déposez vos fichiers dans `public/brand/` :
+ *   - `public/brand/logo.svg`        → version foncée (pour fonds clairs : header, boutiques)
+ *   - `public/brand/logo-white.svg`  → version claire (pour fonds foncés : footer)
+ * (Le format SVG est idéal ; un PNG transparent haute résolution fonctionne aussi —
+ *  dans ce cas renommez en `logo.png` / `logo-white.png` et changez LOGO_* ci-dessous.)
+ *
+ * Tant qu'aucun fichier n'est présent, on affiche proprement le mot « FLOKKA »
+ * (aucun visuel cassé).
+ */
+const LOGO_LIGHT_BG = '/brand/logo.svg' // logo foncé, sur fond clair
+const LOGO_DARK_BG = '/brand/logo-white.svg' // logo clair, sur fond foncé
 
 interface FlokkaLogoProps {
   className?: string
   href?: string
+  /** true = sur fond clair (logo foncé) ; false = sur fond foncé (logo clair). */
   dark?: boolean
   size?: 'sm' | 'md' | 'lg'
-  /** Use the vibrant brand gradient for the mark + wordmark. Defaults to true. */
-  gradient?: boolean
 }
 
-export function FlokkaLogo({
-  className,
-  href = '/',
-  dark = true,
-  size = 'md',
-  gradient = true,
-}: FlokkaLogoProps) {
-  const gradId = useId()
-  const sizes = {
-    sm: { width: 32, height: 36 },
-    md: { width: 46, height: 52 },
-    lg: { width: 66, height: 74 },
-  }
-  const textSizes = {
-    sm: 'text-base',
-    md: 'text-2xl',
-    lg: 'text-4xl',
-  }
-  const s = sizes[size]
-  const solidColor = dark ? '#15243B' : '#F6F4EC'
-  // On dark backgrounds (dark=false) keep the mark solid off-white so it stays legible.
-  const fill = gradient && dark ? `url(#${gradId})` : solidColor
+export function FlokkaLogo({ className, href = '/', dark = true, size = 'md' }: FlokkaLogoProps) {
+  const [imgOk, setImgOk] = useState(true)
 
-  const logo = (
-    <div className={cn('flex flex-col items-start gap-0.5', className)}>
-      <svg
-        width={s.width}
-        height={s.height}
-        viewBox="0 0 110 120"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <defs>
-          <linearGradient id={gradId} x1="0" y1="0" x2="110" y2="120" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#1f3a5f" />
-            <stop offset="1" stopColor="#15243B" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M 0 120 L 0 0 L 110 0 L 110 42 A 37.5 30 0 0 0 35 42 L 35 78 L 78 78 L 78 98 L 35 98 L 35 120 Z"
-          fill={fill}
-        />
-      </svg>
-      <span
-        className={cn(
-          textSizes[size],
-          'font-display font-extrabold uppercase leading-none',
-          gradient && dark ? 'text-gradient' : dark ? 'text-brand-black' : 'text-brand-white',
-        )}
-        style={{ letterSpacing: '0.22em' }}
-      >
-        FLOKKA
-      </span>
-    </div>
+  const heights = { sm: 30, md: 40, lg: 56 }
+  const textSizes = { sm: 'text-lg', md: 'text-2xl', lg: 'text-4xl' }
+  const h = heights[size]
+  const src = dark ? LOGO_LIGHT_BG : LOGO_DARK_BG
+
+  const content = imgOk ? (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt="FLOKKA"
+      onError={() => setImgOk(false)}
+      style={{ height: h, width: 'auto' }}
+      className={cn('block w-auto object-contain', className)}
+    />
+  ) : (
+    <span
+      className={cn(
+        textSizes[size],
+        'font-display font-extrabold uppercase leading-none',
+        dark ? 'text-brand-black' : 'text-brand-white',
+        className,
+      )}
+      style={{ letterSpacing: '0.22em' }}
+    >
+      FLOKKA
+    </span>
   )
 
   if (href) {
     return (
-      <Link href={href} aria-label="FLOKKA — Accueil">
-        {logo}
+      <Link href={href} aria-label="FLOKKA — Accueil" className="inline-flex items-center">
+        {content}
       </Link>
     )
   }
 
-  return logo
+  return content
 }
