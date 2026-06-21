@@ -7,11 +7,11 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  // Connexion runtime : utiliser le pooler Supabase (port 6543, pgbouncer) en production.
-  url       = env("DATABASE_URL")
-  // Connexion directe (port 5432) : utilisée pour les migrations.
-  directUrl = env("DIRECT_URL")
+  provider = "postgresql"
+  // Une seule chaîne de connexion suffit (endpoint Neon direct, non-pooler).
+  // Si vous passez plus tard au pooler Neon pour le runtime, réintroduisez
+  // `directUrl = env("DIRECT_URL")` (endpoint direct) pour les migrations.
+  url      = env("DATABASE_URL")
 }
 
 model User {

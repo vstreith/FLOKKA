@@ -30,10 +30,10 @@ FLOKKA is a French e-commerce platform for custom-printed textile (sports clubs 
 - No online payment. Orders are created as `pending`/`unpaid`; the customer pays their club directly. The order API (`/api/shop/[slug]/order`) **recomputes prices server-side** — never trust client-sent prices.
 
 ### Production (Vercel + Neon)
-- Prisma `datasource` uses `url = DATABASE_URL` (Neon **pooled** endpoint, host with `-pooler`, `?sslmode=require`) and `directUrl = DIRECT_URL` (Neon **direct** endpoint, no `-pooler`) for migrations.
-- `vercel.json` build command: `prisma generate && prisma migrate deploy && next build`. Set `DATABASE_URL`, `DIRECT_URL`, `JWT_SECRET` in Vercel env vars **before** the first deploy (the build runs migrations).
+- Prisma `datasource` uses a single `url = DATABASE_URL`. Use Neon's **direct** endpoint (host without `-pooler`) + `?sslmode=require`, so migrations work directly. (For the pooled endpoint, re-add `directUrl = env("DIRECT_URL")` pointing at the direct endpoint.)
+- `vercel.json` build command: `prisma generate && prisma migrate deploy && next build`. Set `DATABASE_URL` and `JWT_SECRET` in Vercel env vars **before** the first deploy (the build runs migrations).
 - Prisma generator `binaryTargets` includes `rhel-openssl-1.0.x` and `rhel-openssl-3.0.x` for Vercel serverless functions — keep them.
-- One-time prod seeding (admin user + sample data): run `DATABASE_URL="<neon-direct-url>" DIRECT_URL="<neon-direct-url>" npm run db:seed` once.
+- The Neon DB has already been provisioned (migration applied) and seeded once (admin `admin@flokka.fr`). Re-seed only if reset: `DATABASE_URL="<neon-direct-url>" npm run db:seed`.
 
 ### Gotchas
 - `npm run lint` (`next lint`) is INTERACTIVE and hangs (no committed ESLint config). Avoid in non-interactive contexts unless a config is added.
