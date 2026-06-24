@@ -62,7 +62,7 @@ export function Header() {
               className="hidden md:inline-flex items-center gap-2 bg-brand-gradient text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-soft hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300"
             >
               <Store size={14} />
-              Boutique privée
+              Espace réassort
             </Link>
             <button
               className="md:hidden p-2 rounded-full hover:bg-white/60 transition-colors"
@@ -98,7 +98,7 @@ export function Header() {
               className="inline-flex items-center justify-center gap-2 bg-brand-gradient text-white text-sm font-semibold px-4 py-3 mt-2 rounded-full shadow-soft"
             >
               <Store size={14} />
-              Boutique privée
+              Espace réassort
             </Link>
           </div>
         </div>
