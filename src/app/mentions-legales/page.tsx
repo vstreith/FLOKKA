@@ -1,7 +1,13 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata = { title: 'Mentions légales & CGV' }
+export const metadata = pageMetadata({
+  title: 'Mentions légales & CGV',
+  description:
+    "Mentions légales et conditions générales de vente de FLOKKA, atelier de personnalisation textile à Andlau (Bas-Rhin).",
+  path: '/mentions-legales',
+})
 
 export default function MentionsLegalesPage() {
   return (

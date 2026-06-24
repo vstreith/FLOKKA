@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, MapPin, Heart, Shield, Zap } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { pageMetadata } from '@/lib/seo'
 
 const values = [
   {
@@ -30,7 +31,13 @@ const values = [
   },
 ]
 
-export const metadata = { title: 'À propos' }
+export const metadata = pageMetadata({
+  title: 'À propos de FLOKKA, atelier textile à Andlau (Alsace)',
+  description:
+    "FLOKKA est un atelier de personnalisation textile à Andlau, dans le Bas-Rhin. Notre histoire, nos valeurs et notre engagement local au service des clubs et associations d'Alsace.",
+  path: '/a-propos',
+  keywords: ['FLOKKA', 'atelier textile Andlau', 'personnalisation textile Alsace', 'à propos'],
+})
 
 export default function AboutPage() {
   return (

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, Shirt, Tag, Store, Building2, Trophy, Gift } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { pageMetadata } from '@/lib/seo'
 
 const services = [
   {
@@ -42,7 +43,13 @@ const services = [
   },
 ]
 
-export const metadata = { title: 'Services' }
+export const metadata = pageMetadata({
+  title: 'Services de personnalisation textile pour clubs et associations',
+  description:
+    "Flocage, impression, broderie, boutiques privées et packs clubs : découvrez les services de personnalisation textile FLOKKA pour clubs sportifs et associations, à l'unité, en Alsace.",
+  path: '/services',
+  keywords: ['services personnalisation textile', 'flocage', 'broderie', 'pack club', 'boutique privée'],
+})
 
 export default function ServicesPage() {
   return (

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, Trophy, Building2, Users } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { pageMetadata } from '@/lib/seo'
 
 const partners = [
   { name: 'Badminton Club de Barr', type: 'Club sportif', icon: Trophy, gradient: 'from-brand-navy to-brand-black' },
@@ -12,7 +13,13 @@ const partners = [
   { name: 'Menuiserie Schmitt', type: 'Petite entreprise', icon: Building2, gradient: 'from-brand-navy to-brand-black' },
 ]
 
-export const metadata = { title: 'Partenaires' }
+export const metadata = pageMetadata({
+  title: 'Partenaires — clubs et associations qui nous font confiance',
+  description:
+    "Découvrez les clubs sportifs et associations d'Alsace qui ont créé leur boutique textile privée avec FLOKKA. Rejoignez les structures locales qui nous font confiance.",
+  path: '/partenaires',
+  keywords: ['partenaires FLOKKA', 'clubs partenaires', 'associations partenaires Alsace'],
+})
 
 export default function PartnersPage() {
   return (
