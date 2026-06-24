@@ -1,0 +1,18 @@
+/**
+ * Injecte un bloc JSON-LD (schema.org) dans la page.
+ * Accepte un objet ou un tableau d'objets schema.
+ */
+export function JsonLd({ data }: { data: object | object[] }) {
+  const json = Array.isArray(data) ? data : [data]
+  return (
+    <>
+      {json.map((item, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
+        />
+      ))}
+    </>
+  )
+}

@@ -6,13 +6,7 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, Store } from 'lucide-react'
 import { FlokkaLogo } from '@/components/ui/Logo'
 import { cn } from '@/lib/utils'
-
-const navLinks = [
-  { href: '/a-propos', label: 'À propos' },
-  { href: '/services', label: 'Services' },
-  { href: '/partenaires', label: 'Partenaires' },
-  { href: '/contact', label: 'Contact' },
-]
+import { MAIN_NAV as navLinks } from '@/lib/navigation'
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
