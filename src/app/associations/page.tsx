@@ -18,16 +18,16 @@ import { pageMetadata, webPageSchema } from '@/lib/seo'
 const PATH = '/associations'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Boutique textile pour association | Vêtements personnalisés',
+  title: 'Textile personnalisé pour association | Vêtements floqués',
   description:
-    "Créez la boutique textile privée de votre association : vêtements personnalisés pour bénévoles et événements, marge reversée à la structure, sans stock ni avance. Fabrication en Alsace.",
+    "Personnalisation textile pour votre association en Centre Alsace : vêtements pour bénévoles et événements, dès une pièce, avec réassort à la demande sans stock. Marge reversée possible.",
   path: PATH,
   keywords: [
-    'boutique association',
-    'vêtements personnalisés association',
     'textile personnalisé association',
+    'vêtements personnalisés association',
+    'flocage association',
     'financement association textile',
-    'boutique privée association',
+    'réassort textile association',
   ],
 })
 
@@ -45,12 +45,12 @@ const faq = [
   {
     question: 'Quels textiles pour une association ?',
     answer:
-      'T-shirts pour vos événements, sweats et polos pour les bénévoles et le bureau, accessoires personnalisés : la boutique s\'adapte à vos besoins et à vos couleurs.',
+      'T-shirts pour vos événements, sweats et polos pour les bénévoles et le bureau, accessoires personnalisés : on adapte la sélection à vos besoins et à vos couleurs.',
   },
   {
-    question: 'Comment les adhérents accèdent-ils à la boutique ?',
+    question: 'Comment les adhérents commandent-ils ?',
     answer:
-      "Nous créons une boutique privée avec un code d'accès que vous diffusez à vos adhérents. Chacun commande de façon autonome et reçoit sa commande chez lui.",
+      "Nous mettons en place un espace dédié avec un code d'accès que vous diffusez à vos adhérents. Chacun commande de façon autonome, en réassort à la demande.",
   },
 ]
 
@@ -63,15 +63,15 @@ export default function AssociationsPage() {
     <MarketingLayout>
       <JsonLd
         data={webPageSchema({
-          title: 'Boutique textile pour association | FLOKKA',
+          title: 'Textile personnalisé pour association | FLOKKA',
           description:
-            "Boutique privée et vêtements personnalisés pour associations. Marge reversée, sans stock.",
+            "Vêtements personnalisés pour associations, dès une pièce, avec réassort à la demande. Marge reversée possible.",
           path: PATH,
         })}
       />
       <PageHero
         eyebrow="Associations"
-        title="La boutique textile de votre association"
+        title="Textile personnalisé pour votre association"
         breadcrumbs={crumbs}
         intro={
           <>
@@ -80,7 +80,7 @@ export default function AssociationsPage() {
             gérer. Le textile au service de votre projet associatif.
           </>
         }
-        primary={{ label: 'Créer la boutique de mon association', href: '/contact' }}
+        primary={{ label: 'Demander un devis', href: '/contact' }}
         secondary={{ label: 'Comprendre le modèle sans stock', href: '/blog/eviter-stocks-association-textile' }}
       />
 
@@ -93,9 +93,10 @@ export default function AssociationsPage() {
             groupées, avancer l&apos;argent et stocker les invendus décourage beaucoup de structures.
           </p>
           <p>
-            Avec une <strong>boutique association</strong> FLOKKA, ces freins disparaissent. Vous
-            disposez d&apos;une boutique en ligne à vos couleurs, vos adhérents commandent
-            eux-mêmes, et vous pouvez reverser une marge à l&apos;association sur chaque vente.
+            Avec FLOKKA, ces freins disparaissent. Vous disposez d&apos;un{' '}
+            <strong>espace dédié</strong> à vos couleurs, accessible par code : vos adhérents
+            commandent eux-mêmes en réassort à la demande, et vous pouvez reverser une marge à
+            l&apos;association sur chaque vente.
           </p>
         </Prose>
       </Section>
@@ -108,15 +109,15 @@ export default function AssociationsPage() {
             { icon: Palette, title: 'À vos couleurs', description: 'Textiles personnalisés pour bénévoles et événements.' },
             { icon: Repeat, title: "Réassort à l'unité", description: 'Une pièce à la fois, à tout moment.' },
             { icon: HeartHandshake, title: 'Fédérateur', description: 'Une identité commune qui rassemble vos membres.' },
-            { icon: MapPin, title: 'Local', description: "Fabrication en Alsace, interlocuteur unique." },
+            { icon: MapPin, title: 'Local', description: "Atelier en Centre Alsace, interlocuteur unique." },
           ]}
         />
       </Section>
 
-      <Section eyebrow="En pratique" title="Lancer la boutique de votre association">
+      <Section eyebrow="En pratique" title="Équiper votre association, étape par étape">
         <StepList
           steps={[
-            { title: 'Création de la boutique', description: "À vos couleurs, avec votre logo et un code d'accès adhérents." },
+            { title: "Mise en place de l'espace", description: "À vos couleurs, avec votre logo et un code d'accès adhérents." },
             { title: 'Diffusion aux adhérents', description: 'Vous partagez le code par e-mail ou sur vos réseaux.' },
             { title: 'Commande & financement', description: 'Chacun commande, et votre marge alimente le budget de l\'association.' },
           ]}
@@ -137,7 +138,7 @@ export default function AssociationsPage() {
 
       <RelatedLinks
         links={[
-          { title: 'Financer son association avec le textile', description: 'La méthode pour transformer une boutique en source de revenu.', href: '/blog/financer-association-boutique-textile' },
+          { title: 'Financer son association avec le textile', description: 'La méthode pour transformer le textile en source de revenu.', href: '/blog/financer-association-boutique-textile' },
           { title: 'Éviter les stocks dans une association', description: 'Pourquoi et comment supprimer totalement le stock textile.', href: '/blog/eviter-stocks-association-textile' },
           { title: 'Solutions pour clubs sportifs', description: 'Le même modèle, décliné pour les clubs de sport.', href: '/clubs-sportifs' },
         ]}
@@ -145,8 +146,8 @@ export default function AssociationsPage() {
 
       <CTASection
         title="Donnez une identité textile à votre association"
-        text="On crée votre boutique privée, gratuitement et sans engagement."
-        primary={{ label: 'Créer ma boutique association', href: '/contact' }}
+        text="On personnalise vos textiles et on met en place votre espace, sans engagement."
+        primary={{ label: 'Demander un devis', href: '/contact' }}
         secondary={{ label: 'Voir nos services', href: '/services' }}
       />
     </MarketingLayout>

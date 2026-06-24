@@ -55,11 +55,11 @@ export default function BoutiquePriveePage() {
                 <Lock size={24} className="text-white" />
               </div>
               <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-black mb-3">
-                Accès <span className="text-gradient">boutique privée</span>
+                Mon <span className="text-gradient">espace réassort</span>
               </h1>
               <p className="text-brand-gray-text">
-                Entrez le code unique fourni par votre club, association ou structure pour accéder à
-                votre boutique dédiée.
+                Entrez le code de votre structure pour accéder à votre espace dédié et recommander
+                votre textile personnalisé en réassort à la demande.
               </p>
             </div>
 
@@ -80,7 +80,7 @@ export default function BoutiquePriveePage() {
                 disabled={loading || !code.trim()}
                 className="w-full bg-brand-gradient text-white font-semibold py-4 text-sm rounded-full shadow-glow hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:translate-y-0 flex items-center justify-center gap-2"
               >
-                {loading ? 'Vérification...' : 'Accéder à la boutique'}
+                {loading ? 'Vérification...' : 'Accéder à mon espace'}
                 {!loading && <ArrowRight size={16} />}
               </button>
             </form>
@@ -90,12 +90,12 @@ export default function BoutiquePriveePage() {
               <Link href="/contact" className="font-semibold text-brand-violet-dark hover:underline">
                 Contactez-nous
               </Link>{' '}
-              pour créer la boutique de votre structure.
+              pour mettre en place votre espace de réassort.
             </p>
 
             <div className="mt-8 pt-6 border-t border-brand-gray-dark text-center">
               <p className="text-xs text-brand-gray-text">
-                FLOKKA · Boutiques réservées aux structures partenaires.
+                FLOKKA · Espace réservé aux clients de l&apos;atelier.
               </p>
             </div>
           </div>

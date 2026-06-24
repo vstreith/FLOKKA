@@ -12,126 +12,84 @@ export interface LocalArea {
 }
 
 /**
- * Pages SEO locales. Chaque entrée a un contenu 100 % unique
- * (aucune duplication de texte d'une ville à l'autre).
+ * Pages SEO locales — Centre Alsace uniquement.
+ * Positionnement : atelier de personnalisation textile (flocage, marquage,
+ * broderie), sans minimum de commande, avec espace de réassort à la demande.
+ * Contenu 100 % unique par commune.
  */
 export const LOCAL_AREAS: LocalArea[] = [
   {
-    slug: '/textile-personnalise-strasbourg',
-    city: 'Strasbourg',
-    label: 'Textile personnalisé à Strasbourg',
-    title: 'Textile personnalisé à Strasbourg pour clubs et associations',
+    slug: '/textile-personnalise-selestat',
+    city: 'Sélestat',
+    label: 'Personnalisation textile à Sélestat',
+    title: 'Personnalisation textile à Sélestat (flocage, broderie)',
     description:
-      "Boutique textile privée et flocage pour les clubs et associations de Strasbourg et de l'Eurométropole. Réassort à l'unité, fabrication locale en Alsace, livraison incluse.",
+      "Atelier de personnalisation textile proche de Sélestat : flocage, marquage et broderie sans minimum, dès une pièce. Espace de réassort à la demande, sans stock. Centre Alsace.",
     keywords: [
-      'textile personnalisé Strasbourg',
-      'flocage Strasbourg',
-      'boutique club sportif Strasbourg',
-      'vêtements personnalisés association Strasbourg',
+      'personnalisation textile Sélestat',
+      'flocage Sélestat',
+      'broderie Sélestat',
+      'textile personnalisé Sélestat',
     ],
-    h1: 'Textile personnalisé à Strasbourg pour clubs et associations',
-    lead: "Strasbourg concentre des centaines de clubs sportifs, d'amicales et d'associations de quartier. FLOKKA équipe ces structures de l'Eurométropole avec des boutiques textiles privées et un flocage soigné, sans qu'elles aient à gérer le moindre stock.",
+    h1: 'Personnalisation textile à Sélestat',
+    lead: "Au cœur du Centre Alsace, Sélestat est l'une des communes que nous servons en priorité. FLOKKA y personnalise vos textiles — flocage, impression, broderie — dès une seule pièce, sans minimum de commande.",
     sections: [
       {
-        h2: 'Une boutique privée pour chaque structure strasbourgeoise',
+        h2: 'Flocage, marquage et broderie pour les Sélestadiens',
         paragraphs: [
-          "Que vous fassiez vivre un club de handball à la Robertsau, une association culturelle à la Krutenau ou une amicale sportive à Hautepierre, votre structure mérite une boutique en ligne à son nom. Nous la créons avec vos couleurs, votre logo et un code d'accès réservé à vos membres.",
-          "Chaque membre commande son maillot, son sweat ou son polo quand il le souhaite, à sa taille, avec son nom et son numéro. Vous ne portez aucune trésorerie : il n'y a pas de commande groupée à avancer, pas de cartons à stocker dans le local du club.",
+          "Particuliers, commerces, clubs et associations de Sélestat : nous personnalisons vos t-shirts, sweats, polos, maillots et accessoires avec un rendu soigné. Que vous ayez besoin d'une pièce unique ou d'une petite série, c'est possible.",
+          "Notre atelier d'Andlau est tout proche, ce qui facilite les échanges, la validation des maquettes et les délais.",
         ],
       },
       {
-        h2: 'Flocage et marquage textile pour Strasbourg et son agglomération',
+        h2: 'Un réassort à la demande, sans stock à gérer',
         paragraphs: [
-          "Notre atelier d'Andlau se trouve à une trentaine de minutes de Strasbourg. Nous réalisons le flocage, l'impression et la broderie de t-shirts, sweats, vestes et maillots pour les équipes et les bénévoles de toute l'Eurométropole.",
-          "Les commandes sont produites à l'unité puis expédiées directement, ce qui évite les déplacements et les remises en main propre fastidieuses pour un club déjà bien occupé.",
+          "Pour les structures qui commandent régulièrement, nous mettons en place un espace dédié accessible par code. Vous y retrouvez vos produits personnalisés et recommandez à l'unité, quand vous le souhaitez.",
+          "Plus besoin d'immobiliser du textile « au cas où » : vous commandez juste ce qu'il faut, au moment où il le faut.",
         ],
       },
     ],
     faq: [
       {
-        question: 'Livrez-vous les clubs et associations de Strasbourg ?',
+        question: 'Quel est le minimum de commande pour Sélestat ?',
         answer:
-          "Oui. Chaque commande passée sur votre boutique privée est floquée dans notre atelier d'Andlau puis livrée partout dans l'Eurométropole de Strasbourg et dans toute la France.",
+          "Aucun. Nous personnalisons dès une seule pièce, pour les particuliers comme pour les structures de Sélestat et des environs.",
       },
       {
-        question: 'Faut-il commander en grande quantité pour un club strasbourgeois ?',
+        question: 'Proposez-vous le réassort à la demande à Sélestat ?',
         answer:
-          "Non. Le réassort à l'unité est notre principe : un seul membre peut commander un seul article, à tout moment, sans minimum de commande.",
-      },
-    ],
-  },
-  {
-    slug: '/textile-personnalise-colmar',
-    city: 'Colmar',
-    label: 'Textile personnalisé à Colmar',
-    title: 'Textile personnalisé à Colmar pour clubs et associations',
-    description:
-      "Vêtements personnalisés et flocage pour les clubs sportifs et associations de Colmar et du Haut-Rhin. Boutique privée en ligne, réassort à l'unité, production alsacienne.",
-    keywords: [
-      'textile personnalisé Colmar',
-      'flocage Colmar',
-      'boutique association Colmar',
-      'vêtements personnalisés club Colmar',
-    ],
-    h1: 'Textile personnalisé à Colmar pour clubs et associations',
-    lead: "Capitale des vins d'Alsace, Colmar et le centre du Haut-Rhin comptent un tissu associatif dense : clubs sportifs, confréries, comités des fêtes et associations de quartier. FLOKKA leur fournit un textile personnalisé de qualité, géré sans stock grâce à la boutique privée.",
-    sections: [
-      {
-        h2: 'Habiller les clubs et associations colmariens sans contrainte',
-        paragraphs: [
-          "À Colmar, beaucoup de structures renoncent au textile personnalisé par peur de la logistique : avancer l'argent, collecter les tailles, redistribuer les commandes. Notre modèle supprime ces freins. Votre boutique en ligne centralise tout, chacun commande pour lui-même et reçoit sa pièce.",
-          "Nous adaptons les produits à votre identité : maillots à vos couleurs, sweats à capuche pour les bénévoles, polos pour le bureau de l'association ou textiles événementiels pour vos manifestations.",
-        ],
-      },
-      {
-        h2: 'Une production alsacienne au service du Haut-Rhin',
-        paragraphs: [
-          "Même si notre atelier est situé à Andlau, dans le Bas-Rhin, nous travaillons quotidiennement avec des structures du Haut-Rhin. La proximité reste réelle et l'expédition rapide vers Colmar et ses environs.",
-          "Vous bénéficiez d'un interlocuteur unique, de finitions soignées et de délais maîtrisés, du premier maillot au réassort de dernière minute avant un tournoi.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: 'FLOKKA travaille-t-il avec le Haut-Rhin et Colmar ?',
-        answer:
-          "Oui. Notre atelier est dans le Bas-Rhin mais nous équipons des clubs et associations dans tout le Grand Est, dont Colmar et le Haut-Rhin, avec livraison partout en France.",
-      },
-      {
-        question: 'Peut-on personnaliser des textiles pour un événement à Colmar ?',
-        answer:
-          "Absolument. Nous produisons des t-shirts et accessoires personnalisés pour les manifestations, marchés et événements associatifs colmariens, à l'unité ou en petite série.",
+          "Oui. Les clients réguliers disposent d'un espace dédié par code pour recommander leurs produits à l'unité, sans stock.",
       },
     ],
   },
   {
     slug: '/textile-personnalise-obernai',
     city: 'Obernai',
-    label: 'Textile personnalisé à Obernai',
-    title: 'Textile personnalisé à Obernai pour clubs et associations',
+    label: 'Personnalisation textile à Obernai',
+    title: 'Personnalisation textile à Obernai (flocage, broderie)',
     description:
-      "Flocage et boutique textile privée pour les clubs et associations d'Obernai et du piémont des Vosges. Réassort à l'unité, atelier local à quelques minutes, fabrication soignée.",
+      "Atelier de personnalisation textile près d'Obernai : flocage, marquage et broderie sans minimum, dès une pièce. Espace de réassort à la demande. Proximité Centre Alsace.",
     keywords: [
-      'textile personnalisé Obernai',
+      'personnalisation textile Obernai',
       'flocage Obernai',
-      'boutique club sportif Obernai',
-      'vêtements personnalisés association Obernai',
+      'broderie Obernai',
+      'textile personnalisé Obernai',
     ],
-    h1: 'Textile personnalisé à Obernai pour clubs et associations',
-    lead: "Obernai est notre voisine directe : quelques minutes seulement séparent notre atelier d'Andlau de la cité de Sainte-Odile. Cette proximité fait de FLOKKA un partenaire textile naturel pour les clubs, écoles de sport et associations du secteur.",
+    h1: 'Personnalisation textile à Obernai',
+    lead: "Obernai est l'une de nos voisines directes : quelques minutes séparent notre atelier d'Andlau de la cité de Sainte-Odile. Nous y personnalisons vos textiles dès une pièce, sans minimum.",
     sections: [
       {
         h2: 'Le partenaire textile de proximité à Obernai',
         paragraphs: [
-          "Être à côté change tout : échanges rapides, validation des maquettes sans délai, réactivité avant un match ou une manifestation. Les clubs d'Obernai et des communes alentour profitent d'un atelier réellement local.",
-          "Nous créons la boutique privée de votre structure, vous diffusez le code à vos membres, et chacun commande son textile floqué à son nom. Aucune avance de trésorerie, aucun stock à entreposer.",
+          "Être à côté change tout : échanges rapides, validation des visuels sans délai, réactivité avant un événement. Particuliers, commerces, clubs et associations d'Obernai profitent d'un atelier réellement local.",
+          "Nous réalisons flocage, impression et broderie sur une large gamme de supports, à l'unité comme en petite série.",
         ],
       },
       {
-        h2: "Du club de sport à l'amicale de village",
+        h2: 'Réassort à la demande pour les habitués',
         paragraphs: [
-          "Handball, football, gymnastique, cyclisme, mais aussi comités des fêtes et associations patrimoniales : nous habillons toutes les structures qui font vivre Obernai et le piémont des Vosges.",
-          "Chaque pièce est produite à l'unité, ce qui permet d'intégrer un nouveau licencié en cours de saison sans relancer une commande groupée.",
+          "Vous commandez régulièrement ? Nous créons votre espace dédié, accessible par code, où vos produits sont enregistrés. Vous recommandez à la demande, sans gérer de stock.",
+          "C'est la solution idéale pour renouveler un textile au fil de l'eau, sans surcommander.",
         ],
       },
     ],
@@ -139,56 +97,100 @@ export const LOCAL_AREAS: LocalArea[] = [
       {
         question: "FLOKKA est-il proche d'Obernai ?",
         answer:
-          "Oui, notre atelier se situe à Andlau, à quelques minutes d'Obernai. C'est l'une des zones que nous servons le plus rapidement.",
+          "Oui, notre atelier est à Andlau, à quelques minutes d'Obernai. C'est l'une des communes que nous servons le plus rapidement.",
       },
       {
-        question: 'Peut-on ajouter un membre en cours de saison ?',
+        question: 'Peut-on commander une seule pièce à Obernai ?',
         answer:
-          "Bien sûr. Avec le réassort à l'unité, un nouveau licencié commande son textile quand il arrive, sans attendre une commande collective.",
+          "Oui. Nous n'imposons aucun minimum de commande : une pièce suffit.",
       },
     ],
   },
   {
-    slug: '/textile-personnalise-selestat',
-    city: 'Sélestat',
-    label: 'Textile personnalisé à Sélestat',
-    title: 'Textile personnalisé à Sélestat pour clubs et associations',
+    slug: '/textile-personnalise-barr',
+    city: 'Barr',
+    label: 'Personnalisation textile à Barr',
+    title: 'Personnalisation textile à Barr (flocage, broderie)',
     description:
-      "Vêtements personnalisés et flocage pour les clubs et associations de Sélestat et du centre Alsace. Boutique privée en ligne, réassort à l'unité, fabrication locale.",
+      "Atelier de personnalisation textile à côté de Barr : flocage, marquage et broderie sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
     keywords: [
-      'textile personnalisé Sélestat',
-      'flocage Sélestat',
-      'boutique association Sélestat',
-      'vêtements personnalisés club Sélestat',
+      'personnalisation textile Barr',
+      'flocage Barr',
+      'broderie Barr',
+      'textile personnalisé Barr',
     ],
-    h1: 'Textile personnalisé à Sélestat pour clubs et associations',
-    lead: "Au cœur du centre Alsace, Sélestat rayonne sur de nombreuses communes et un riche réseau associatif. FLOKKA accompagne ces structures avec un textile personnalisé sans stock, pensé pour les bénévoles.",
+    h1: 'Personnalisation textile à Barr',
+    lead: "Barr est notre commune voisine immédiate, sur la route des vins. FLOKKA y propose la personnalisation textile de proximité : flocage, marquage et broderie, dès une seule pièce.",
     sections: [
       {
-        h2: 'Une solution textile pensée pour le centre Alsace',
+        h2: 'Un atelier textile à deux pas de Barr',
         paragraphs: [
-          "Entre Strasbourg et Colmar, Sélestat occupe une position centrale qui en fait un pôle associatif important. Les clubs y manquent souvent de temps et de trésorerie pour gérer du textile : c'est précisément ce que FLOKKA simplifie.",
-          "Votre boutique privée regroupe vos produits et vos couleurs. Chaque membre s'y connecte avec un code, commande sa pièce personnalisée et la reçoit chez lui. Le bureau de l'association ne gère plus rien.",
+          "La proximité avec Barr nous permet d'être particulièrement réactifs : conseil direct, maquettes validées rapidement et délais courts. Nous personnalisons t-shirts, sweats, polos, maillots et accessoires.",
+          "Que vous soyez un particulier, un commerce, un club ou une association de Barr, vous commandez au juste besoin, sans quantité imposée.",
         ],
       },
       {
-        h2: 'Flocage, impression et broderie à la demande',
+        h2: 'Réassort à la demande, sans immobiliser de stock',
         paragraphs: [
-          "Nous floquons noms, numéros et logos sur une large gamme de textiles : maillots, sweats, polos, vestes et accessoires. La production à l'unité évite tout surstock et toute perte.",
-          "Depuis notre atelier d'Andlau, l'expédition vers Sélestat et les communes du centre Alsace est rapide et sans contrainte pour vos bénévoles.",
+          "Pour les clients réguliers, un espace dédié par code regroupe vos produits personnalisés. Vous recommandez à l'unité quand vous voulez.",
+          "Vous évitez ainsi de stocker du textile inutilement et ne payez que ce que vous commandez réellement.",
         ],
       },
     ],
     faq: [
       {
-        question: 'Desservez-vous le centre Alsace et Sélestat ?',
+        question: 'Êtes-vous proches de Barr ?',
         answer:
-          "Oui. Sélestat fait partie de notre zone de proximité en Alsace. Les commandes sont produites à Andlau puis livrées partout en France.",
+          "Oui. Notre atelier d'Andlau est juste à côté de Barr : c'est l'une de nos zones de proximité immédiate en Centre Alsace.",
       },
       {
-        question: 'Quel est le minimum de commande pour une association de Sélestat ?',
+        question: 'Y a-t-il un minimum de commande à Barr ?',
         answer:
-          "Il n'y a pas de minimum. Le réassort à l'unité permet de commander une seule pièce à la fois.",
+          "Non, aucun minimum. Nous personnalisons dès une pièce.",
+      },
+    ],
+  },
+  {
+    slug: '/textile-personnalise-erstein',
+    city: 'Erstein',
+    label: 'Personnalisation textile à Erstein',
+    title: 'Personnalisation textile à Erstein (flocage, broderie)',
+    description:
+      "Atelier de personnalisation textile pour Erstein et ses environs : flocage, marquage et broderie sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
+    keywords: [
+      'personnalisation textile Erstein',
+      'flocage Erstein',
+      'broderie Erstein',
+      'textile personnalisé Erstein',
+    ],
+    h1: 'Personnalisation textile à Erstein',
+    lead: "Au nord du Centre Alsace, Erstein et son bassin de vie font partie des secteurs que nous accompagnons. FLOKKA y personnalise vos textiles dès une pièce, sans minimum de commande.",
+    sections: [
+      {
+        h2: 'Flocage, impression et broderie pour Erstein',
+        paragraphs: [
+          "Nous habillons particuliers, commerces, clubs et associations d'Erstein avec un textile personnalisé de qualité : noms, numéros, prénoms, logos et visuels, sur le support de votre choix.",
+          "La production se fait dans notre atelier d'Andlau, en Centre Alsace, avec un interlocuteur unique pour votre projet.",
+        ],
+      },
+      {
+        h2: 'Commandez à la demande, sans stock',
+        paragraphs: [
+          "Notre espace client dédié permet aux structures d'Erstein de recommander leurs produits personnalisés à l'unité, via un simple code, sans repasser par un devis.",
+          "Idéal pour renouveler progressivement, sans avancer de stock ni gérer d'invendus.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Desservez-vous Erstein ?',
+        answer:
+          "Oui, Erstein fait partie de notre secteur en Centre Alsace. La production a lieu à Andlau.",
+      },
+      {
+        question: 'Peut-on faire personnaliser une seule pièce à Erstein ?',
+        answer:
+          "Oui. Aucun minimum de commande : une pièce suffit.",
       },
     ],
   },
@@ -196,43 +198,43 @@ export const LOCAL_AREAS: LocalArea[] = [
     slug: '/flocage-textile-bas-rhin',
     city: 'Bas-Rhin',
     label: 'Flocage textile dans le Bas-Rhin',
-    title: 'Flocage textile dans le Bas-Rhin (67) — clubs & associations',
+    title: 'Flocage textile dans le Bas-Rhin (Centre Alsace, 67)',
     description:
-      "Atelier de flocage textile dans le Bas-Rhin. Marquage de maillots, sweats et polos pour clubs sportifs et associations, à l'unité, avec boutique privée et fabrication locale à Andlau.",
+      "Atelier de flocage textile à Andlau, en Centre Alsace (Bas-Rhin). Marquage et broderie de t-shirts, sweats, maillots et polos, sans minimum, dès une pièce. Réassort à la demande.",
     keywords: [
       'flocage textile Bas-Rhin',
       'flocage 67',
       'marquage textile Bas-Rhin',
-      'textile personnalisé Bas-Rhin',
+      'personnalisation textile Centre Alsace',
     ],
-    h1: 'Flocage textile dans le Bas-Rhin (67)',
-    lead: "Notre atelier est implanté à Andlau, en plein cœur du Bas-Rhin. Nous y réalisons le flocage et le marquage textile des clubs sportifs et des associations du département, avec un modèle sans stock et un réassort à l'unité.",
+    h1: 'Flocage textile dans le Bas-Rhin (Centre Alsace)',
+    lead: "Notre atelier est implanté à Andlau, en Centre Alsace, dans le Bas-Rhin. Nous y réalisons le flocage et le marquage textile, sans minimum de commande et avec réassort à la demande.",
     sections: [
       {
-        h2: 'Le flocage textile au plus près des clubs du 67',
+        h2: 'Le flocage textile au plus près de chez vous',
         paragraphs: [
-          "Le flocage consiste à appliquer noms, numéros, logos et visuels sur un textile de façon durable et nette. C'est le cœur de notre métier. Dans le Bas-Rhin, nous travaillons avec des clubs de toutes disciplines et des associations de toutes tailles.",
-          "Plutôt que de livrer un gros volume une fois par an, nous produisons chaque pièce au moment où elle est commandée. Le club ne gère ni stock, ni invendus, ni avance d'argent.",
+          "Le flocage consiste à appliquer noms, numéros, logos et visuels de façon durable et nette sur un textile. C'est le cœur de notre métier, aux côtés de l'impression et de la broderie.",
+          "Nous travaillons avec les particuliers et les structures du Centre Alsace, dès une seule pièce, sans imposer de volume.",
         ],
       },
       {
-        h2: 'Andlau, un atelier central pour tout le département',
+        h2: 'Andlau, un atelier central en Centre Alsace',
         paragraphs: [
-          "Situé entre Barr, Obernai et Sélestat, Andlau est idéalement placé pour rayonner sur l'ensemble du Bas-Rhin, de Strasbourg au piémont des Vosges.",
-          "Chaque structure dispose de sa boutique privée en ligne et d'un interlocuteur unique, ce qui garantit des finitions homogènes et des délais tenus, saison après saison.",
+          "Situé entre Barr, Obernai, Sélestat et Erstein, Andlau est idéalement placé pour servir le Centre Alsace avec réactivité.",
+          "Les clients réguliers bénéficient d'un espace dédié par code pour le réassort à la demande, sans stock à immobiliser.",
         ],
       },
     ],
     faq: [
       {
-        question: 'Où se trouve votre atelier de flocage dans le Bas-Rhin ?',
+        question: 'Où se trouve votre atelier de flocage ?',
         answer:
-          "Notre atelier est à Andlau (67140), dans le Bas-Rhin, entre Barr, Obernai et Sélestat. Nous y réalisons l'ensemble du flocage et du marquage textile.",
+          "À Andlau (67140), en Centre Alsace (Bas-Rhin), entre Barr, Obernai, Sélestat et Erstein.",
       },
       {
         question: 'Quels textiles pouvez-vous floquer ?',
         answer:
-          "Maillots, t-shirts, sweats, polos, vestes et accessoires. Nous adaptons la technique de marquage (flocage, impression, broderie) au support et au rendu souhaité.",
+          "T-shirts, sweats, polos, maillots, vestes et accessoires, à l'unité comme en petite série, par flocage, impression ou broderie.",
       },
     ],
   },

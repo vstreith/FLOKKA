@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Accès à votre boutique privée',
+  title: 'Mon espace réassort — accès client',
   description:
-    "Accédez à la boutique privée de votre club ou association avec votre code d'accès. Commandez votre textile personnalisé en réassort à l'unité, livré partout en France.",
+    "Accédez à votre espace client FLOKKA avec votre code. Recommandez votre textile personnalisé en réassort à la demande, à l'unité, sans stock. Atelier en Centre Alsace.",
   path: '/boutique-privee',
-  keywords: ['boutique privée', "code d'accès boutique", 'accès boutique club'],
+  keywords: ['espace client textile', "code d'accès réassort", 'réassort textile à la demande'],
 })
 
 export default function BoutiquePriveeLayout({ children }: { children: React.ReactNode }) {

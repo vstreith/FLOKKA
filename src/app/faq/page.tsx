@@ -56,9 +56,9 @@ const faq = [
       "Dans notre atelier d'Andlau, dans le Bas-Rhin (Alsace). Le flocage, l'impression et la broderie y sont réalisés localement.",
   },
   {
-    question: 'Livrez-vous partout en France ?',
+    question: 'Sur quel secteur travaillez-vous ?',
     answer:
-      'Oui. Les commandes sont expédiées partout en France, directement au domicile de chaque membre.',
+      "Nous nous concentrons sur le Centre Alsace : Andlau, Barr, Obernai, Sélestat, Erstein et les communes environnantes. La récupération se fait à l'atelier ou en remise locale selon les cas.",
   },
   {
     question: 'Combien de temps pour recevoir une commande ?',

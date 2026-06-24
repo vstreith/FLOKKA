@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Repeat, MapPin, PiggyBank, Users, Palette, Truck } from 'lucide-react'
+import { Repeat, MapPin, Users, Palette, KeySquare, PackageOpen } from 'lucide-react'
 import { MarketingLayout } from '@/components/layout/MarketingLayout'
 import {
   PageHero,
@@ -16,16 +16,16 @@ import { pageMetadata, webPageSchema } from '@/lib/seo'
 const PATH = '/textile-personnalise-alsace'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Textile personnalisé en Alsace pour clubs et associations',
+  title: 'Textile personnalisé en Alsace (Centre Alsace) — dès 1 pièce',
   description:
-    "Textile personnalisé en Alsace : boutiques privées, flocage et réassort à l'unité pour clubs sportifs et associations. Atelier à Andlau (Bas-Rhin), livraison partout en France.",
+    "Textile personnalisé en Alsace : flocage, marquage et broderie sans minimum, dès une pièce. Atelier à Andlau, en Centre Alsace, avec réassort à la demande sans stock.",
   path: PATH,
   keywords: [
     'textile personnalisé Alsace',
-    'vêtements personnalisés Alsace',
-    'textile club Alsace',
-    'textile association Alsace',
+    'personnalisation textile Alsace',
     'flocage Alsace',
+    'broderie Alsace',
+    'textile personnalisé Centre Alsace',
   ],
 })
 
@@ -33,17 +33,17 @@ const faq = [
   {
     question: 'Où se trouve votre atelier en Alsace ?',
     answer:
-      "Notre atelier est à Andlau (67140), dans le Bas-Rhin, entre Barr, Obernai et Sélestat. Nous servons toute l'Alsace et livrons partout en France.",
+      "À Andlau (67140), en Centre Alsace, entre Barr, Obernai, Sélestat et Erstein. C'est là que nous réalisons toute la personnalisation textile.",
   },
   {
-    question: 'Quelles structures équipez-vous en Alsace ?',
+    question: 'Faut-il commander en quantité ?',
     answer:
-      "Principalement des clubs sportifs et des associations, mais aussi des petites entreprises et collectivités alsaciennes souhaitant du textile personnalisé.",
+      "Non. Nous personnalisons dès une seule pièce, sans minimum de commande, pour les particuliers comme pour les structures.",
   },
   {
-    question: 'Proposez-vous le réassort à l\'unité partout en Alsace ?',
+    question: "Qu'est-ce que le réassort à la demande ?",
     answer:
-      "Oui. Le réassort à l'unité s'applique à toutes les structures, où qu'elles soient en Alsace : une seule pièce peut être commandée à tout moment.",
+      "Un espace client dédié, accessible par code, qui vous permet de recommander vos produits personnalisés à l'unité, sans immobiliser de stock.",
   },
 ]
 
@@ -58,7 +58,7 @@ export default function TextileAlsacePage() {
         data={webPageSchema({
           title: 'Textile personnalisé en Alsace | FLOKKA',
           description:
-            "Textile personnalisé en Alsace pour clubs et associations : boutiques privées, flocage, réassort à l'unité.",
+            "Textile personnalisé en Alsace : flocage, marquage, broderie, sans minimum, avec réassort à la demande. Atelier en Centre Alsace.",
           path: PATH,
         })}
       />
@@ -68,27 +68,27 @@ export default function TextileAlsacePage() {
         breadcrumbs={crumbs}
         intro={
           <>
-            Boutiques privées, flocage et <strong>réassort à l&apos;unité</strong> pour les clubs et
-            associations de toute l&apos;<strong>Alsace</strong>. Une fabrication locale depuis notre
-            atelier d&apos;Andlau, dans le Bas-Rhin.
+            Flocage, marquage et broderie sur tous vos textiles, <strong>dès une pièce</strong> et
+            sans minimum. Un atelier ancré en <strong>Centre Alsace</strong>, avec un{' '}
+            <strong>réassort à la demande</strong> sans stock.
           </>
         }
-        primary={{ label: 'Créer ma boutique', href: '/contact' }}
+        primary={{ label: 'Demander un devis', href: '/contact' }}
         secondary={{ label: 'Notre flocage', href: '/flocage-textile-alsace' }}
       />
 
-      <Section eyebrow="Local" title="Un acteur textile ancré en Alsace">
+      <Section eyebrow="Local" title="Un atelier textile ancré en Centre Alsace">
         <Prose>
           <p>
-            FLOKKA est un atelier <strong>alsacien</strong> de personnalisation textile. Depuis
-            Andlau, au cœur du <strong>Bas-Rhin</strong>, nous équipons les structures locales en{' '}
-            <strong>vêtements personnalisés</strong> : maillots, sweats, polos, vestes et
-            accessoires, le tout sans contrainte de stock.
+            FLOKKA est une petite entreprise <strong>alsacienne</strong> de personnalisation textile.
+            Depuis Andlau, au cœur du <strong>Centre Alsace</strong>, nous personnalisons vos{' '}
+            <strong>vêtements</strong> — maillots, sweats, polos, vestes, t-shirts et accessoires —
+            avec un rendu soigné et sans contrainte de quantité.
           </p>
           <p>
-            L&apos;Alsace possède un tissu associatif et sportif particulièrement dense. Notre
-            mission est de permettre à chaque club et association de la région de proposer un textile
-            de qualité à ses membres, sans avancer de trésorerie ni gérer de logistique.
+            Nous avons choisi de nous concentrer sur notre territoire pour offrir proximité, conseil
+            direct et réactivité. Particuliers, clubs, associations, commerces et entreprises y
+            trouvent un partenaire textile fiable et local.
           </p>
         </Prose>
       </Section>
@@ -96,25 +96,25 @@ export default function TextileAlsacePage() {
       <Section eyebrow="Notre approche" title="Le textile personnalisé sans contraintes" tone="tint">
         <FeatureGrid
           items={[
-            { icon: Repeat, title: "Réassort à l'unité", description: 'Une pièce à la fois, sans minimum.' },
-            { icon: PiggyBank, title: 'Sans avance', description: 'La structure ne finance aucun stock.' },
-            { icon: Palette, title: 'À vos couleurs', description: 'Personnalisation complète à votre identité.' },
-            { icon: Users, title: 'Clubs & assos', description: 'Une solution pensée pour les structures locales.' },
-            { icon: MapPin, title: 'Fabrication locale', description: "Produit en Alsace, à Andlau (67)." },
-            { icon: Truck, title: 'Livraison France', description: 'Expédition partout en France.' },
+            { icon: PackageOpen, title: 'Dès une pièce', description: 'Aucun minimum de commande.' },
+            { icon: KeySquare, title: 'Réassort à la demande', description: 'Espace dédié, sans stock.' },
+            { icon: Palette, title: 'Flocage & broderie', description: 'Marquage soigné sur tous supports.' },
+            { icon: Users, title: 'Tous publics', description: 'Particuliers, clubs, assos, entreprises.' },
+            { icon: MapPin, title: 'Centre Alsace', description: 'Atelier local à Andlau (67).' },
+            { icon: Repeat, title: 'Sur-mesure', description: 'Du conseil jusqu\'à la pièce finie.' },
           ]}
         />
       </Section>
 
-      <Section eyebrow="Proximité" title="Nous desservons toute l'Alsace">
+      <Section eyebrow="Proximité" title="Notre secteur en Centre Alsace">
         <Prose>
           <p>
-            Que votre structure soit à <a href="/textile-personnalise-strasbourg">Strasbourg</a>, à{' '}
-            <a href="/textile-personnalise-colmar">Colmar</a>, à{' '}
-            <a href="/textile-personnalise-obernai">Obernai</a> ou à{' '}
-            <a href="/textile-personnalise-selestat">Sélestat</a>, nous sommes à vos côtés. Notre
-            implantation centrale dans le Bas-Rhin nous permet d&apos;être réactifs sur l&apos;ensemble
-            du territoire alsacien.
+            Que vous soyez à <a href="/textile-personnalise-selestat">Sélestat</a>, à{' '}
+            <a href="/textile-personnalise-obernai">Obernai</a>, à{' '}
+            <a href="/textile-personnalise-barr">Barr</a> ou à{' '}
+            <a href="/textile-personnalise-erstein">Erstein</a>, notre atelier d&apos;Andlau est tout
+            proche. Cette implantation centrale nous rend particulièrement réactifs sur le Centre
+            Alsace.
           </p>
         </Prose>
       </Section>
@@ -124,15 +124,15 @@ export default function TextileAlsacePage() {
       <RelatedLinks
         links={[
           { title: 'Flocage textile Alsace', description: 'Notre savoir-faire de marquage textile détaillé.', href: '/flocage-textile-alsace' },
-          { title: 'Textile personnalisé à Strasbourg', description: "Notre offre pour l'Eurométropole.", href: '/textile-personnalise-strasbourg' },
-          { title: 'Flocage dans le Bas-Rhin', description: 'Le marquage textile au plus près du 67.', href: '/flocage-textile-bas-rhin' },
+          { title: 'Réassort à la demande', description: "L'espace client pour recommander sans stock.", href: '/reassort-a-la-demande' },
+          { title: 'Personnalisation textile à Sélestat', description: 'Notre offre au cœur du Centre Alsace.', href: '/textile-personnalise-selestat' },
         ]}
       />
 
       <CTASection
         title="Votre projet textile en Alsace commence ici"
-        text="Clubs, associations, entreprises : créons ensemble votre boutique."
-        primary={{ label: 'Démarrer un projet', href: '/contact' }}
+        text="Une pièce ou une série, particulier ou structure : personnalisons vos textiles."
+        primary={{ label: 'Demander un devis', href: '/contact' }}
       />
     </MarketingLayout>
   )

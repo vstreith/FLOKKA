@@ -3,7 +3,7 @@ import { LocalAreaTemplate } from '@/components/marketing/LocalAreaTemplate'
 import { getLocalArea } from '@/lib/local-areas'
 import { pageMetadata } from '@/lib/seo'
 
-const area = getLocalArea('/textile-personnalise-strasbourg')!
+const area = getLocalArea('/textile-personnalise-erstein')!
 
 export const metadata: Metadata = pageMetadata({
   title: area.title,

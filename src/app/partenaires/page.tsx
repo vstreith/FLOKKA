@@ -16,7 +16,7 @@ const partners = [
 export const metadata = pageMetadata({
   title: 'Partenaires — clubs et associations qui nous font confiance',
   description:
-    "Découvrez les clubs sportifs et associations d'Alsace qui ont créé leur boutique textile privée avec FLOKKA. Rejoignez les structures locales qui nous font confiance.",
+    "Découvrez les clubs, associations et structures du Centre Alsace qui personnalisent leur textile avec FLOKKA. Rejoignez les acteurs locaux qui nous font confiance.",
   path: '/partenaires',
   keywords: ['partenaires FLOKKA', 'clubs partenaires', 'associations partenaires Alsace'],
 })
@@ -72,13 +72,13 @@ export default function PartnersPage() {
                 Vous aussi, rejoignez FLOKKA
               </h2>
               <p className="text-white/70 mb-10 text-lg">
-                On crée la boutique privée de votre structure, gratuitement et sans engagement.
+                On personnalise vos textiles, dès une pièce, gratuitement et sans engagement pour le devis.
               </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-brand-gradient text-white font-semibold px-8 py-4 rounded-full shadow-glow hover:-translate-y-0.5 transition-all text-sm"
               >
-                Créer ma boutique
+                Demander un devis
                 <ArrowRight size={16} />
               </Link>
             </div>

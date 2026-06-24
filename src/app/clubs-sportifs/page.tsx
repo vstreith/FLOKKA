@@ -18,16 +18,16 @@ import { pageMetadata, webPageSchema } from '@/lib/seo'
 const PATH = '/clubs-sportifs'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Boutique textile pour club sportif | Maillots & flocage',
+  title: 'Textile personnalisé pour club sportif | Flocage maillots',
   description:
-    "Équipez votre club sportif d'une boutique en ligne privée : maillots, sweats et textiles floqués à vos couleurs, réassort à l'unité, sans stock ni avance. Fabrication en Alsace.",
+    "Personnalisation textile pour votre club sportif en Centre Alsace : maillots, sweats et tenues floqués à vos couleurs, dès une pièce, avec réassort à la demande sans stock.",
   path: PATH,
   keywords: [
     'textile personnalisé club sportif',
-    'boutique club sportif',
     'vêtements personnalisés club sportif',
-    'boutique privée club',
     'maillot personnalisé club',
+    'flocage maillot club',
+    'réassort textile club',
   ],
 })
 
@@ -35,7 +35,7 @@ const faq = [
   {
     question: 'Comment équiper un club sportif sans avancer de trésorerie ?',
     answer:
-      "Avec une boutique privée FLOKKA, chaque licencié commande et paie sa propre pièce. Le club n'avance rien et ne gère aucun stock : tout est produit à l'unité, à la commande.",
+      "Via un espace de commande dédié, chaque licencié commande et paie sa propre pièce. Le club n'avance rien et ne gère aucun stock : tout est produit à l'unité, à la commande.",
   },
   {
     question: 'Peut-on personnaliser les maillots avec nom et numéro ?',
@@ -48,7 +48,7 @@ const faq = [
       "Absolument. Le réassort à l'unité permet à un nouveau licencié de commander son équipement à tout moment, sans attendre une commande groupée.",
   },
   {
-    question: 'Quels produits proposer dans la boutique du club ?',
+    question: 'Quels produits peut-on personnaliser pour un club ?',
     answer:
       "Maillots et tenues d'entraînement, survêtements, sweats à capuche, polos pour le staff, sacs et accessoires. Vous choisissez la sélection adaptée à votre club.",
   },
@@ -63,15 +63,15 @@ export default function ClubsSportifsPage() {
     <MarketingLayout>
       <JsonLd
         data={webPageSchema({
-          title: 'Boutique textile pour club sportif | FLOKKA',
+          title: 'Textile personnalisé pour club sportif | FLOKKA',
           description:
-            "Boutique privée, maillots et flocage pour clubs sportifs. Réassort à l'unité, sans stock.",
+            "Personnalisation textile et flocage pour clubs sportifs. Dès une pièce, réassort à la demande, sans stock.",
           path: PATH,
         })}
       />
       <PageHero
         eyebrow="Clubs sportifs"
-        title="La boutique textile de votre club sportif"
+        title="Textile personnalisé pour votre club sportif"
         breadcrumbs={crumbs}
         intro={
           <>
@@ -80,8 +80,8 @@ export default function ClubsSportifsPage() {
             sans stock, fabriqués en Alsace.
           </>
         }
-        primary={{ label: 'Créer la boutique de mon club', href: '/contact' }}
-        secondary={{ label: 'Voir comment ça marche', href: '/boutique-privee-club' }}
+        primary={{ label: 'Demander un devis', href: '/contact' }}
+        secondary={{ label: 'Le réassort à la demande', href: '/reassort-a-la-demande' }}
       />
 
       <Section
@@ -97,15 +97,15 @@ export default function ClubsSportifsPage() {
             c&apos;est une charge lourde et un risque financier.
           </p>
           <p>
-            FLOKKA propose une autre approche : une <strong>boutique en ligne privée</strong>{' '}
-            dédiée à votre club, où chaque licencié commande lui-même son{' '}
-            <strong>textile personnalisé</strong>, à sa taille, avec son nom et son numéro. Le club
-            ne porte plus aucune logistique.
+            FLOKKA propose une autre approche : un <strong>espace de commande dédié</strong> à votre
+            club, accessible par code, où chaque licencié commande lui-même son{' '}
+            <strong>textile personnalisé</strong>, à sa taille, avec son nom et son numéro, en{' '}
+            réassort à la demande. Le club ne porte plus aucune logistique.
           </p>
         </Prose>
       </Section>
 
-      <Section eyebrow="La solution" title="Une boutique club sportif clé en main" tone="tint">
+      <Section eyebrow="La solution" title="Une solution textile clé en main pour votre club" tone="tint">
         <FeatureGrid
           items={[
             { icon: Trophy, title: 'À vos couleurs', description: 'Maillots et tenues personnalisés à l\'identité du club.' },
@@ -113,15 +113,15 @@ export default function ClubsSportifsPage() {
             { icon: Users, title: 'Pour tous', description: 'Joueurs, staff, dirigeants, parents et supporters.' },
             { icon: PiggyBank, title: 'Zéro avance', description: "Le club n'avance pas un centime." },
             { icon: Shirt, title: 'Nom & numéro', description: 'Personnalisation individuelle de chaque pièce.' },
-            { icon: Zap, title: 'Rapide', description: 'Boutique prête sans effort, livraison directe.' },
+            { icon: Zap, title: 'Rapide', description: 'Espace prêt sans effort, production à l\'unité.' },
           ]}
         />
       </Section>
 
-      <Section eyebrow="En pratique" title="Comment lancer la boutique de votre club">
+      <Section eyebrow="En pratique" title="Comment équiper votre club, étape par étape">
         <StepList
           steps={[
-            { title: 'On crée la boutique', description: "Avec vos couleurs, votre logo et un code d'accès réservé au club." },
+            { title: 'On met en place votre espace', description: "Avec vos couleurs, votre logo et un code d'accès réservé au club." },
             { title: 'Vos licenciés commandent', description: 'Chacun choisit ses produits, sa taille, son nom et son numéro.' },
             { title: 'On produit et on livre', description: "Chaque pièce est floquée à l'unité et expédiée directement." },
           ]}
@@ -134,7 +134,7 @@ export default function ClubsSportifsPage() {
                 'Une image homogène et professionnelle',
                 'Zéro logistique pour le bureau',
                 "Un financement possible via une marge club",
-                'Une boutique ouverte toute la saison',
+                'Un espace de réassort ouvert toute la saison',
               ]}
             />
           </div>
@@ -157,7 +157,7 @@ export default function ClubsSportifsPage() {
 
       <RelatedLinks
         links={[
-          { title: 'Boutique privée club : le fonctionnement', description: 'Le détail du modèle de boutique privée pour un club.', href: '/boutique-privee-club' },
+          { title: 'Réassort à la demande', description: "L'espace dédié pour recommander le textile du club sans stock.", href: '/reassort-a-la-demande' },
           { title: 'Flocage textile en Alsace', description: 'Notre savoir-faire de marquage textile au cœur du Bas-Rhin.', href: '/flocage-textile-alsace' },
           { title: 'Guide complet de la boutique club sportif', description: 'Tout comprendre, étape par étape, sur le blog.', href: '/blog/boutique-club-sportif-guide-complet' },
         ]}
@@ -165,8 +165,8 @@ export default function ClubsSportifsPage() {
 
       <CTASection
         title="Prêt à équiper votre club ?"
-        text="On met en place votre boutique privée, à vos couleurs, sans engagement."
-        primary={{ label: 'Créer ma boutique club', href: '/contact' }}
+        text="On personnalise vos textiles et on met en place votre espace de réassort, sans engagement."
+        primary={{ label: 'Demander un devis', href: '/contact' }}
         secondary={{ label: 'Solutions associations', href: '/associations' }}
       />
     </MarketingLayout>

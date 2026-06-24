@@ -7,7 +7,7 @@ import { LOCAL_AREAS, type LocalArea } from '@/lib/local-areas'
 export function LocalAreaTemplate({ area }: { area: LocalArea }) {
   const crumbs = [
     { name: 'Accueil', path: '/' },
-    { name: 'Zones desservies', path: '/textile-personnalise-alsace' },
+    { name: 'Centre Alsace', path: '/textile-personnalise-alsace' },
     { name: area.city, path: area.slug },
   ]
 
@@ -31,8 +31,8 @@ export function LocalAreaTemplate({ area }: { area: LocalArea }) {
         title={area.h1}
         breadcrumbs={crumbs}
         intro={area.lead}
-        primary={{ label: 'Créer ma boutique', href: '/contact' }}
-        secondary={{ label: 'Nos solutions clubs', href: '/clubs-sportifs' }}
+        primary={{ label: 'Demander un devis', href: '/contact' }}
+        secondary={{ label: 'Nos services', href: '/services' }}
       />
 
       {area.sections.map((s, i) => (

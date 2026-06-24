@@ -57,7 +57,7 @@ export default function ContactPage() {
               Parlons de <span className="text-gradient">votre projet.</span>
             </h1>
             <p className="text-brand-gray-text text-lg">
-              Un club à équiper, une boutique privée à créer, une question ? Écrivez-moi, je réponds
+              Un textile à personnaliser, un réassort à mettre en place, une question ? Écrivez-moi, je réponds
               vite et simplement.
             </p>
           </div>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                 <h3 className="font-display font-bold text-brand-black mb-2">Vous représentez un club ?</h3>
                 <p className="text-sm text-brand-gray-text leading-relaxed">
                   Dites-moi simplement quelle structure vous représentez. On met en place votre
-                  boutique privée et votre code d&apos;accès, sans engagement.
+                  espace de réassort et votre code d&apos;accès, sans engagement.
                 </p>
               </div>
             </div>

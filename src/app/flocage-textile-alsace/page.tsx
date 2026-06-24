@@ -18,7 +18,7 @@ const PATH = '/flocage-textile-alsace'
 export const metadata: Metadata = pageMetadata({
   title: 'Flocage textile en Alsace | Marquage de maillots & sweats',
   description:
-    "Atelier de flocage textile en Alsace (Andlau, Bas-Rhin). Marquage de maillots, sweats, polos et vestes pour clubs et associations, à l'unité, avec boutique privée et fabrication locale.",
+    "Atelier de flocage textile en Centre Alsace (Andlau, Bas-Rhin). Marquage et broderie de maillots, sweats, polos et vestes, dès une pièce, avec réassort à la demande sans stock.",
   path: PATH,
   keywords: [
     'flocage textile Alsace',
@@ -38,7 +38,7 @@ const faq = [
   {
     question: 'Où réalisez-vous le flocage en Alsace ?',
     answer:
-      "Dans notre atelier d'Andlau, dans le Bas-Rhin, entre Barr, Obernai et Sélestat. Nous servons toute l'Alsace et expédions partout en France.",
+      "Dans notre atelier d'Andlau, en Centre Alsace (Bas-Rhin), entre Barr, Obernai, Sélestat et Erstein. C'est notre secteur de proximité.",
   },
   {
     question: 'Peut-on floquer une seule pièce ?',
@@ -73,9 +73,10 @@ export default function FlocageAlsacePage() {
         breadcrumbs={crumbs}
         intro={
           <>
-            Notre atelier d&apos;<strong>Andlau</strong> réalise le <strong>flocage</strong> et le
-            marquage de vos textiles : maillots, sweats, polos et vestes, à l&apos;unité, pour les
-            clubs et associations de toute l&apos;Alsace.
+            Notre atelier d&apos;<strong>Andlau</strong> réalise le <strong>flocage</strong>, le
+            marquage et la broderie de vos textiles : maillots, sweats, polos et vestes,{' '}
+            <strong>dès une pièce</strong>, pour les particuliers et structures du{' '}
+            <strong>Centre Alsace</strong>.
           </>
         }
         primary={{ label: 'Demander un flocage', href: '/contact' }}
@@ -92,8 +93,8 @@ export default function FlocageAlsacePage() {
           </p>
           <p>
             Implantés à Andlau, dans le <strong>Bas-Rhin</strong>, nous travaillons avec les clubs,
-            associations et structures de toute l&apos;Alsace, de Strasbourg à Colmar en passant par
-            Sélestat et Obernai. Chaque pièce est produite à la demande, ce qui évite tout surstock.
+            associations, commerces et particuliers du Centre Alsace : Barr, Obernai, Sélestat,
+            Erstein et alentours. Chaque pièce est produite à la demande, ce qui évite tout surstock.
           </p>
         </Prose>
       </Section>
@@ -106,7 +107,7 @@ export default function FlocageAlsacePage() {
             { icon: Scissors, title: 'Broderie', description: 'Finition haut de gamme et durable pour les logos.' },
             { icon: Repeat, title: "À l'unité", description: 'Une seule pièce floquée, à tout moment.' },
             { icon: ShieldCheck, title: 'Durable', description: 'Des marquages qui résistent aux lavages.' },
-            { icon: MapPin, title: 'Local', description: 'Réalisé en Alsace, livré partout en France.' },
+            { icon: MapPin, title: 'Local', description: 'Réalisé en Centre Alsace, à Andlau.' },
           ]}
         />
         <div className="mt-10">

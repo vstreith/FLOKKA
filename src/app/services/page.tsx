@@ -19,8 +19,8 @@ const services = [
   },
   {
     icon: Store,
-    title: 'Boutiques privées',
-    description: "Une boutique en ligne dédiée à votre club ou association, avec code d'accès.",
+    title: 'Réassort à la demande',
+    description: "Un espace client dédié, avec code d'accès, pour recommander sans stock.",
     gradient: 'from-brand-navy to-brand-black',
   },
   {
@@ -46,9 +46,9 @@ const services = [
 export const metadata = pageMetadata({
   title: 'Services de personnalisation textile pour clubs et associations',
   description:
-    "Flocage, impression, broderie, boutiques privées et packs clubs : découvrez les services de personnalisation textile FLOKKA pour clubs sportifs et associations, à l'unité, en Alsace.",
+    "Flocage, impression, broderie, réassort à la demande et packs personnalisés : les services de personnalisation textile FLOKKA, dès une pièce, en Centre Alsace.",
   path: '/services',
-  keywords: ['services personnalisation textile', 'flocage', 'broderie', 'pack club', 'boutique privée'],
+  keywords: ['services personnalisation textile', 'flocage', 'broderie', 'impression textile', 'réassort à la demande'],
 })
 
 export default function ServicesPage() {
@@ -68,8 +68,8 @@ export default function ServicesPage() {
                 Tout ce qu&apos;il faut pour <span className="text-gradient">habiller votre structure.</span>
               </h1>
               <p className="text-xl text-brand-gray-text leading-relaxed">
-                Du flocage à la boutique privée, des solutions simples et locales, avec réassort à la
-                demande même à l&apos;unité.
+                Du flocage à la broderie, des solutions simples et locales, sans minimum de commande
+                et avec réassort à la demande.
               </p>
             </div>
 

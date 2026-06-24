@@ -12,8 +12,8 @@ export const SITE = {
   locale: 'fr_FR',
   lang: 'fr',
   description:
-    "FLOKKA crée des boutiques textiles privées pour clubs sportifs et associations. Réassort à l'unité, sans gestion de stock, fabrication locale en Alsace (Andlau, Bas-Rhin).",
-  slogan: 'Le textile personnalisé des clubs et associations, sans stock.',
+    "FLOKKA, atelier de personnalisation textile en Centre Alsace (Andlau). Flocage, marquage et broderie sans minimum de commande, dès une seule pièce. Espace client dédié pour le réassort à la demande, sans stock à immobiliser.",
+  slogan: 'La personnalisation textile sans minimum, en Centre Alsace.',
   email: 'contact@flokka.fr',
   phoneDisplay: '06 00 00 00 00',
   phoneE164: '+33600000000',
@@ -33,7 +33,7 @@ export const SITE = {
   twitter: '@flokka',
   foundingYear: '2024',
   sameAs: [] as string[],
-  areaServed: ['France', 'Alsace', 'Bas-Rhin', 'Grand Est'],
+  areaServed: ['Centre Alsace', 'Sélestat', 'Obernai', 'Barr', 'Erstein', 'Andlau'],
 } as const
 
 export function absoluteUrl(path = '/'): string {

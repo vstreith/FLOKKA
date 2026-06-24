@@ -75,8 +75,8 @@ export default function BlogIndexPage() {
       </section>
 
       <CTASection
-        title="Besoin d'une boutique pour votre structure ?"
-        text="Mettez en pratique nos conseils : créons votre boutique privée."
+        title="Besoin de personnaliser du textile ?"
+        text="Mettez en pratique nos conseils : parlons de votre projet, dès une pièce."
         primary={{ label: 'Démarrer un projet', href: '/contact' }}
         secondary={{ label: 'Voir les solutions clubs', href: '/clubs-sportifs' }}
       />
