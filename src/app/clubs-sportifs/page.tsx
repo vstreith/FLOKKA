@@ -75,9 +75,10 @@ export default function ClubsSportifsPage() {
         breadcrumbs={crumbs}
         intro={
           <>
-            Maillots, survêtements et sweats <strong>floqués à vos couleurs</strong>, commandés
-            directement par vos licenciés en <strong>réassort à l&apos;unité</strong>. Sans avance,
-            sans stock, fabriqués en Alsace.
+            On a nous-mêmes présidé un club (le Badminton Club de Barr !), alors on sait ce que
+            c&apos;est. Maillots et sweats <strong>floqués à vos couleurs</strong>, commandés par vos
+            licenciés en <strong>réassort à l&apos;unité</strong> — sans avance, sans stock, et avec
+            des gens qui comprennent votre quotidien.
           </>
         }
         primary={{ label: 'Demander un devis', href: '/contact' }}
@@ -164,10 +165,10 @@ export default function ClubsSportifsPage() {
       />
 
       <CTASection
-        title="Prêt à équiper votre club ?"
-        text="On personnalise vos textiles et on met en place votre espace de réassort, sans engagement."
-        primary={{ label: 'Demander un devis', href: '/contact' }}
-        secondary={{ label: 'Solutions associations', href: '/associations' }}
+        title="On équipe votre club ?"
+        text="Écrivez-nous un mot : on connaît la vie de club de l'intérieur, et on adore ça. Sans engagement, promis."
+        primary={{ label: 'Nous écrire', href: '/contact' }}
+        secondary={{ label: 'Et pour les assos', href: '/associations' }}
       />
     </MarketingLayout>
   )

@@ -75,9 +75,9 @@ export default function AssociationsPage() {
         breadcrumbs={crumbs}
         intro={
           <>
-            Des <strong>vêtements personnalisés</strong> pour vos bénévoles et vos événements, une{' '}
-            <strong>marge reversée</strong> à votre structure, et <strong>zéro stock</strong> à
-            gérer. Le textile au service de votre projet associatif.
+            On adore les projets associatifs (on en a fait notre quotidien). Des{' '}
+            <strong>vêtements personnalisés</strong> pour vos bénévoles et vos événements, une{' '}
+            <strong>marge reversée</strong> à votre asso, et <strong>zéro stock</strong> à gérer.
           </>
         }
         primary={{ label: 'Demander un devis', href: '/contact' }}
@@ -145,9 +145,9 @@ export default function AssociationsPage() {
       />
 
       <CTASection
-        title="Donnez une identité textile à votre association"
-        text="On personnalise vos textiles et on met en place votre espace, sans engagement."
-        primary={{ label: 'Demander un devis', href: '/contact' }}
+        title="On habille votre association ?"
+        text="Racontez-nous votre projet en deux lignes. On vous répond vite, avec des idées et le sourire."
+        primary={{ label: 'Nous écrire', href: '/contact' }}
         secondary={{ label: 'Voir nos services', href: '/services' }}
       />
     </MarketingLayout>

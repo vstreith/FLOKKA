@@ -57,9 +57,9 @@ export function LocalAreaTemplate({ area }: { area: LocalArea }) {
       <RelatedLinks links={related} />
 
       <CTASection
-        title={`Votre projet textile à ${area.city} commence ici`}
-        text="Clubs, associations, structures locales : créons votre boutique privée."
-        primary={{ label: 'Nous contacter', href: '/contact' }}
+        title={`Un projet textile à ${area.city} ?`}
+        text="Écrivez-nous un petit mot : on habite le coin, on répond vite et avec le sourire."
+        primary={{ label: 'Nous écrire', href: '/contact' }}
       />
     </MarketingLayout>
   )

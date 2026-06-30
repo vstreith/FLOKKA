@@ -74,12 +74,12 @@ export default function ReassortPage() {
         breadcrumbs={crumbs}
         intro={
           <>
-            Un <strong>espace client dédié</strong>, accessible par code, où vos produits
-            personnalisés sont enregistrés. Vous recommandez à l&apos;<strong>unité</strong>, quand
-            vous voulez, sans immobiliser de <strong>stock</strong>.
+            On vous crée un <strong>petit espace rien qu&apos;à vous</strong>, accessible par code,
+            où l&apos;on garde vos produits déjà personnalisés. Vous recommandez à l&apos;
+            <strong>unité</strong>, quand ça vous arrange, sans rien <strong>stocker</strong>.
           </>
         }
-        primary={{ label: 'Mettre en place mon espace', href: '/contact' }}
+        primary={{ label: 'J\'en parle avec vous', href: '/contact' }}
         secondary={{ label: 'Accéder à mon espace', href: '/boutique-privee' }}
       />
 
@@ -143,9 +143,9 @@ export default function ReassortPage() {
       />
 
       <CTASection
-        title="Envie d'un réassort sans contrainte ?"
-        text="Mettons en place votre espace dédié. Sans engagement."
-        primary={{ label: 'Nous contacter', href: '/contact' }}
+        title="Envie d'un réassort tranquille ?"
+        text="Dites-nous bonjour : on met en place votre petit espace ensemble, sans engagement."
+        primary={{ label: 'Nous écrire', href: '/contact' }}
       />
     </MarketingLayout>
   )

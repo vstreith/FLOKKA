@@ -93,11 +93,11 @@ export default function FaqPage() {
       />
       <PageHero
         eyebrow="FAQ"
-        title="Questions fréquentes"
+        title="Vos questions, nos réponses"
         breadcrumbs={crumbs}
-        intro="Tout ce que vous devez savoir sur les boutiques textiles privées, le réassort à l'unité et notre fonctionnement."
+        intro="On vous a réuni les questions qu'on nous pose le plus souvent. Et s'il en reste une, écrivez-nous : on adore discuter."
       />
-      <FaqSection items={faq} title="Vos questions, nos réponses" />
+      <FaqSection items={faq} title="Les questions qu'on nous pose souvent" />
       <RelatedLinks
         links={[
           { title: 'Solutions clubs sportifs', description: 'La boutique textile pour les clubs.', href: '/clubs-sportifs' },

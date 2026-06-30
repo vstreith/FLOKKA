@@ -130,9 +130,9 @@ export default function TextileAlsacePage() {
       />
 
       <CTASection
-        title="Votre projet textile en Alsace commence ici"
-        text="Une pièce ou une série, particulier ou structure : personnalisons vos textiles."
-        primary={{ label: 'Demander un devis', href: '/contact' }}
+        title="On personnalise vos textiles ?"
+        text="Une pièce ou une série, un particulier ou une asso : écrivez-nous, on adore les nouveaux projets."
+        primary={{ label: 'Nous écrire', href: '/contact' }}
       />
     </MarketingLayout>
   )

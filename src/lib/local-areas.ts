@@ -32,7 +32,7 @@ export const LOCAL_AREAS: LocalArea[] = [
       'textile personnalisé Sélestat',
     ],
     h1: 'Personnalisation textile à Sélestat',
-    lead: "Au cœur du Centre Alsace, Sélestat est l'une des communes que nous servons en priorité. FLOKKA y personnalise vos textiles — flocage, impression, broderie — dès une seule pièce, sans minimum de commande.",
+    lead: "Sélestat, c'est tout près de chez nous. On y personnalise vos textiles avec plaisir — flocage, impression, broderie — dès une seule pièce et sans minimum. Et si vous voulez passer en discuter, notre atelier d'Andlau n'est qu'à quelques minutes.",
     sections: [
       {
         h2: 'Flocage, marquage et broderie pour les Sélestadiens',
@@ -76,7 +76,7 @@ export const LOCAL_AREAS: LocalArea[] = [
       'textile personnalisé Obernai',
     ],
     h1: 'Personnalisation textile à Obernai',
-    lead: "Obernai est l'une de nos voisines directes : quelques minutes séparent notre atelier d'Andlau de la cité de Sainte-Odile. Nous y personnalisons vos textiles dès une pièce, sans minimum.",
+    lead: "Obernai, c'est la porte à côté : quelques minutes seulement depuis notre atelier d'Andlau. Autant dire qu'on connaît bien le coin et qu'on se fera un plaisir de personnaliser vos textiles, même en un seul exemplaire.",
     sections: [
       {
         h2: 'Le partenaire textile de proximité à Obernai',
@@ -120,7 +120,7 @@ export const LOCAL_AREAS: LocalArea[] = [
       'textile personnalisé Barr',
     ],
     h1: 'Personnalisation textile à Barr',
-    lead: "Barr est notre commune voisine immédiate, sur la route des vins. FLOKKA y propose la personnalisation textile de proximité : flocage, marquage et broderie, dès une seule pièce.",
+    lead: "Barr, on y est très attachés : on a tous les deux présidé le Badminton Club de Barr ! C'est un peu là qu'est née l'idée de FLOKKA. Du coup, pour les Barrois, on personnalise vos textiles avec un soin tout particulier, dès une seule pièce.",
     sections: [
       {
         h2: 'Un atelier textile à deux pas de Barr',
@@ -164,7 +164,7 @@ export const LOCAL_AREAS: LocalArea[] = [
       'textile personnalisé Erstein',
     ],
     h1: 'Personnalisation textile à Erstein',
-    lead: "Au nord du Centre Alsace, Erstein et son bassin de vie font partie des secteurs que nous accompagnons. FLOKKA y personnalise vos textiles dès une pièce, sans minimum de commande.",
+    lead: "Erstein et ses environs font partie de notre petit territoire de cœur. On y personnalise vos textiles avec la même attention, que vous commandiez une pièce ou toute une équipe.",
     sections: [
       {
         h2: 'Flocage, impression et broderie pour Erstein',

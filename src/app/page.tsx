@@ -9,6 +9,7 @@ import {
   Repeat,
   PackageOpen,
   MapPin,
+  Heart,
   User,
   Users,
   Building2,
@@ -32,85 +33,85 @@ import { JsonLd } from '@/components/seo/JsonLd'
 import { pageMetadata, webPageSchema } from '@/lib/seo'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Personnalisation textile en Centre Alsace, dès 1 pièce | FLOKKA',
+  title: 'Petit atelier de personnalisation textile en Centre Alsace | FLOKKA',
   description:
-    "Atelier de personnalisation textile en Centre Alsace (Andlau) : flocage, marquage et broderie sans minimum de commande, dès une pièce. Espace client dédié pour le réassort à la demande, sans stock.",
+    "FLOKKA, c'est un petit atelier textile tenu par un couple à Andlau. Flocage, marquage et broderie avec le sourire, dès une pièce et sans minimum. Réassort à la demande, en Centre Alsace.",
   path: '/',
   keywords: [
     'personnalisation textile Centre Alsace',
-    'personnalisation textile Alsace',
+    'petit atelier textile Alsace',
     'flocage textile Alsace',
-    'marquage textile Alsace',
     'broderie personnalisée Alsace',
     'textile personnalisé sans minimum',
     'réassort textile sans stock',
+    'textile personnalisé Andlau',
   ],
 })
 
 const differenceItems = [
-  { icon: PackageOpen, title: 'Aucun minimum de commande', description: 'On personnalise dès une seule pièce. Pas de quantité imposée, jamais.' },
-  { icon: KeySquare, title: 'Espace client dédié', description: "Un accès par code pour commander votre réassort quand vous voulez." },
-  { icon: Repeat, title: 'Réassort à la demande', description: "Vous recommandez à l'unité, sans immobiliser de stock « au cas où »." },
-  { icon: MapPin, title: 'Atelier en Centre Alsace', description: 'Production locale à Andlau, proximité et conseil direct.' },
+  { icon: PackageOpen, title: 'Dès une seule pièce', description: "Pas de minimum, jamais. Une pièce vous suffit ? Nous aussi." },
+  { icon: KeySquare, title: 'Votre espace à vous', description: 'Un accès par code pour recommander quand ça vous arrange.' },
+  { icon: Repeat, title: 'Réassort tranquille', description: "Vous commandez à l'unité, on garde vos modèles. Zéro stock chez vous." },
+  { icon: Heart, title: 'Fait avec soin', description: 'Deux paires de mains, beaucoup d\'attention, près de chez vous.' },
 ]
 
 const services = [
-  { icon: Stamp, title: 'Flocage', description: 'Noms, numéros et logos en relief, mats et résistants.' },
-  { icon: Printer, title: 'Impression', description: 'Visuels détaillés et multicolores, photos comprises.' },
-  { icon: Scissors, title: 'Broderie', description: 'Finition haut de gamme et durable pour vos logos.' },
-  { icon: Shirt, title: 'Tous supports', description: 'T-shirts, sweats, polos, vestes, maillots, casquettes, sacs.' },
+  { icon: Stamp, title: 'Flocage', description: 'Noms, numéros et logos en relief, nets et qui tiennent.' },
+  { icon: Printer, title: 'Impression', description: 'Pour les visuels en couleurs et les photos.' },
+  { icon: Scissors, title: 'Broderie', description: 'La jolie finition, durable, pour vos logos.' },
+  { icon: Shirt, title: 'Sur tout', description: 'T-shirts, sweats, polos, vestes, casquettes, sacs…' },
 ]
 
 const audiences = [
-  { icon: User, title: 'Particuliers', description: 'Un cadeau, un événement de famille, une idée à personnaliser, même en un exemplaire.' },
-  { icon: Users, title: 'Clubs & associations', description: 'Équipez vos membres et profitez d\'un espace de réassort à la demande, sans stock.' },
-  { icon: Building2, title: 'Entreprises & commerces', description: 'Tenues de travail et textiles à votre image, en petite série.' },
-  { icon: PartyPopper, title: 'Événements', description: 'Tournois, fêtes, manifestations : du textile personnalisé sur mesure.' },
+  { icon: User, title: 'Les particuliers', description: 'Un cadeau, un tee-shirt de famille, une idée à offrir — même en un seul exemplaire.' },
+  { icon: Users, title: 'Les clubs & assos', description: "On connaît la musique : on a nous-mêmes présidé un club. On vous simplifie tout." },
+  { icon: Building2, title: 'Les commerces & TPE', description: 'Des tenues à votre image, en petite série, sans prise de tête.' },
+  { icon: PartyPopper, title: 'Les événements', description: 'Tournois, fêtes de village, EVJF… on adore ces projets-là.' },
 ]
 
 const testimonials = [
-  { quote: "J'avais besoin d'un seul sweat brodé : ailleurs on me demandait d'en commander dix. Chez FLOKKA, une pièce a suffi.", author: 'Cliente particulière', role: 'Sélestat' },
-  { quote: "Notre espace dédié nous permet de recommander des maillots à l'unité quand un joueur arrive. Plus de stock à gérer.", author: 'Club sportif', role: 'Centre Alsace' },
-  { quote: 'Travail soigné, conseils utiles et atelier à côté de chez nous. Exactement ce qu\'on cherchait.', author: 'Commerce local', role: 'Obernai' },
+  { quote: "Je voulais un seul sweat brodé pour offrir. Partout on me parlait de minimum… eux l'ont fait avec le sourire.", author: 'Marie', role: 'Sélestat' },
+  { quote: "On recommande nos maillots à l'unité dès qu'un joueur arrive. Plus de cartons dans le local, c'est le bonheur.", author: 'Un club voisin', role: 'Centre Alsace' },
+  { quote: 'Accueil au top, conseils sincères et atelier juste à côté. On ne va plus voir ailleurs.', author: 'Thomas', role: 'Obernai' },
 ]
 
 const faq = [
   {
-    question: 'Quel est le minimum de commande chez FLOKKA ?',
+    question: 'Vraiment, on peut commander une seule pièce ?',
     answer:
-      "Il n'y en a pas. Nous personnalisons votre textile dès une seule pièce. Que vous ayez besoin d'un exemplaire ou de plusieurs dizaines, c'est possible, sans quantité imposée.",
+      "Oui, vraiment ! Une pièce, c'est parfait pour nous. On n'impose aucun minimum : un cadeau unique comme une petite série, c'est avec le même plaisir.",
   },
   {
-    question: "Qu'est-ce que l'espace client dédié ?",
+    question: "C'est quoi votre fameux espace réassort ?",
     answer:
-      "C'est un espace en ligne réservé à votre structure, accessible via un code. Vos produits personnalisés y sont enregistrés : vous (ou vos membres) pouvez recommander à tout moment, à la demande, sans repasser par un devis et sans stock à immobiliser.",
+      "Un petit espace en ligne rien que pour vous, avec un code. On y garde vos modèles déjà personnalisés : quand vous en voulez d'autres, vous recommandez en deux clics, à l'unité, sans rien stocker chez vous.",
   },
   {
-    question: "Qu'est-ce que le réassort à la demande ?",
+    question: 'Qui se cache derrière FLOKKA ?',
     answer:
-      "C'est la possibilité de recommander vos pièces déjà personnalisées au fil de l'eau, à l'unité. Vous évitez ainsi de surcommander « au cas où » et de stocker du textile inutilement.",
+      "Nous : un couple installé à Andlau, en Centre Alsace. Anciens présidents du Badminton Club de Barr, on a vécu de l'intérieur la galère d'équiper un club — d'où l'idée de FLOKKA.",
   },
   {
-    question: 'Quelles techniques de personnalisation proposez-vous ?',
+    question: 'Vous faites quoi, exactement ?',
     answer:
-      'Le flocage (noms, numéros, logos), l\'impression (visuels détaillés et multicolores) et la broderie (finition durable). Nous vous conseillons la technique la plus adaptée à votre projet.',
+      'Du flocage (noms, numéros, logos), de l\'impression (visuels en couleurs) et de la broderie (la jolie finition). On vous conseille la technique la mieux adaptée à votre idée.',
   },
   {
-    question: 'Où se trouve votre atelier ?',
+    question: 'On peut passer vous voir ?',
     answer:
-      "À Andlau, en Centre Alsace (Bas-Rhin), entre Barr, Obernai et Sélestat. Nous travaillons en priorité avec les particuliers, clubs, associations et entreprises du secteur.",
+      "Avec plaisir. On est à Andlau, entre Barr, Obernai et Sélestat. Écrivez-nous un mot et on convient d'un moment pour discuter de votre projet autour d'un café.",
   },
   {
-    question: 'Faut-il être un club ou une association pour commander ?',
+    question: 'Faut-il être un club pour commander ?',
     answer:
-      "Non. Nous personnalisons du textile pour tout le monde : particuliers, clubs, associations, entreprises et événements. L'espace de réassort est simplement un service en plus pour ceux qui commandent régulièrement.",
+      "Pas du tout. Particuliers, familles, commerces, assos, équipes : tout le monde est le bienvenu. L'espace réassort est juste un petit plus pour celles et ceux qui reviennent souvent.",
   },
 ]
 
 const relatedLinks = [
-  { title: 'Flocage textile en Alsace', description: 'Notre savoir-faire de marquage : flocage, impression, broderie.', href: '/flocage-textile-alsace' },
-  { title: 'Réassort à la demande', description: "L'espace client dédié pour recommander sans stock.", href: '/reassort-a-la-demande' },
-  { title: 'Textile pour clubs & associations', description: 'Un service pensé pour les structures locales.', href: '/clubs-sportifs' },
+  { title: 'Notre savoir-faire : flocage & broderie', description: 'Comment on personnalise vos textiles, avec soin.', href: '/flocage-textile-alsace' },
+  { title: 'Le réassort, sans stock', description: 'Votre petit espace pour recommander tranquillement.', href: '/reassort-a-la-demande' },
+  { title: 'Notre histoire', description: 'Un couple, un club de badminton, et une idée.', href: '/a-propos' },
 ]
 
 export default function HomePage() {
@@ -119,9 +120,9 @@ export default function HomePage() {
       <JsonLd
         data={[
           webPageSchema({
-            title: 'Personnalisation textile en Centre Alsace, dès 1 pièce | FLOKKA',
+            title: 'Petit atelier de personnalisation textile en Centre Alsace | FLOKKA',
             description:
-              'Atelier de personnalisation textile en Centre Alsace : flocage, marquage, broderie, sans minimum, avec réassort à la demande.',
+              "Petit atelier textile tenu par un couple à Andlau : flocage, marquage, broderie dès une pièce, avec réassort à la demande. En Centre Alsace.",
             path: '/',
           }),
         ]}
@@ -139,42 +140,43 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 mb-8 rounded-full bg-white/70 backdrop-blur px-4 py-2 shadow-soft ring-1 ring-brand-gray-dark">
                 <span className="flex h-2 w-2 rounded-full bg-brand-gradient" aria-hidden="true" />
                 <span className="text-xs font-bold tracking-widest uppercase text-brand-violet-dark">
-                  Atelier textile · Andlau, Centre Alsace
+                  Petit atelier textile · Andlau, Centre Alsace
                 </span>
               </div>
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-brand-black mb-8">
-                Personnalisation textile
+                Votre petit atelier
                 <br />
-                <span className="text-gradient">en Centre Alsace.</span>
+                <span className="text-gradient">textile, près de chez vous.</span>
               </h1>
               <p className="text-lg sm:text-xl text-brand-gray-text max-w-2xl leading-relaxed mb-10">
-                Flocage, marquage et broderie sur tous vos textiles — <strong className="text-brand-black">dès une seule pièce</strong>,
-                sans minimum de commande. Et pour ceux qui commandent régulièrement, un{' '}
-                <strong className="text-brand-black">espace dédié avec réassort à la demande</strong>,
-                sans stock à immobiliser.
+                Nous sommes un <strong className="text-brand-black">couple d&apos;Andlau</strong> qui
+                personnalise vos textiles avec soin — flocage, marquage, broderie. Chez nous,{' '}
+                <strong className="text-brand-black">une seule pièce suffit</strong> (jamais de
+                minimum), et on vous crée même un petit <strong className="text-brand-black">espace
+                réassort</strong> pour recommander sans rien stocker.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
                   className="group inline-flex items-center justify-center gap-2 bg-brand-gradient text-white font-semibold px-8 py-4 rounded-full text-sm tracking-wide shadow-glow hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  Demander un devis
+                  Venez nous en parler
                   <ArrowRight size={16} />
                 </Link>
                 <Link
-                  href="/boutique-privee"
+                  href="/a-propos"
                   className="inline-flex items-center justify-center gap-2 bg-white text-brand-black font-semibold px-8 py-4 rounded-full ring-1 ring-brand-gray-medium hover:text-brand-violet-dark transition-all text-sm tracking-wide shadow-soft"
                 >
-                  <KeySquare size={16} />
-                  Accéder à mon espace réassort
+                  <Heart size={16} />
+                  Faire connaissance
                 </Link>
               </div>
 
               <dl className="mt-16 grid grid-cols-3 gap-4 max-w-2xl">
                 {[
-                  { value: 'Dès 1', label: 'Pièce, sans minimum de commande' },
-                  { value: '0 stock', label: 'Réassort à la demande' },
-                  { value: 'Andlau', label: 'Atelier en Centre Alsace' },
+                  { value: 'Dès 1', label: 'Pièce, sans minimum' },
+                  { value: '0 stock', label: 'Réassort quand vous voulez' },
+                  { value: 'Andlau', label: 'À deux pas de chez vous' },
                 ].map((stat) => (
                   <div key={stat.label} className="rounded-2xl bg-white/70 backdrop-blur p-5 ring-1 ring-brand-gray-dark shadow-soft">
                     <dt className="sr-only">{stat.label}</dt>
@@ -189,78 +191,82 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Nos différences ── */}
-        <Section
-          eyebrow="Ce qui nous distingue"
-          title="Une petite entreprise de personnalisation textile, deux vraies différences"
-          intro="FLOKKA est un atelier de personnalisation textile basé à Andlau, en Centre Alsace. Notre métier : flocage, marquage et broderie. Notre façon de le faire change tout."
-        >
-          <div className="mb-12">
-            <FeatureGrid items={differenceItems} cols={4} />
-          </div>
+        {/* ── Notre histoire ── */}
+        <Section eyebrow="Bonjour, c'est nous" title="Un couple, un club de badminton, et une idée">
           <Prose>
             <p>
-              La plupart des ateliers imposent un <strong>minimum de commande</strong> : dix, vingt,
-              parfois cinquante pièces. Pour un particulier qui veut un seul vêtement personnalisé,
-              ou pour une petite structure, c&apos;est rédhibitoire. Chez FLOKKA, nous personnalisons{' '}
-              <strong>dès une pièce</strong>, sans quantité imposée.
+              FLOKKA, ce n&apos;est pas une grande enseigne : c&apos;est <strong>nous deux</strong>, un
+              couple installé à <strong>Andlau</strong>, au cœur du <strong>Centre Alsace</strong>.
+              Un tout <strong>petit atelier</strong>, deux paires de mains, et beaucoup d&apos;envie de
+              bien faire.
             </p>
             <p>
-              Notre seconde différence, c&apos;est l&apos;<strong>espace client dédié</strong>. Pour
-              ceux qui reviennent régulièrement, nous mettons en place un accès par code où vos
-              produits personnalisés sont enregistrés. Vous pouvez ainsi commander votre{' '}
-              <strong>réassort à la demande</strong>, à l&apos;unité, sans avoir à immobiliser du
-              stock « au cas où ». C&apos;est ce service qui nous démarque des autres ateliers de la
-              région.
+              On a tous les deux été <strong>président du Badminton Club de Barr</strong>. Alors la
+              galère d&apos;équiper un club en textile, on la connaît par cœur : avancer l&apos;argent,
+              courir après les tailles, stocker des cartons… C&apos;est précisément de là qu&apos;est
+              née l&apos;idée de FLOKKA. On a voulu un atelier qui rende ça simple, humain et
+              sympathique — pour les clubs, mais aussi pour les particuliers, les commerces et les
+              associations du coin.
+            </p>
+            <p>
+              Du coup, chez nous, on prend le temps de discuter, on conseille pour de vrai, et on
+              traite votre commande comme si c&apos;était la nôtre. <a href="/a-propos">Découvrez notre
+              histoire</a> si le cœur vous en dit.
             </p>
           </Prose>
+        </Section>
+
+        {/* ── Ce qui nous distingue ── */}
+        <Section
+          eyebrow="Ce qui nous rend différents"
+          title="Deux petites choses qui changent tout"
+          tone="tint"
+        >
+          <FeatureGrid items={differenceItems} cols={4} />
         </Section>
 
         {/* ── Ce que nous personnalisons ── */}
         <Section
           eyebrow="Notre savoir-faire"
-          title="Ce que nous personnalisons"
-          intro="Flocage, impression et broderie sur une large gamme de textiles, avec des finitions soignées."
-          tone="tint"
+          title="Ce qu'on aime faire"
+          intro="Flocage, impression et broderie sur à peu près tout ce qui se porte — avec des finitions soignées."
         >
           <FeatureGrid items={services} cols={4} />
           <div className="mt-10">
             <Prose>
               <p>
-                Nous appliquons noms, numéros, prénoms, logos et visuels sur t-shirts, sweats, polos,
-                maillots, vestes, casquettes et accessoires. Selon le rendu recherché, nous
-                choisissons la technique la plus adaptée : <strong>flocage</strong> pour les lettrages
-                et numéros, <strong>impression</strong> pour les visuels complexes,{' '}
-                <strong>broderie</strong> pour une finition haut de gamme. Découvrez le détail de
-                notre <a href="/flocage-textile-alsace">savoir-faire de flocage en Alsace</a>.
+                On applique noms, prénoms, numéros, logos et visuels sur t-shirts, sweats, polos,
+                maillots, vestes, casquettes et accessoires. Pas sûr de la bonne technique ? C&apos;est
+                normal, et c&apos;est notre métier : on vous oriente vers ce qui rendra le mieux.
+                Curieux ? Jetez un œil à <a href="/flocage-textile-alsace">notre savoir-faire de
+                flocage et broderie</a>.
               </p>
             </Prose>
           </div>
         </Section>
 
         {/* ── Sans minimum ── */}
-        <Section eyebrow="Différence n°1" title="Sans minimum de commande, dès une pièce">
+        <Section eyebrow="Promesse n°1" title="Une seule pièce ? Avec plaisir.">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <Prose>
               <p>
-                Vous avez besoin d&apos;un <strong>seul</strong> t-shirt floqué, d&apos;un sweat brodé
-                pour offrir, ou de trois polos pour votre commerce ? Aucun problème. Nous travaillons{' '}
-                <strong>sans minimum de quantité</strong>, ce qui est rare dans le secteur.
+                Vous voulez <strong>un seul</strong> t-shirt floqué, un sweat brodé à offrir, ou trois
+                polos pour la boutique ? Parfait. On travaille <strong>sans minimum</strong>, parce
+                qu&apos;une petite commande mérite autant d&apos;attention qu&apos;une grande.
               </p>
               <p>
-                Cette souplesse profite à tout le monde : aux particuliers qui veulent une pièce
-                unique, comme aux clubs, associations et entreprises qui préfèrent commander au juste
-                besoin plutôt que par gros lots.
+                C&apos;est rare dans le métier, et c&apos;est un parti pris : ici, votre projet compte,
+                quelle que soit sa taille.
               </p>
             </Prose>
             <div className="rounded-3xl bg-white p-8 ring-1 ring-brand-gray-dark shadow-soft">
-              <h3 className="font-display text-xl font-bold text-brand-black mb-5">Idéal pour</h3>
+              <h3 className="font-display text-xl font-bold text-brand-black mb-5">Parfait pour…</h3>
               <CheckList
                 items={[
-                  'Une pièce unique (cadeau, événement personnel)',
-                  'Une petite série pour un commerce ou une équipe',
-                  'Un test avant une commande plus importante',
-                  'Le complément ponctuel d\'une commande passée',
+                  'Une pièce unique à offrir',
+                  'Un petit lot pour une équipe ou un commerce',
+                  'Un essai avant de commander davantage',
+                  'Un petit complément à une commande passée',
                 ]}
               />
             </div>
@@ -268,72 +274,47 @@ export default function HomePage() {
         </Section>
 
         {/* ── Espace réassort ── */}
-        <Section eyebrow="Différence n°2" title="Un espace dédié pour le réassort à la demande" tone="tint">
+        <Section eyebrow="Promesse n°2" title="Votre petit espace réassort, sans stock" tone="tint">
           <StepList
             steps={[
-              { title: 'On enregistre vos produits', description: 'Vos textiles personnalisés sont sauvegardés dans un espace à votre nom.' },
-              { title: 'Vous accédez par un code', description: "Un simple code donne accès à votre espace, quand vous le souhaitez." },
-              { title: 'Vous recommandez à la demande', description: "Réassort à l'unité, sans repasser par un devis et sans stocker." },
+              { title: 'On garde vos modèles', description: 'Vos textiles personnalisés sont enregistrés dans un espace à votre nom.' },
+              { title: 'Vous avez votre code', description: 'Un simple code, et vous voilà chez vous, quand vous voulez.' },
+              { title: 'Vous recommandez tranquille', description: "À l'unité, sans repasser par un devis, sans rien stocker." },
             ]}
           />
           <div className="mt-10">
             <Prose>
               <p>
-                Fini le textile qui dort dans un placard « au cas où ». Avec l&apos;
-                <strong>espace client dédié</strong>, vous gardez la main sur vos produits et vous
-                recommandez uniquement ce dont vous avez besoin, au moment où vous en avez besoin.
-                C&apos;est particulièrement utile pour les clubs, associations et commerces qui
-                renouvellent régulièrement. En savoir plus sur{' '}
-                <a href="/reassort-a-la-demande">le réassort à la demande</a>.
+                Fini les cartons qui dorment « au cas où ». Avec votre <strong>espace réassort</strong>,
+                vous recommandez juste ce qu&apos;il faut, au moment où il le faut. On s&apos;occupe du
+                reste. <a href="/reassort-a-la-demande">On vous explique tout ici</a>.
               </p>
             </Prose>
           </div>
         </Section>
 
         {/* ── Pour qui ── */}
-        <Section eyebrow="Pour qui" title="Du particulier à l'entreprise">
+        <Section eyebrow="Pour qui" title="On travaille avec tout le monde">
           <FeatureGrid items={audiences} cols={4} />
         </Section>
 
-        {/* ── Ancrage local ── */}
-        <Section eyebrow="Local" title="Ancrés en Centre Alsace" tone="tint">
-          <Prose>
-            <p>
-              FLOKKA est une <strong>petite entreprise locale</strong> installée à{' '}
-              <strong>Andlau</strong>, au cœur du <strong>Centre Alsace</strong>. Nous avons fait le
-              choix de nous concentrer sur notre territoire : proximité, conseil direct et réactivité
-              pour les habitants et les structures de <strong>Sélestat</strong>,{' '}
-              <strong>Obernai</strong>, <strong>Barr</strong>, <strong>Erstein</strong> et des
-              communes environnantes.
-            </p>
-            <p>
-              Travailler localement, c&apos;est échanger facilement, valider rapidement vos maquettes
-              et soutenir une production de proximité. Voir nos zones :{' '}
-              <a href="/textile-personnalise-selestat">Sélestat</a>,{' '}
-              <a href="/textile-personnalise-obernai">Obernai</a>,{' '}
-              <a href="/textile-personnalise-barr">Barr</a>,{' '}
-              <a href="/textile-personnalise-erstein">Erstein</a>.
-            </p>
-          </Prose>
-        </Section>
-
         {/* ── Témoignages ── */}
-        <Section eyebrow="Ils nous font confiance" title="Ce que disent nos clients" center>
+        <Section eyebrow="On nous fait confiance" title="Ce qu'on nous dit" center>
           <Testimonials items={testimonials} />
         </Section>
 
         {/* ── FAQ ── */}
-        <FaqSection items={faq} />
+        <FaqSection items={faq} title="Vos questions (et nos réponses)" />
 
         {/* ── Maillage interne ── */}
-        <RelatedLinks links={relatedLinks} />
+        <RelatedLinks links={relatedLinks} title="Pour faire connaissance" />
 
         {/* ── CTA ── */}
         <CTASection
-          title="Un projet de personnalisation textile ?"
-          text="Une pièce ou une série, un particulier ou une structure : parlons-en. Devis rapide, sans engagement."
-          primary={{ label: 'Demander un devis', href: '/contact' }}
-          secondary={{ label: 'Voir nos services', href: '/services' }}
+          title="On se rencontre ?"
+          text="Un projet, une idée, une simple question ? Écrivez-nous un petit mot — on adore en discuter, et on répond vite."
+          primary={{ label: 'Nous écrire', href: '/contact' }}
+          secondary={{ label: 'Notre histoire', href: '/a-propos' }}
         />
       </main>
 

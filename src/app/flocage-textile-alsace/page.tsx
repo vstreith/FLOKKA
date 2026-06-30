@@ -132,10 +132,10 @@ export default function FlocageAlsacePage() {
       />
 
       <CTASection
-        title="Un flocage pour votre club ou votre équipe ?"
-        text="Parlons de votre projet : conseil, devis et fabrication en Alsace."
-        primary={{ label: 'Nous contacter', href: '/contact' }}
-        secondary={{ label: 'Solutions clubs', href: '/clubs-sportifs' }}
+        title="Une idée de flocage ou de broderie ?"
+        text="Montrez-nous votre visuel (même un croquis !) : on vous dit ce qui rendra le mieux, en toute franchise."
+        primary={{ label: 'Nous écrire', href: '/contact' }}
+        secondary={{ label: 'Pour les clubs', href: '/clubs-sportifs' }}
       />
     </MarketingLayout>
   )

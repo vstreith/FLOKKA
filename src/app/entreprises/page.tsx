@@ -69,12 +69,12 @@ export default function EntreprisesPage() {
         breadcrumbs={crumbs}
         intro={
           <>
-            Habillez vos équipes avec des <strong>vêtements de travail personnalisés</strong> à votre
-            image. Petites séries, <strong>réassort à l&apos;unité</strong>, flocage et broderie
-            soignés, fabriqués localement en Alsace.
+            Habillez votre équipe avec des <strong>vêtements de travail personnalisés</strong> à
+            votre image. Petites séries, <strong>réassort à l&apos;unité</strong>, flocage et
+            broderie soignés — et un atelier voisin avec qui c&apos;est simple de discuter.
           </>
         }
-        primary={{ label: 'Demander un devis', href: '/contact' }}
+        primary={{ label: 'Parlons-en', href: '/contact' }}
         secondary={{ label: 'Nos services', href: '/services' }}
       />
 
@@ -131,9 +131,9 @@ export default function EntreprisesPage() {
       />
 
       <CTASection
-        title="Un projet textile pour votre entreprise ?"
-        text="Parlons-en : devis rapide, sans engagement."
-        primary={{ label: 'Demander un devis', href: '/contact' }}
+        title="Un projet pour votre entreprise ?"
+        text="Écrivez-nous : on vous conseille avec franchise et on vous fait un devis rapide, sans engagement."
+        primary={{ label: 'Nous écrire', href: '/contact' }}
       />
     </MarketingLayout>
   )
