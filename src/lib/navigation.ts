@@ -5,7 +5,7 @@ export interface NavLink {
 
 /** Navigation principale (header) — volontairement concise. */
 export const MAIN_NAV: NavLink[] = [
-  { href: '/flocage-textile-alsace', label: 'Flocage & broderie' },
+  { href: '/flocage-textile-alsace', label: 'Flocage & marquage' },
   { href: '/reassort-a-la-demande', label: 'Réassort' },
   { href: '/clubs-sportifs', label: 'Clubs & assos' },
   { href: '/blog', label: 'Blog' },

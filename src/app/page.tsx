@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import {
   ArrowRight,
   Stamp,
-  Scissors,
+  Tag,
   Shirt,
   Printer,
   Repeat,
@@ -35,13 +35,13 @@ import { pageMetadata, webPageSchema } from '@/lib/seo'
 export const metadata: Metadata = pageMetadata({
   title: 'Petit atelier de personnalisation textile en Centre Alsace | FLOKKA',
   description:
-    "FLOKKA, c'est un petit atelier textile tenu par un couple à Andlau. Flocage, marquage et broderie avec le sourire, dès une pièce et sans minimum. Réassort à la demande, en Centre Alsace.",
+    "FLOKKA, c'est un petit atelier textile tenu par un couple à Andlau. Flocage, marquage et impression avec le sourire, dès une pièce et sans minimum. Réassort à la demande, en Centre Alsace.",
   path: '/',
   keywords: [
     'personnalisation textile Centre Alsace',
     'petit atelier textile Alsace',
     'flocage textile Alsace',
-    'broderie personnalisée Alsace',
+    'marquage textile Alsace',
     'textile personnalisé sans minimum',
     'réassort textile sans stock',
     'textile personnalisé Andlau',
@@ -58,7 +58,7 @@ const differenceItems = [
 const services = [
   { icon: Stamp, title: 'Flocage', description: 'Noms, numéros et logos en relief, nets et qui tiennent.' },
   { icon: Printer, title: 'Impression', description: 'Pour les visuels en couleurs et les photos.' },
-  { icon: Scissors, title: 'Broderie', description: 'La jolie finition, durable, pour vos logos.' },
+  { icon: Tag, title: 'Marquage', description: 'Noms, numéros et prénoms, nets et bien placés.' },
   { icon: Shirt, title: 'Sur tout', description: 'T-shirts, sweats, polos, vestes, casquettes, sacs…' },
 ]
 
@@ -70,7 +70,7 @@ const audiences = [
 ]
 
 const testimonials = [
-  { quote: "Je voulais un seul sweat brodé pour offrir. Partout on me parlait de minimum… eux l'ont fait avec le sourire.", author: 'Marie', role: 'Sélestat' },
+  { quote: "Je voulais un seul sweat floqué pour offrir. Partout on me parlait de minimum… eux l'ont fait avec le sourire.", author: 'Marie', role: 'Sélestat' },
   { quote: "On recommande nos maillots à l'unité dès qu'un joueur arrive. Plus de cartons dans le local, c'est le bonheur.", author: 'Un club voisin', role: 'Centre Alsace' },
   { quote: 'Accueil au top, conseils sincères et atelier juste à côté. On ne va plus voir ailleurs.', author: 'Thomas', role: 'Obernai' },
 ]
@@ -94,7 +94,7 @@ const faq = [
   {
     question: 'Vous faites quoi, exactement ?',
     answer:
-      'Du flocage (noms, numéros, logos), de l\'impression (visuels en couleurs) et de la broderie (la jolie finition). On vous conseille la technique la mieux adaptée à votre idée.',
+      'Du flocage (noms, numéros, logos) et de l\'impression (visuels en couleurs et photos). On vous conseille la technique la mieux adaptée à votre idée.',
   },
   {
     question: 'On peut passer vous voir ?',
@@ -109,7 +109,7 @@ const faq = [
 ]
 
 const relatedLinks = [
-  { title: 'Notre savoir-faire : flocage & broderie', description: 'Comment on personnalise vos textiles, avec soin.', href: '/flocage-textile-alsace' },
+  { title: 'Notre savoir-faire : flocage & marquage', description: 'Comment on personnalise vos textiles, avec soin.', href: '/flocage-textile-alsace' },
   { title: 'Le réassort, sans stock', description: 'Votre petit espace pour recommander tranquillement.', href: '/reassort-a-la-demande' },
   { title: 'Notre histoire', description: 'Un couple, un club de badminton, et une idée.', href: '/a-propos' },
 ]
@@ -122,7 +122,7 @@ export default function HomePage() {
           webPageSchema({
             title: 'Petit atelier de personnalisation textile en Centre Alsace | FLOKKA',
             description:
-              "Petit atelier textile tenu par un couple à Andlau : flocage, marquage, broderie dès une pièce, avec réassort à la demande. En Centre Alsace.",
+              "Petit atelier textile tenu par un couple à Andlau : flocage, marquage, impression dès une pièce, avec réassort à la demande. En Centre Alsace.",
             path: '/',
           }),
         ]}
@@ -150,7 +150,7 @@ export default function HomePage() {
               </h1>
               <p className="text-lg sm:text-xl text-brand-gray-text max-w-2xl leading-relaxed mb-10">
                 Nous sommes un <strong className="text-brand-black">couple d&apos;Andlau</strong> qui
-                personnalise vos textiles avec soin — flocage, marquage, broderie. Chez nous,{' '}
+                personnalise vos textiles avec soin — flocage, marquage, impression. Chez nous,{' '}
                 <strong className="text-brand-black">une seule pièce suffit</strong> (jamais de
                 minimum), et on vous crée même un petit <strong className="text-brand-black">espace
                 réassort</strong> pour recommander sans rien stocker.
@@ -229,7 +229,7 @@ export default function HomePage() {
         <Section
           eyebrow="Notre savoir-faire"
           title="Ce qu'on aime faire"
-          intro="Flocage, impression et broderie sur à peu près tout ce qui se porte — avec des finitions soignées."
+          intro="Flocage, marquage et impression sur à peu près tout ce qui se porte — avec des finitions soignées."
         >
           <FeatureGrid items={services} cols={4} />
           <div className="mt-10">
@@ -239,7 +239,7 @@ export default function HomePage() {
                 maillots, vestes, casquettes et accessoires. Pas sûr de la bonne technique ? C&apos;est
                 normal, et c&apos;est notre métier : on vous oriente vers ce qui rendra le mieux.
                 Curieux ? Jetez un œil à <a href="/flocage-textile-alsace">notre savoir-faire de
-                flocage et broderie</a>.
+                flocage et marquage</a>.
               </p>
             </Prose>
           </div>
@@ -250,7 +250,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <Prose>
               <p>
-                Vous voulez <strong>un seul</strong> t-shirt floqué, un sweat brodé à offrir, ou trois
+                Vous voulez <strong>un seul</strong> t-shirt floqué, un sweat personnalisé à offrir, ou trois
                 polos pour la boutique ? Parfait. On travaille <strong>sans minimum</strong>, parce
                 qu&apos;une petite commande mérite autant d&apos;attention qu&apos;une grande.
               </p>

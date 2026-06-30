@@ -19,7 +19,7 @@ const PATH = '/entreprises'
 export const metadata: Metadata = pageMetadata({
   title: 'Textile personnalisé pour entreprises et collectivités',
   description:
-    "Vêtements de travail et textiles personnalisés pour petites entreprises, PME et collectivités locales. Petites séries, réassort à l'unité, flocage et broderie en Alsace.",
+    "Vêtements de travail et textiles personnalisés pour petites entreprises, PME et collectivités locales. Petites séries, réassort à l'unité, flocage et marquage en Alsace.",
   path: PATH,
   keywords: [
     'textile personnalisé entreprise',
@@ -39,7 +39,7 @@ const faq = [
   {
     question: "Peut-on commander des vêtements de travail floqués ?",
     answer:
-      'Oui : t-shirts, polos, sweats et vestes de travail floqués ou brodés à votre logo, avec possibilité de personnaliser le prénom de chaque collaborateur.',
+      'Oui : t-shirts, polos, sweats et vestes de travail floqués ou imprimés à votre logo, avec possibilité de personnaliser le prénom de chaque collaborateur.',
   },
   {
     question: 'Y a-t-il un minimum de commande pour une entreprise ?',
@@ -71,7 +71,7 @@ export default function EntreprisesPage() {
           <>
             Habillez votre équipe avec des <strong>vêtements de travail personnalisés</strong> à
             votre image. Petites séries, <strong>réassort à l&apos;unité</strong>, flocage et
-            broderie soignés — et un atelier voisin avec qui c&apos;est simple de discuter.
+            marquage soignés — et un atelier voisin avec qui c&apos;est simple de discuter.
           </>
         }
         primary={{ label: 'Parlons-en', href: '/contact' }}
@@ -98,7 +98,7 @@ export default function EntreprisesPage() {
         <FeatureGrid
           items={[
             { icon: Briefcase, title: 'Tenues pro', description: 'Polos, t-shirts, sweats et vestes à votre logo.' },
-            { icon: Shirt, title: 'Flocage & broderie', description: 'Le rendu adapté à votre image de marque.' },
+            { icon: Shirt, title: 'Flocage & marquage', description: 'Le rendu adapté à votre image de marque.' },
             { icon: Repeat, title: "Réassort à l'unité", description: 'Une pièce pour chaque nouveau collaborateur.' },
             { icon: Building2, title: 'Petites séries', description: 'Pas de minimum contraignant pour les PME.' },
             { icon: ShieldCheck, title: 'Qualité durable', description: 'Des finitions qui tiennent dans le temps.' },
@@ -125,7 +125,7 @@ export default function EntreprisesPage() {
       <RelatedLinks
         links={[
           { title: 'Flocage textile en Alsace', description: 'Notre savoir-faire de marquage textile.', href: '/flocage-textile-alsace' },
-          { title: 'Tout comprendre au flocage', description: 'Flocage, impression, broderie : les différences.', href: '/blog/comprendre-flocage-textile' },
+          { title: 'Tout comprendre au flocage', description: 'Flocage, marquage, impression : les différences.', href: '/blog/comprendre-flocage-textile' },
           { title: 'Nos services', description: "L'ensemble de nos prestations de personnalisation.", href: '/services' },
         ]}
       />

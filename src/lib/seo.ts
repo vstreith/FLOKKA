@@ -12,7 +12,7 @@ export const SITE = {
   locale: 'fr_FR',
   lang: 'fr',
   description:
-    "Petit atelier de personnalisation textile à Andlau, tenu par un couple passionné. Flocage, marquage et broderie dès une pièce, sans minimum. On crée aussi votre espace réassort pour recommander sans stocker. En Centre Alsace, près de chez vous.",
+    "Petit atelier de personnalisation textile à Andlau, tenu par un couple passionné. Flocage, marquage et impression dès une pièce, sans minimum. On crée aussi votre espace réassort pour recommander sans stocker. En Centre Alsace, près de chez vous.",
   slogan: 'Votre petit atelier textile en Centre Alsace, tenu par un couple passionné.',
   email: 'contact@flokka.fr',
   phoneDisplay: '06 00 00 00 00',

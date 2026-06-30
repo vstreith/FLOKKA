@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'personnalisation textile Alsace',
     'flocage textile Alsace',
     'marquage textile Alsace',
-    'broderie personnalisée Alsace',
+    'marquage textile Alsace',
     'textile personnalisé sans minimum',
     'textile personnalisé Sélestat',
     'textile personnalisé Obernai',

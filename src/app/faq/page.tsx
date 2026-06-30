@@ -53,7 +53,7 @@ const faq = [
   {
     question: 'Où sont fabriqués les produits ?',
     answer:
-      "Dans notre atelier d'Andlau, dans le Bas-Rhin (Alsace). Le flocage, l'impression et la broderie y sont réalisés localement.",
+      "Dans notre atelier d'Andlau, dans le Bas-Rhin (Alsace). Le flocage, le marquage et l'impression y sont réalisés localement, par nous deux.",
   },
   {
     question: 'Sur quel secteur travaillez-vous ?',

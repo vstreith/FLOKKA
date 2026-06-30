@@ -227,7 +227,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Le type de marquage' },
       {
         type: 'p',
-        text: "Le flocage donne un rendu mat, épais et résistant, parfait pour les noms et numéros. L'impression permet des visuels plus détaillés et multicolores. La broderie, plus haut de gamme, est idéale pour un logo de club sur la poitrine. On choisit la technique selon le visuel et le rendu recherché.",
+        text: "Le flocage donne un rendu mat, épais et résistant, parfait pour les noms et numéros. L'impression permet des visuels plus détaillés et multicolores, photos comprises. On choisit la technique selon le visuel et le rendu recherché.",
       },
       { type: 'h2', text: 'Les couleurs et la cohérence visuelle' },
       {
@@ -246,7 +246,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Tout comprendre au flocage textile',
     h1: 'Tout comprendre au flocage textile',
     description:
-      "Flocage, impression, broderie : quelles différences ? Découvrez comment fonctionne le flocage textile, ses avantages, sa durabilité et quand le choisir pour un club ou une association.",
+      "Flocage, marquage, impression : quelles différences ? Découvrez comment fonctionne le flocage textile, ses avantages, sa durabilité et quand le choisir pour un club ou une association.",
     datePublished: '2026-04-07',
     author: 'FLOKKA',
     readingMinutes: 7,
@@ -261,13 +261,13 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'p',
         text: "Le flocage consiste à découper un motif (nom, numéro, logo) dans un film thermocollant, puis à le presser à chaud sur le textile. Le résultat est un marquage en relief, mat et très résistant, particulièrement adapté aux lettrages et aux numéros des maillots de sport.",
       },
-      { type: 'h2', text: 'Flocage, impression, broderie : les différences' },
+      { type: 'h2', text: 'Flocage, marquage, impression : les différences' },
       {
         type: 'ul',
         items: [
           'Flocage : rendu mat et épais, idéal pour noms, numéros et aplats de couleur.',
           'Impression (transfert ou DTF) : permet des visuels détaillés et multicolores, photos comprises.',
-          'Broderie : rendu textile haut de gamme et très durable, parfait pour un logo de poitrine.',
+          'Marquage nom & numéro : net et durable, la référence pour les maillots d\'équipe.',
         ],
       },
       { type: 'h2', text: 'Les avantages du flocage pour un club' },
@@ -287,7 +287,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Quelle technique choisir ?' },
       {
         type: 'p',
-        text: "Pour des noms et numéros de maillots, le flocage est la référence. Pour un visuel complexe ou photographique, on s'orientera vers l'impression. Pour un logo discret et durable, la broderie. Dans tous les cas, nous vous conseillons la méthode la plus adaptée à votre projet.",
+        text: "Pour des noms et numéros de maillots, le flocage est la référence. Pour un visuel complexe ou photographique, on s'orientera vers l'impression. Dans tous les cas, nous vous conseillons la méthode la plus adaptée à votre projet.",
       },
     ],
     faq: [

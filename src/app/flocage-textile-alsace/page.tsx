@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Shirt, Stamp, Scissors, Repeat, MapPin, ShieldCheck } from 'lucide-react'
+import { Shirt, Stamp, Tag, Repeat, MapPin, ShieldCheck } from 'lucide-react'
 import { MarketingLayout } from '@/components/layout/MarketingLayout'
 import {
   PageHero,
@@ -18,7 +18,7 @@ const PATH = '/flocage-textile-alsace'
 export const metadata: Metadata = pageMetadata({
   title: 'Flocage textile en Alsace | Marquage de maillots & sweats',
   description:
-    "Atelier de flocage textile en Centre Alsace (Andlau, Bas-Rhin). Marquage et broderie de maillots, sweats, polos et vestes, dès une pièce, avec réassort à la demande sans stock.",
+    "Atelier de flocage textile en Centre Alsace (Andlau, Bas-Rhin). Marquage et impression de maillots, sweats, polos et vestes, dès une pièce, avec réassort à la demande sans stock.",
   path: PATH,
   keywords: [
     'flocage textile Alsace',
@@ -74,7 +74,7 @@ export default function FlocageAlsacePage() {
         intro={
           <>
             Notre atelier d&apos;<strong>Andlau</strong> réalise le <strong>flocage</strong>, le
-            marquage et la broderie de vos textiles : maillots, sweats, polos et vestes,{' '}
+            marquage et l&apos;impression de vos textiles : maillots, sweats, polos et vestes,{' '}
             <strong>dès une pièce</strong>, pour les particuliers et structures du{' '}
             <strong>Centre Alsace</strong>.
           </>
@@ -99,12 +99,12 @@ export default function FlocageAlsacePage() {
         </Prose>
       </Section>
 
-      <Section eyebrow="Techniques" title="Flocage, impression, broderie" tone="tint">
+      <Section eyebrow="Techniques" title="Flocage, marquage, impression" tone="tint">
         <FeatureGrid
           items={[
             { icon: Stamp, title: 'Flocage', description: 'Rendu mat et résistant, idéal pour noms et numéros.' },
             { icon: Shirt, title: 'Impression', description: 'Visuels détaillés et multicolores, photos comprises.' },
-            { icon: Scissors, title: 'Broderie', description: 'Finition haut de gamme et durable pour les logos.' },
+            { icon: Tag, title: 'Marquage nom & numéro', description: 'Le marquage idéal pour les maillots d\'équipe.' },
             { icon: Repeat, title: "À l'unité", description: 'Une seule pièce floquée, à tout moment.' },
             { icon: ShieldCheck, title: 'Durable', description: 'Des marquages qui résistent aux lavages.' },
             { icon: MapPin, title: 'Local', description: 'Réalisé en Centre Alsace, à Andlau.' },
@@ -132,7 +132,7 @@ export default function FlocageAlsacePage() {
       />
 
       <CTASection
-        title="Une idée de flocage ou de broderie ?"
+        title="Une idée de flocage ou de marquage ?"
         text="Montrez-nous votre visuel (même un croquis !) : on vous dit ce qui rendra le mieux, en toute franchise."
         primary={{ label: 'Nous écrire', href: '/contact' }}
         secondary={{ label: 'Pour les clubs', href: '/clubs-sportifs' }}

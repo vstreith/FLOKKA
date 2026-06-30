@@ -97,7 +97,7 @@ export default function AboutPage() {
       <RelatedLinks
         title="Et concrètement ?"
         links={[
-          { title: 'Ce qu\'on sait faire', description: 'Flocage, impression, broderie — notre savoir-faire.', href: '/flocage-textile-alsace' },
+          { title: 'Ce qu\'on sait faire', description: 'Flocage, marquage, impression — notre savoir-faire.', href: '/flocage-textile-alsace' },
           { title: 'Le réassort sans stock', description: 'Votre petit espace pour recommander tranquille.', href: '/reassort-a-la-demande' },
           { title: 'Pour les clubs & assos', description: 'On connaît la vie de club de l\'intérieur.', href: '/clubs-sportifs' },
         ]}
