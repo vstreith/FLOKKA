@@ -54,11 +54,11 @@ export default function ContactPage() {
               Contact
             </span>
             <h1 className="font-display text-4xl sm:text-5xl font-extrabold text-brand-black leading-tight mb-4">
-              Parlons de <span className="text-gradient">votre projet.</span>
+              Dites-nous <span className="text-gradient">tout !</span>
             </h1>
             <p className="text-brand-gray-text text-lg">
-              Un textile à personnaliser, un réassort à mettre en place, une question ? Écrivez-moi, je réponds
-              vite et simplement.
+              Une idée, un textile à personnaliser, une simple question ? Écrivez-nous deux lignes —
+              on adore en discuter, et on vous répond vite, avec le sourire.
             </p>
           </div>
 
@@ -70,9 +70,9 @@ export default function ContactPage() {
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-navy to-brand-black flex items-center justify-center mb-5 shadow-soft">
                     <CheckCircle2 size={30} className="text-white" />
                   </div>
-                  <h3 className="font-display text-2xl font-extrabold text-brand-black mb-2">Message envoyé !</h3>
+                  <h3 className="font-display text-2xl font-extrabold text-brand-black mb-2">Merci, c'est noté !</h3>
                   <p className="text-brand-gray-text">
-                    Merci pour votre message. Je vous répondrai dans les plus brefs délais.
+                    On a bien reçu votre message et on vous répond très vite. À tout bientôt !
                   </p>
                 </div>
               ) : (
@@ -147,7 +147,7 @@ export default function ContactPage() {
 
             {/* Info */}
             <div>
-              <h2 className="font-display text-2xl font-extrabold text-brand-black mb-8">Coordonnées</h2>
+              <h2 className="font-display text-2xl font-extrabold text-brand-black mb-8">Où nous joindre</h2>
               <ul className="space-y-5 mb-10">
                 <li className="flex items-center gap-3">
                   <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-navy to-brand-black flex items-center justify-center shrink-0 shadow-soft">
@@ -175,15 +175,16 @@ export default function ContactPage() {
                   <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-navy to-brand-black flex items-center justify-center shrink-0 shadow-soft">
                     <Clock size={16} className="text-white" />
                   </span>
-                  <span className="text-brand-gray-text">Horaires flexibles — sur rendez-vous</span>
+                  <span className="text-brand-gray-text">Sur rendez-vous — et le café est offert</span>
                 </li>
               </ul>
 
               <div className="rounded-3xl bg-brand-gradient-soft border-l-4 border-brand-violet p-6 ring-1 ring-brand-gray-dark">
-                <h3 className="font-display font-bold text-brand-black mb-2">Vous représentez un club ?</h3>
+                <h3 className="font-display font-bold text-brand-black mb-2">Un club ou une asso ?</h3>
                 <p className="text-sm text-brand-gray-text leading-relaxed">
-                  Dites-moi simplement quelle structure vous représentez. On met en place votre
-                  espace de réassort et votre code d&apos;accès, sans engagement.
+                  On connaît bien la vie de club (on en a présidé un !). Dites-nous juste qui vous
+                  êtes : on met en place votre espace réassort et votre code, tranquillement et sans
+                  engagement.
                 </p>
               </div>
             </div>

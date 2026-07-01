@@ -7,8 +7,8 @@ import { pageMetadata } from '@/lib/seo'
 const services = [
   {
     icon: Shirt,
-    title: 'Flocage textile',
-    description: 'Flocage et marquage de t-shirts, sweats, polos, maillots et vestes.',
+    title: 'Flocage flex',
+    description: 'Noms, numéros, logos et textes floqués sur t-shirts, sweats, polos, maillots et vestes.',
     gradient: 'from-brand-navy to-brand-black',
   },
   {
@@ -37,8 +37,8 @@ const services = [
   },
   {
     icon: Gift,
-    title: 'Goodies',
-    description: 'Mugs, sacs, casquettes et accessoires personnalisés.',
+    title: 'Accessoires',
+    description: 'Casquettes, sacs et tote bags floqués à vos couleurs.',
     gradient: 'from-brand-navy to-brand-black',
   },
 ]
@@ -46,9 +46,9 @@ const services = [
 export const metadata = pageMetadata({
   title: 'Services de personnalisation textile pour clubs et associations',
   description:
-    "Flocage, impression, broderie, réassort à la demande et packs personnalisés : les services de personnalisation textile FLOKKA, dès une pièce, en Centre Alsace.",
+    "Flocage, réassort à la demande et packs personnalisés : les services de personnalisation textile FLOKKA, dès une pièce, en Centre Alsace.",
   path: '/services',
-  keywords: ['services personnalisation textile', 'flocage', 'broderie', 'impression textile', 'réassort à la demande'],
+  keywords: ['services personnalisation textile', 'flocage', 'marquage textile', 'flocage textile', 'réassort à la demande'],
 })
 
 export default function ServicesPage() {
@@ -68,8 +68,8 @@ export default function ServicesPage() {
                 Tout ce qu&apos;il faut pour <span className="text-gradient">habiller votre structure.</span>
               </h1>
               <p className="text-xl text-brand-gray-text leading-relaxed">
-                Du flocage à la broderie, des solutions simples et locales, sans minimum de commande
-                et avec réassort à la demande.
+                Le flocage flex, notre unique métier — des solutions simples et locales, sans minimum
+                de commande et avec réassort à la demande.
               </p>
             </div>
 

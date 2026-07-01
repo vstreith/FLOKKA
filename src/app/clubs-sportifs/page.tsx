@@ -75,9 +75,10 @@ export default function ClubsSportifsPage() {
         breadcrumbs={crumbs}
         intro={
           <>
-            Maillots, survêtements et sweats <strong>floqués à vos couleurs</strong>, commandés
-            directement par vos licenciés en <strong>réassort à l&apos;unité</strong>. Sans avance,
-            sans stock, fabriqués en Alsace.
+            On a nous-mêmes présidé un club (le Badminton Club de Barr !), alors on sait ce que
+            c&apos;est. Maillots et sweats <strong>floqués à vos couleurs</strong>, commandés par vos
+            licenciés en <strong>réassort à l&apos;unité</strong> — sans avance, sans stock, et avec
+            des gens qui comprennent votre quotidien.
           </>
         }
         primary={{ label: 'Demander un devis', href: '/contact' }}
@@ -145,9 +146,8 @@ export default function ClubsSportifsPage() {
               source de financement pour le matériel, les déplacements ou les projets de la saison.
             </p>
             <p>
-              Notre atelier d&apos;Andlau réalise l&apos;ensemble du <strong>flocage</strong> et du
-              marquage, avec des finitions pensées pour résister aux entraînements et aux lavages
-              répétés.
+              Notre atelier d&apos;Andlau réalise tout le <strong>flocage</strong> en interne, avec
+              des finitions pensées pour résister aux entraînements et aux lavages répétés.
             </p>
           </Prose>
         </div>
@@ -158,16 +158,16 @@ export default function ClubsSportifsPage() {
       <RelatedLinks
         links={[
           { title: 'Réassort à la demande', description: "L'espace dédié pour recommander le textile du club sans stock.", href: '/reassort-a-la-demande' },
-          { title: 'Flocage textile en Alsace', description: 'Notre savoir-faire de marquage textile au cœur du Bas-Rhin.', href: '/flocage-textile-alsace' },
+          { title: 'Flocage textile en Alsace', description: 'Notre matériel et notre méthode de flocage flex.', href: '/flocage-textile-alsace' },
           { title: 'Guide complet de la boutique club sportif', description: 'Tout comprendre, étape par étape, sur le blog.', href: '/blog/boutique-club-sportif-guide-complet' },
         ]}
       />
 
       <CTASection
-        title="Prêt à équiper votre club ?"
-        text="On personnalise vos textiles et on met en place votre espace de réassort, sans engagement."
-        primary={{ label: 'Demander un devis', href: '/contact' }}
-        secondary={{ label: 'Solutions associations', href: '/associations' }}
+        title="On équipe votre club ?"
+        text="Écrivez-nous un mot : on connaît la vie de club de l'intérieur, et on adore ça. Sans engagement, promis."
+        primary={{ label: 'Nous écrire', href: '/contact' }}
+        secondary={{ label: 'Et pour les assos', href: '/associations' }}
       />
     </MarketingLayout>
   )

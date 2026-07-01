@@ -12,8 +12,8 @@ export const SITE = {
   locale: 'fr_FR',
   lang: 'fr',
   description:
-    "FLOKKA, atelier de personnalisation textile en Centre Alsace (Andlau). Flocage, marquage et broderie sans minimum de commande, dès une seule pièce. Espace client dédié pour le réassort à la demande, sans stock à immobiliser.",
-  slogan: 'La personnalisation textile sans minimum, en Centre Alsace.',
+    "Petit atelier de flocage textile à Andlau, tenu par un couple passionné. Flocage flex dès une pièce, sans minimum, avec réassort à la demande. En Centre Alsace, près de chez vous.",
+  slogan: 'Votre petit atelier de flocage textile en Centre Alsace, tenu par un couple.',
   email: 'contact@flokka.fr',
   phoneDisplay: '06 00 00 00 00',
   phoneE164: '+33600000000',

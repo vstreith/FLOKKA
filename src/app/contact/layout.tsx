@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Contact — Créez la boutique textile de votre structure',
+  title: 'Nous contacter — un petit atelier textile à Andlau',
   description:
-    "Contactez FLOKKA pour créer la boutique textile privée de votre club ou association. Atelier à Andlau (Bas-Rhin), réponse rapide, devis sans engagement, fabrication en Alsace.",
+    "Une idée de textile personnalisé ? Écrivez à FLOKKA, petit atelier tenu par un couple à Andlau (Centre Alsace). Réponse rapide, conseils sincères, devis sans engagement.",
   path: '/contact',
-  keywords: ['contact FLOKKA', 'devis textile club', 'créer boutique association', 'contact flocage Alsace'],
+  keywords: ['contact FLOKKA', 'atelier textile Andlau', 'devis flocage Alsace', 'personnalisation textile contact'],
 })
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {

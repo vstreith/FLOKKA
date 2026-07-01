@@ -19,7 +19,7 @@ const PATH = '/entreprises'
 export const metadata: Metadata = pageMetadata({
   title: 'Textile personnalisé pour entreprises et collectivités',
   description:
-    "Vêtements de travail et textiles personnalisés pour petites entreprises, PME et collectivités locales. Petites séries, réassort à l'unité, flocage et broderie en Alsace.",
+    "Vêtements de travail floqués pour petites entreprises, PME et collectivités locales. Flocage flex, petites séries, réassort à l'unité, en Centre Alsace.",
   path: PATH,
   keywords: [
     'textile personnalisé entreprise',
@@ -39,7 +39,7 @@ const faq = [
   {
     question: "Peut-on commander des vêtements de travail floqués ?",
     answer:
-      'Oui : t-shirts, polos, sweats et vestes de travail floqués ou brodés à votre logo, avec possibilité de personnaliser le prénom de chaque collaborateur.',
+      'Oui : t-shirts, polos, sweats et vestes de travail floqués à votre logo, avec possibilité de personnaliser le prénom de chaque collaborateur.',
   },
   {
     question: 'Y a-t-il un minimum de commande pour une entreprise ?',
@@ -69,12 +69,13 @@ export default function EntreprisesPage() {
         breadcrumbs={crumbs}
         intro={
           <>
-            Habillez vos équipes avec des <strong>vêtements de travail personnalisés</strong> à votre
-            image. Petites séries, <strong>réassort à l&apos;unité</strong>, flocage et broderie
-            soignés, fabriqués localement en Alsace.
+            Habillez votre équipe avec des <strong>vêtements de travail personnalisés</strong> à
+            votre image. Petites séries, <strong>réassort à l&apos;unité</strong>, un{' '}
+            <strong>flocage soigné</strong> — et un atelier voisin avec qui c&apos;est simple de
+            discuter.
           </>
         }
-        primary={{ label: 'Demander un devis', href: '/contact' }}
+        primary={{ label: 'Parlons-en', href: '/contact' }}
         secondary={{ label: 'Nos services', href: '/services' }}
       />
 
@@ -98,7 +99,7 @@ export default function EntreprisesPage() {
         <FeatureGrid
           items={[
             { icon: Briefcase, title: 'Tenues pro', description: 'Polos, t-shirts, sweats et vestes à votre logo.' },
-            { icon: Shirt, title: 'Flocage & broderie', description: 'Le rendu adapté à votre image de marque.' },
+            { icon: Shirt, title: 'Flocage flex', description: 'Un rendu net et durable à votre image.' },
             { icon: Repeat, title: "Réassort à l'unité", description: 'Une pièce pour chaque nouveau collaborateur.' },
             { icon: Building2, title: 'Petites séries', description: 'Pas de minimum contraignant pour les PME.' },
             { icon: ShieldCheck, title: 'Qualité durable', description: 'Des finitions qui tiennent dans le temps.' },
@@ -124,16 +125,16 @@ export default function EntreprisesPage() {
 
       <RelatedLinks
         links={[
-          { title: 'Flocage textile en Alsace', description: 'Notre savoir-faire de marquage textile.', href: '/flocage-textile-alsace' },
-          { title: 'Tout comprendre au flocage', description: 'Flocage, impression, broderie : les différences.', href: '/blog/comprendre-flocage-textile' },
+          { title: 'Flocage textile en Alsace', description: 'Notre matériel et notre méthode de flocage.', href: '/flocage-textile-alsace' },
+          { title: 'Tout comprendre au flocage', description: 'Le flocage flex expliqué simplement.', href: '/blog/comprendre-flocage-textile' },
           { title: 'Nos services', description: "L'ensemble de nos prestations de personnalisation.", href: '/services' },
         ]}
       />
 
       <CTASection
-        title="Un projet textile pour votre entreprise ?"
-        text="Parlons-en : devis rapide, sans engagement."
-        primary={{ label: 'Demander un devis', href: '/contact' }}
+        title="Un projet pour votre entreprise ?"
+        text="Écrivez-nous : on vous conseille avec franchise et on vous fait un devis rapide, sans engagement."
+        primary={{ label: 'Nous écrire', href: '/contact' }}
       />
     </MarketingLayout>
   )

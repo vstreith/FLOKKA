@@ -14,7 +14,7 @@ export interface LocalArea {
 /**
  * Pages SEO locales — Centre Alsace uniquement.
  * Positionnement : atelier de personnalisation textile (flocage, marquage,
- * broderie), sans minimum de commande, avec espace de réassort à la demande.
+ * flocage flex uniquement), sans minimum de commande, avec réassort à la demande.
  * Contenu 100 % unique par commune.
  */
 export const LOCAL_AREAS: LocalArea[] = [
@@ -22,20 +22,20 @@ export const LOCAL_AREAS: LocalArea[] = [
     slug: '/textile-personnalise-selestat',
     city: 'Sélestat',
     label: 'Personnalisation textile à Sélestat',
-    title: 'Personnalisation textile à Sélestat (flocage, broderie)',
+    title: 'Personnalisation textile à Sélestat (flocage, marquage)',
     description:
-      "Atelier de personnalisation textile proche de Sélestat : flocage, marquage et broderie sans minimum, dès une pièce. Espace de réassort à la demande, sans stock. Centre Alsace.",
+      "Atelier de personnalisation textile proche de Sélestat : flocage sans minimum, dès une pièce. Espace de réassort à la demande, sans stock. Centre Alsace.",
     keywords: [
       'personnalisation textile Sélestat',
       'flocage Sélestat',
-      'broderie Sélestat',
+      'marquage Sélestat',
       'textile personnalisé Sélestat',
     ],
     h1: 'Personnalisation textile à Sélestat',
-    lead: "Au cœur du Centre Alsace, Sélestat est l'une des communes que nous servons en priorité. FLOKKA y personnalise vos textiles — flocage, impression, broderie — dès une seule pièce, sans minimum de commande.",
+    lead: "Sélestat, c'est tout près de chez nous. On y personnalise vos textiles avec plaisir — flocage — dès une seule pièce et sans minimum. Et si vous voulez passer en discuter, notre atelier d'Andlau n'est qu'à quelques minutes.",
     sections: [
       {
-        h2: 'Flocage, marquage et broderie pour les Sélestadiens',
+        h2: 'Flocage pour les Sélestadiens',
         paragraphs: [
           "Particuliers, commerces, clubs et associations de Sélestat : nous personnalisons vos t-shirts, sweats, polos, maillots et accessoires avec un rendu soigné. Que vous ayez besoin d'une pièce unique ou d'une petite série, c'est possible.",
           "Notre atelier d'Andlau est tout proche, ce qui facilite les échanges, la validation des maquettes et les délais.",
@@ -66,23 +66,23 @@ export const LOCAL_AREAS: LocalArea[] = [
     slug: '/textile-personnalise-obernai',
     city: 'Obernai',
     label: 'Personnalisation textile à Obernai',
-    title: 'Personnalisation textile à Obernai (flocage, broderie)',
+    title: 'Personnalisation textile à Obernai (flocage, marquage)',
     description:
-      "Atelier de personnalisation textile près d'Obernai : flocage, marquage et broderie sans minimum, dès une pièce. Espace de réassort à la demande. Proximité Centre Alsace.",
+      "Atelier de personnalisation textile près d'Obernai : flocage sans minimum, dès une pièce. Espace de réassort à la demande. Proximité Centre Alsace.",
     keywords: [
       'personnalisation textile Obernai',
       'flocage Obernai',
-      'broderie Obernai',
+      'marquage Obernai',
       'textile personnalisé Obernai',
     ],
     h1: 'Personnalisation textile à Obernai',
-    lead: "Obernai est l'une de nos voisines directes : quelques minutes séparent notre atelier d'Andlau de la cité de Sainte-Odile. Nous y personnalisons vos textiles dès une pièce, sans minimum.",
+    lead: "Obernai, c'est la porte à côté : quelques minutes seulement depuis notre atelier d'Andlau. Autant dire qu'on connaît bien le coin et qu'on se fera un plaisir de personnaliser vos textiles, même en un seul exemplaire.",
     sections: [
       {
         h2: 'Le partenaire textile de proximité à Obernai',
         paragraphs: [
           "Être à côté change tout : échanges rapides, validation des visuels sans délai, réactivité avant un événement. Particuliers, commerces, clubs et associations d'Obernai profitent d'un atelier réellement local.",
-          "Nous réalisons flocage, impression et broderie sur une large gamme de supports, à l'unité comme en petite série.",
+          "Nous réalisons flocage sur une large gamme de supports, à l'unité comme en petite série.",
         ],
       },
       {
@@ -110,17 +110,17 @@ export const LOCAL_AREAS: LocalArea[] = [
     slug: '/textile-personnalise-barr',
     city: 'Barr',
     label: 'Personnalisation textile à Barr',
-    title: 'Personnalisation textile à Barr (flocage, broderie)',
+    title: 'Personnalisation textile à Barr (flocage, marquage)',
     description:
-      "Atelier de personnalisation textile à côté de Barr : flocage, marquage et broderie sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
+      "Atelier de personnalisation textile à côté de Barr : flocage sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
     keywords: [
       'personnalisation textile Barr',
       'flocage Barr',
-      'broderie Barr',
+      'marquage Barr',
       'textile personnalisé Barr',
     ],
     h1: 'Personnalisation textile à Barr',
-    lead: "Barr est notre commune voisine immédiate, sur la route des vins. FLOKKA y propose la personnalisation textile de proximité : flocage, marquage et broderie, dès une seule pièce.",
+    lead: "Barr, on y est très attachés : on a tous les deux présidé le Badminton Club de Barr ! C'est un peu là qu'est née l'idée de FLOKKA. Du coup, pour les Barrois, on personnalise vos textiles avec un soin tout particulier, dès une seule pièce.",
     sections: [
       {
         h2: 'Un atelier textile à deux pas de Barr',
@@ -154,20 +154,20 @@ export const LOCAL_AREAS: LocalArea[] = [
     slug: '/textile-personnalise-erstein',
     city: 'Erstein',
     label: 'Personnalisation textile à Erstein',
-    title: 'Personnalisation textile à Erstein (flocage, broderie)',
+    title: 'Personnalisation textile à Erstein (flocage, marquage)',
     description:
-      "Atelier de personnalisation textile pour Erstein et ses environs : flocage, marquage et broderie sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
+      "Atelier de personnalisation textile pour Erstein et ses environs : flocage sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
     keywords: [
       'personnalisation textile Erstein',
       'flocage Erstein',
-      'broderie Erstein',
+      'marquage Erstein',
       'textile personnalisé Erstein',
     ],
     h1: 'Personnalisation textile à Erstein',
-    lead: "Au nord du Centre Alsace, Erstein et son bassin de vie font partie des secteurs que nous accompagnons. FLOKKA y personnalise vos textiles dès une pièce, sans minimum de commande.",
+    lead: "Erstein et ses environs font partie de notre petit territoire de cœur. On y personnalise vos textiles avec la même attention, que vous commandiez une pièce ou toute une équipe.",
     sections: [
       {
-        h2: 'Flocage, impression et broderie pour Erstein',
+        h2: 'Flocage pour Erstein',
         paragraphs: [
           "Nous habillons particuliers, commerces, clubs et associations d'Erstein avec un textile personnalisé de qualité : noms, numéros, prénoms, logos et visuels, sur le support de votre choix.",
           "La production se fait dans notre atelier d'Andlau, en Centre Alsace, avec un interlocuteur unique pour votre projet.",
@@ -200,7 +200,7 @@ export const LOCAL_AREAS: LocalArea[] = [
     label: 'Flocage textile dans le Bas-Rhin',
     title: 'Flocage textile dans le Bas-Rhin (Centre Alsace, 67)',
     description:
-      "Atelier de flocage textile à Andlau, en Centre Alsace (Bas-Rhin). Marquage et broderie de t-shirts, sweats, maillots et polos, sans minimum, dès une pièce. Réassort à la demande.",
+      "Atelier de flocage textile à Andlau, en Centre Alsace (Bas-Rhin). Flocage de t-shirts, sweats, maillots et polos, sans minimum, dès une pièce. Réassort à la demande.",
     keywords: [
       'flocage textile Bas-Rhin',
       'flocage 67',
@@ -213,7 +213,7 @@ export const LOCAL_AREAS: LocalArea[] = [
       {
         h2: 'Le flocage textile au plus près de chez vous',
         paragraphs: [
-          "Le flocage consiste à appliquer noms, numéros, logos et visuels de façon durable et nette sur un textile. C'est le cœur de notre métier, aux côtés de l'impression et de la broderie.",
+          "Le flocage consiste à découper votre visuel dans un film flex, puis à le poser à chaud sur le textile. C'est notre seule et unique spécialité — et c'est pour ça qu'on la maîtrise bien.",
           "Nous travaillons avec les particuliers et les structures du Centre Alsace, dès une seule pièce, sans imposer de volume.",
         ],
       },
@@ -234,7 +234,7 @@ export const LOCAL_AREAS: LocalArea[] = [
       {
         question: 'Quels textiles pouvez-vous floquer ?',
         answer:
-          "T-shirts, sweats, polos, maillots, vestes et accessoires, à l'unité comme en petite série, par flocage, impression ou broderie.",
+          "T-shirts, sweats, polos, maillots, vestes et accessoires, à l'unité comme en petite série, par flocage.",
       },
     ],
   },
