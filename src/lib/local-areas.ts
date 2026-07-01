@@ -14,7 +14,7 @@ export interface LocalArea {
 /**
  * Pages SEO locales — Centre Alsace uniquement.
  * Positionnement : atelier de personnalisation textile (flocage, marquage,
- * impression), sans minimum de commande, avec espace de réassort à la demande.
+ * flocage flex uniquement), sans minimum de commande, avec réassort à la demande.
  * Contenu 100 % unique par commune.
  */
 export const LOCAL_AREAS: LocalArea[] = [
@@ -24,7 +24,7 @@ export const LOCAL_AREAS: LocalArea[] = [
     label: 'Personnalisation textile à Sélestat',
     title: 'Personnalisation textile à Sélestat (flocage, marquage)',
     description:
-      "Atelier de personnalisation textile proche de Sélestat : flocage, marquage et impression sans minimum, dès une pièce. Espace de réassort à la demande, sans stock. Centre Alsace.",
+      "Atelier de personnalisation textile proche de Sélestat : flocage sans minimum, dès une pièce. Espace de réassort à la demande, sans stock. Centre Alsace.",
     keywords: [
       'personnalisation textile Sélestat',
       'flocage Sélestat',
@@ -32,10 +32,10 @@ export const LOCAL_AREAS: LocalArea[] = [
       'textile personnalisé Sélestat',
     ],
     h1: 'Personnalisation textile à Sélestat',
-    lead: "Sélestat, c'est tout près de chez nous. On y personnalise vos textiles avec plaisir — flocage, marquage, impression — dès une seule pièce et sans minimum. Et si vous voulez passer en discuter, notre atelier d'Andlau n'est qu'à quelques minutes.",
+    lead: "Sélestat, c'est tout près de chez nous. On y personnalise vos textiles avec plaisir — flocage — dès une seule pièce et sans minimum. Et si vous voulez passer en discuter, notre atelier d'Andlau n'est qu'à quelques minutes.",
     sections: [
       {
-        h2: 'Flocage, marquage et impression pour les Sélestadiens',
+        h2: 'Flocage pour les Sélestadiens',
         paragraphs: [
           "Particuliers, commerces, clubs et associations de Sélestat : nous personnalisons vos t-shirts, sweats, polos, maillots et accessoires avec un rendu soigné. Que vous ayez besoin d'une pièce unique ou d'une petite série, c'est possible.",
           "Notre atelier d'Andlau est tout proche, ce qui facilite les échanges, la validation des maquettes et les délais.",
@@ -68,7 +68,7 @@ export const LOCAL_AREAS: LocalArea[] = [
     label: 'Personnalisation textile à Obernai',
     title: 'Personnalisation textile à Obernai (flocage, marquage)',
     description:
-      "Atelier de personnalisation textile près d'Obernai : flocage, marquage et impression sans minimum, dès une pièce. Espace de réassort à la demande. Proximité Centre Alsace.",
+      "Atelier de personnalisation textile près d'Obernai : flocage sans minimum, dès une pièce. Espace de réassort à la demande. Proximité Centre Alsace.",
     keywords: [
       'personnalisation textile Obernai',
       'flocage Obernai',
@@ -82,7 +82,7 @@ export const LOCAL_AREAS: LocalArea[] = [
         h2: 'Le partenaire textile de proximité à Obernai',
         paragraphs: [
           "Être à côté change tout : échanges rapides, validation des visuels sans délai, réactivité avant un événement. Particuliers, commerces, clubs et associations d'Obernai profitent d'un atelier réellement local.",
-          "Nous réalisons flocage, marquage et impression sur une large gamme de supports, à l'unité comme en petite série.",
+          "Nous réalisons flocage sur une large gamme de supports, à l'unité comme en petite série.",
         ],
       },
       {
@@ -112,7 +112,7 @@ export const LOCAL_AREAS: LocalArea[] = [
     label: 'Personnalisation textile à Barr',
     title: 'Personnalisation textile à Barr (flocage, marquage)',
     description:
-      "Atelier de personnalisation textile à côté de Barr : flocage, marquage et impression sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
+      "Atelier de personnalisation textile à côté de Barr : flocage sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
     keywords: [
       'personnalisation textile Barr',
       'flocage Barr',
@@ -156,7 +156,7 @@ export const LOCAL_AREAS: LocalArea[] = [
     label: 'Personnalisation textile à Erstein',
     title: 'Personnalisation textile à Erstein (flocage, marquage)',
     description:
-      "Atelier de personnalisation textile pour Erstein et ses environs : flocage, marquage et impression sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
+      "Atelier de personnalisation textile pour Erstein et ses environs : flocage sans minimum, dès une pièce. Espace de réassort à la demande. Centre Alsace.",
     keywords: [
       'personnalisation textile Erstein',
       'flocage Erstein',
@@ -167,7 +167,7 @@ export const LOCAL_AREAS: LocalArea[] = [
     lead: "Erstein et ses environs font partie de notre petit territoire de cœur. On y personnalise vos textiles avec la même attention, que vous commandiez une pièce ou toute une équipe.",
     sections: [
       {
-        h2: 'Flocage, marquage et impression pour Erstein',
+        h2: 'Flocage pour Erstein',
         paragraphs: [
           "Nous habillons particuliers, commerces, clubs et associations d'Erstein avec un textile personnalisé de qualité : noms, numéros, prénoms, logos et visuels, sur le support de votre choix.",
           "La production se fait dans notre atelier d'Andlau, en Centre Alsace, avec un interlocuteur unique pour votre projet.",
@@ -200,7 +200,7 @@ export const LOCAL_AREAS: LocalArea[] = [
     label: 'Flocage textile dans le Bas-Rhin',
     title: 'Flocage textile dans le Bas-Rhin (Centre Alsace, 67)',
     description:
-      "Atelier de flocage textile à Andlau, en Centre Alsace (Bas-Rhin). Marquage et impression de t-shirts, sweats, maillots et polos, sans minimum, dès une pièce. Réassort à la demande.",
+      "Atelier de flocage textile à Andlau, en Centre Alsace (Bas-Rhin). Flocage de t-shirts, sweats, maillots et polos, sans minimum, dès une pièce. Réassort à la demande.",
     keywords: [
       'flocage textile Bas-Rhin',
       'flocage 67',
@@ -213,7 +213,7 @@ export const LOCAL_AREAS: LocalArea[] = [
       {
         h2: 'Le flocage textile au plus près de chez vous',
         paragraphs: [
-          "Le flocage consiste à appliquer noms, numéros, logos et visuels de façon durable et nette sur un textile. C'est le cœur de notre métier, aux côtés du marquage et de l'impression.",
+          "Le flocage consiste à découper votre visuel dans un film flex, puis à le poser à chaud sur le textile. C'est notre seule et unique spécialité — et c'est pour ça qu'on la maîtrise bien.",
           "Nous travaillons avec les particuliers et les structures du Centre Alsace, dès une seule pièce, sans imposer de volume.",
         ],
       },
@@ -234,7 +234,7 @@ export const LOCAL_AREAS: LocalArea[] = [
       {
         question: 'Quels textiles pouvez-vous floquer ?',
         answer:
-          "T-shirts, sweats, polos, maillots, vestes et accessoires, à l'unité comme en petite série, par flocage, marquage ou impression.",
+          "T-shirts, sweats, polos, maillots, vestes et accessoires, à l'unité comme en petite série, par flocage.",
       },
     ],
   },

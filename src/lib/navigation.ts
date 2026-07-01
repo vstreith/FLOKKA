@@ -5,21 +5,22 @@ export interface NavLink {
 
 /** Navigation principale (header) — volontairement concise. */
 export const MAIN_NAV: NavLink[] = [
-  { href: '/flocage-textile-alsace', label: 'Flocage & marquage' },
+  { href: '/flocage-textile-alsace', label: 'Le flocage' },
+  { href: '/tarifs', label: 'Tarifs' },
   { href: '/reassort-a-la-demande', label: 'Réassort' },
   { href: '/clubs-sportifs', label: 'Clubs & assos' },
-  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ]
 
 /** Pied de page — maillage interne riche. */
 export const FOOTER_NAV: { title: string; links: NavLink[] }[] = [
   {
-    title: 'Personnalisation',
+    title: 'Le flocage',
     links: [
-      { href: '/flocage-textile-alsace', label: 'Flocage textile Alsace' },
-      { href: '/textile-personnalise-alsace', label: 'Textile personnalisé Alsace' },
+      { href: '/flocage-textile-alsace', label: 'Notre flocage flex' },
+      { href: '/tarifs', label: 'Tarifs' },
       { href: '/reassort-a-la-demande', label: 'Réassort à la demande' },
+      { href: '/textile-personnalise-alsace', label: 'Textile personnalisé Alsace' },
       { href: '/services', label: 'Tous nos services' },
     ],
   },
@@ -59,6 +60,7 @@ export const STATIC_ROUTES: { path: string; priority: number; changeFrequency: '
   { path: '/', priority: 1.0, changeFrequency: 'weekly' },
   { path: '/flocage-textile-alsace', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/textile-personnalise-alsace', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/tarifs', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/reassort-a-la-demande', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/clubs-sportifs', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/associations', priority: 0.8, changeFrequency: 'monthly' },

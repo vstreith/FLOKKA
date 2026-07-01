@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 import {
   ArrowRight,
   Stamp,
-  Tag,
-  Shirt,
-  Printer,
+  Scissors,
+  Flame,
+  Hash,
   Repeat,
   PackageOpen,
   MapPin,
@@ -33,18 +33,18 @@ import { JsonLd } from '@/components/seo/JsonLd'
 import { pageMetadata, webPageSchema } from '@/lib/seo'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Petit atelier de personnalisation textile en Centre Alsace | FLOKKA',
+  title: 'Petit atelier de flocage textile en Centre Alsace | FLOKKA',
   description:
-    "FLOKKA, c'est un petit atelier textile tenu par un couple à Andlau. Flocage, marquage et impression avec le sourire, dès une pièce et sans minimum. Réassort à la demande, en Centre Alsace.",
+    "FLOKKA, c'est un petit atelier de flocage textile tenu par un couple à Andlau. Du flocage flex, et rien que ça, avec le sourire — dès une pièce et sans minimum. Réassort à la demande, en Centre Alsace.",
   path: '/',
   keywords: [
-    'personnalisation textile Centre Alsace',
-    'petit atelier textile Alsace',
+    'flocage textile Centre Alsace',
+    'petit atelier flocage Alsace',
     'flocage textile Alsace',
-    'marquage textile Alsace',
-    'textile personnalisé sans minimum',
-    'réassort textile sans stock',
-    'textile personnalisé Andlau',
+    'flocage flex Alsace',
+    'flocage sans minimum',
+    'flocage Andlau',
+    'flocage maillot Alsace',
   ],
 })
 
@@ -56,10 +56,10 @@ const differenceItems = [
 ]
 
 const services = [
-  { icon: Stamp, title: 'Flocage', description: 'Noms, numéros et logos en relief, nets et qui tiennent.' },
-  { icon: Printer, title: 'Impression', description: 'Pour les visuels en couleurs et les photos.' },
-  { icon: Tag, title: 'Marquage', description: 'Noms, numéros et prénoms, nets et bien placés.' },
-  { icon: Shirt, title: 'Sur tout', description: 'T-shirts, sweats, polos, vestes, casquettes, sacs…' },
+  { icon: Stamp, title: 'Flocage flex', description: 'Notre unique métier — et toute notre attention.' },
+  { icon: Hash, title: 'Noms & numéros', description: 'La spécialité des maillots d\'équipe.' },
+  { icon: Scissors, title: 'Découpe précise', description: 'Sur notre plotter Graphtec CE7000.' },
+  { icon: Flame, title: 'Pose à chaud', description: 'À la presse Secabo V7 lite, pour que ça dure.' },
 ]
 
 const audiences = [
@@ -94,7 +94,7 @@ const faq = [
   {
     question: 'Vous faites quoi, exactement ?',
     answer:
-      'Du flocage (noms, numéros, logos) et de l\'impression (visuels en couleurs et photos). On vous conseille la technique la mieux adaptée à votre idée.',
+      "On ne fait que du flocage flex : on découpe votre visuel (nom, numéro, logo) et on le pose à chaud. C'est net, souple et ça tient dans le temps. Un seul métier, bien fait.",
   },
   {
     question: 'On peut passer vous voir ?',
@@ -109,7 +109,7 @@ const faq = [
 ]
 
 const relatedLinks = [
-  { title: 'Notre savoir-faire : flocage & marquage', description: 'Comment on personnalise vos textiles, avec soin.', href: '/flocage-textile-alsace' },
+  { title: 'Notre savoir-faire : le flocage flex', description: 'Notre matériel, notre méthode, notre exigence.', href: '/flocage-textile-alsace' },
   { title: 'Le réassort, sans stock', description: 'Votre petit espace pour recommander tranquillement.', href: '/reassort-a-la-demande' },
   { title: 'Notre histoire', description: 'Un couple, un club de badminton, et une idée.', href: '/a-propos' },
 ]
@@ -120,9 +120,9 @@ export default function HomePage() {
       <JsonLd
         data={[
           webPageSchema({
-            title: 'Petit atelier de personnalisation textile en Centre Alsace | FLOKKA',
+            title: 'Petit atelier de flocage textile en Centre Alsace | FLOKKA',
             description:
-              "Petit atelier textile tenu par un couple à Andlau : flocage, marquage, impression dès une pièce, avec réassort à la demande. En Centre Alsace.",
+              "Petit atelier de flocage flex tenu par un couple à Andlau : dès une pièce, avec réassort à la demande. En Centre Alsace.",
             path: '/',
           }),
         ]}
@@ -150,10 +150,11 @@ export default function HomePage() {
               </h1>
               <p className="text-lg sm:text-xl text-brand-gray-text max-w-2xl leading-relaxed mb-10">
                 Nous sommes un <strong className="text-brand-black">couple d&apos;Andlau</strong> qui
-                personnalise vos textiles avec soin — flocage, marquage, impression. Chez nous,{' '}
-                <strong className="text-brand-black">une seule pièce suffit</strong> (jamais de
-                minimum), et on vous crée même un petit <strong className="text-brand-black">espace
-                réassort</strong> pour recommander sans rien stocker.
+                <strong className="text-brand-black"> floque vos textiles</strong> avec soin — noms,
+                numéros, logos. Chez nous, <strong className="text-brand-black">une seule pièce
+                suffit</strong> (jamais de minimum), et on vous crée même un petit{' '}
+                <strong className="text-brand-black">espace réassort</strong> pour recommander sans
+                rien stocker.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -227,19 +228,19 @@ export default function HomePage() {
 
         {/* ── Ce que nous personnalisons ── */}
         <Section
-          eyebrow="Notre savoir-faire"
-          title="Ce qu'on aime faire"
-          intro="Flocage, marquage et impression sur à peu près tout ce qui se porte — avec des finitions soignées."
+          eyebrow="Notre métier"
+          title="Le flocage, et rien que le flocage"
+          intro="On a fait un choix : maîtriser une seule technique, à fond. Le flocage flex, posé avec soin sur à peu près tout ce qui se porte."
         >
           <FeatureGrid items={services} cols={4} />
           <div className="mt-10">
             <Prose>
               <p>
-                On applique noms, prénoms, numéros, logos et visuels sur t-shirts, sweats, polos,
-                maillots, vestes, casquettes et accessoires. Pas sûr de la bonne technique ? C&apos;est
-                normal, et c&apos;est notre métier : on vous oriente vers ce qui rendra le mieux.
-                Curieux ? Jetez un œil à <a href="/flocage-textile-alsace">notre savoir-faire de
-                flocage et marquage</a>.
+                On floque noms, prénoms, numéros, logos et textes sur t-shirts, sweats, polos,
+                maillots, vestes, casquettes et petits accessoires. On découpe votre visuel en flex
+                sur notre plotter <strong>Graphtec CE7000</strong>, puis on le pose à la presse{' '}
+                <strong>Secabo V7 lite</strong>. Curieux du détail ? Jetez un œil à{' '}
+                <a href="/flocage-textile-alsace">notre savoir-faire</a>.
               </p>
             </Prose>
           </div>

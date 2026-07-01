@@ -146,9 +146,8 @@ export default function ClubsSportifsPage() {
               source de financement pour le matériel, les déplacements ou les projets de la saison.
             </p>
             <p>
-              Notre atelier d&apos;Andlau réalise l&apos;ensemble du <strong>flocage</strong> et du
-              marquage, avec des finitions pensées pour résister aux entraînements et aux lavages
-              répétés.
+              Notre atelier d&apos;Andlau réalise tout le <strong>flocage</strong> en interne, avec
+              des finitions pensées pour résister aux entraînements et aux lavages répétés.
             </p>
           </Prose>
         </div>
@@ -159,7 +158,7 @@ export default function ClubsSportifsPage() {
       <RelatedLinks
         links={[
           { title: 'Réassort à la demande', description: "L'espace dédié pour recommander le textile du club sans stock.", href: '/reassort-a-la-demande' },
-          { title: 'Flocage textile en Alsace', description: 'Notre savoir-faire de marquage textile au cœur du Bas-Rhin.', href: '/flocage-textile-alsace' },
+          { title: 'Flocage textile en Alsace', description: 'Notre matériel et notre méthode de flocage flex.', href: '/flocage-textile-alsace' },
           { title: 'Guide complet de la boutique club sportif', description: 'Tout comprendre, étape par étape, sur le blog.', href: '/blog/boutique-club-sportif-guide-complet' },
         ]}
       />

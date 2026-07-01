@@ -224,10 +224,10 @@ export const BLOG_POSTS: BlogPost[] = [
           'Le zippé est pratique pour enfiler par-dessus une tenue de sport.',
         ],
       },
-      { type: 'h2', text: 'Le type de marquage' },
+      { type: 'h2', text: 'Le flocage du sweat' },
       {
         type: 'p',
-        text: "Le flocage donne un rendu mat, épais et résistant, parfait pour les noms et numéros. L'impression permet des visuels plus détaillés et multicolores, photos comprises. On choisit la technique selon le visuel et le rendu recherché.",
+        text: "Le flocage donne un rendu mat, souple et résistant, parfait pour un nom, un numéro ou un logo de club. On découpe votre visuel dans un film flex, puis on le pose à chaud : le marquage tient dans le temps et reste agréable à porter.",
       },
       { type: 'h2', text: 'Les couleurs et la cohérence visuelle' },
       {
@@ -246,48 +246,49 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Tout comprendre au flocage textile',
     h1: 'Tout comprendre au flocage textile',
     description:
-      "Flocage, marquage, impression : quelles différences ? Découvrez comment fonctionne le flocage textile, ses avantages, sa durabilité et quand le choisir pour un club ou une association.",
+      "Comment fonctionne le flocage textile en flex ? Découpe, pose à chaud, avantages et entretien : notre atelier alsacien vous explique tout, simplement.",
     datePublished: '2026-04-07',
     author: 'FLOKKA',
-    readingMinutes: 7,
-    tags: ['flocage', 'technique', 'guide'],
+    readingMinutes: 6,
+    tags: ['flocage', 'flex', 'guide'],
     blocks: [
       {
         type: 'p',
-        text: "On parle souvent de « flocage » pour désigner toute personnalisation textile, mais c'est en réalité une technique bien précise. Comprendre les différentes méthodes de marquage permet de faire le bon choix pour vos maillots, sweats et t-shirts.",
+        text: "Chez FLOKKA, on ne fait qu'une seule chose : du flocage textile en flex. Et comme c'est notre unique métier, autant vous expliquer précisément de quoi il s'agit.",
       },
-      { type: 'h2', text: "Qu'est-ce que le flocage textile ?" },
+      { type: 'h2', text: "Qu'est-ce que le flocage flex ?" },
       {
         type: 'p',
-        text: "Le flocage consiste à découper un motif (nom, numéro, logo) dans un film thermocollant, puis à le presser à chaud sur le textile. Le résultat est un marquage en relief, mat et très résistant, particulièrement adapté aux lettrages et aux numéros des maillots de sport.",
+        text: "Le flocage consiste à découper un motif (nom, numéro, logo, texte) dans un film flex — un textile thermocollant souple — puis à le presser à chaud sur le vêtement. Le résultat est un marquage net, souple au toucher, mat et très résistant, idéal pour les lettrages et les numéros de maillots.",
       },
-      { type: 'h2', text: 'Flocage, marquage, impression : les différences' },
+      { type: 'h2', text: 'Comment on réalise un flocage, chez nous' },
       {
         type: 'ul',
         items: [
-          'Flocage : rendu mat et épais, idéal pour noms, numéros et aplats de couleur.',
-          'Impression (transfert ou DTF) : permet des visuels détaillés et multicolores, photos comprises.',
-          'Marquage nom & numéro : net et durable, la référence pour les maillots d\'équipe.',
+          'On prépare votre visuel pour la découpe (mise au propre, vectorisation).',
+          'On découpe le flex sur notre plotter Graphtec CE7000, précis au dixième de millimètre.',
+          "On échenille à la main (on retire le flex superflu autour du motif).",
+          'On presse à chaud avec notre Secabo V7 lite, à la bonne température et pression.',
         ],
       },
-      { type: 'h2', text: 'Les avantages du flocage pour un club' },
+      { type: 'h2', text: 'Les avantages du flocage flex' },
       {
         type: 'p',
-        text: "Le flocage est apprécié pour sa lisibilité, sa tenue dans le temps et son aspect sportif caractéristique. Bien réalisé et bien entretenu, un marquage par flocage résiste à de nombreux lavages sans se craqueler ni se décoller.",
+        text: "Le flocage est apprécié pour sa lisibilité, sa tenue dans le temps et son aspect net et sportif. Bien réalisé et bien entretenu, il résiste à de nombreux lavages sans se craqueler ni se décoller. C'est aussi une technique qui se prête parfaitement au travail à l'unité, sans minimum.",
       },
       { type: 'h2', text: 'Comment bien entretenir un textile floqué' },
       {
         type: 'ul',
         items: [
           "Laver à l'envers, à basse température (30 °C de préférence).",
-          'Éviter le sèche-linge et le repassage direct sur le marquage.',
+          'Éviter le sèche-linge et le repassage direct sur le flocage.',
           'Ne pas utiliser de javel ni de nettoyage à sec agressif.',
         ],
       },
-      { type: 'h2', text: 'Quelle technique choisir ?' },
+      { type: 'h2', text: 'Une question sur votre projet ?' },
       {
         type: 'p',
-        text: "Pour des noms et numéros de maillots, le flocage est la référence. Pour un visuel complexe ou photographique, on s'orientera vers l'impression. Dans tous les cas, nous vous conseillons la méthode la plus adaptée à votre projet.",
+        text: "Comme le flocage est notre seul métier, on le connaît sous toutes ses coutures. Envoyez-nous votre visuel (même un simple croquis) : on vous dira tout de suite ce que ça donne et combien ça coûte.",
       },
     ],
     faq: [

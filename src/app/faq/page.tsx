@@ -53,7 +53,7 @@ const faq = [
   {
     question: 'Où sont fabriqués les produits ?',
     answer:
-      "Dans notre atelier d'Andlau, dans le Bas-Rhin (Alsace). Le flocage, le marquage et l'impression y sont réalisés localement, par nous deux.",
+      "Dans notre atelier d'Andlau, dans le Bas-Rhin (Alsace). Tout le flocage y est réalisé par nous deux, sur notre plotter Graphtec CE7000 et notre presse Secabo V7 lite.",
   },
   {
     question: 'Sur quel secteur travaillez-vous ?',

@@ -18,7 +18,7 @@ const PATH = '/textile-personnalise-alsace'
 export const metadata: Metadata = pageMetadata({
   title: 'Textile personnalisé en Alsace (Centre Alsace) — dès 1 pièce',
   description:
-    "Textile personnalisé en Alsace : flocage, marquage et impression sans minimum, dès une pièce. Atelier à Andlau, en Centre Alsace, avec réassort à la demande sans stock.",
+    "Textile personnalisé en Alsace : flocage sans minimum, dès une pièce. Atelier à Andlau, en Centre Alsace, avec réassort à la demande sans stock.",
   path: PATH,
   keywords: [
     'textile personnalisé Alsace',
@@ -58,7 +58,7 @@ export default function TextileAlsacePage() {
         data={webPageSchema({
           title: 'Textile personnalisé en Alsace | FLOKKA',
           description:
-            "Textile personnalisé en Alsace : flocage, marquage, impression, sans minimum, avec réassort à la demande. Atelier en Centre Alsace.",
+            "Textile personnalisé en Alsace : flocage, sans minimum, avec réassort à la demande. Atelier en Centre Alsace.",
           path: PATH,
         })}
       />
@@ -68,7 +68,7 @@ export default function TextileAlsacePage() {
         breadcrumbs={crumbs}
         intro={
           <>
-            Flocage, marquage et impression sur tous vos textiles, <strong>dès une pièce</strong> et
+            Flocage sur tous vos textiles, <strong>dès une pièce</strong> et
             sans minimum. Un atelier ancré en <strong>Centre Alsace</strong>, avec un{' '}
             <strong>réassort à la demande</strong> sans stock.
           </>
@@ -98,7 +98,7 @@ export default function TextileAlsacePage() {
           items={[
             { icon: PackageOpen, title: 'Dès une pièce', description: 'Aucun minimum de commande.' },
             { icon: KeySquare, title: 'Réassort à la demande', description: 'Espace dédié, sans stock.' },
-            { icon: Palette, title: 'Flocage & marquage', description: 'Marquage soigné sur tous supports.' },
+            { icon: Palette, title: 'Flocage flex', description: 'Un flocage soigné sur tous vos textiles.' },
             { icon: Users, title: 'Tous publics', description: 'Particuliers, clubs, assos, entreprises.' },
             { icon: MapPin, title: 'Centre Alsace', description: 'Atelier local à Andlau (67).' },
             { icon: Repeat, title: 'Sur-mesure', description: 'Du conseil jusqu\'à la pièce finie.' },
@@ -123,7 +123,7 @@ export default function TextileAlsacePage() {
 
       <RelatedLinks
         links={[
-          { title: 'Flocage textile Alsace', description: 'Notre savoir-faire de marquage textile détaillé.', href: '/flocage-textile-alsace' },
+          { title: 'Flocage textile Alsace', description: 'Notre matériel et notre méthode, en détail.', href: '/flocage-textile-alsace' },
           { title: 'Réassort à la demande', description: "L'espace client pour recommander sans stock.", href: '/reassort-a-la-demande' },
           { title: 'Personnalisation textile à Sélestat', description: 'Notre offre au cœur du Centre Alsace.', href: '/textile-personnalise-selestat' },
         ]}

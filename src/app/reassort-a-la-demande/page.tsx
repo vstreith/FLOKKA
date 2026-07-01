@@ -136,7 +136,7 @@ export default function ReassortPage() {
 
       <RelatedLinks
         links={[
-          { title: 'Notre savoir-faire flocage', description: 'Flocage, marquage et impression en Alsace.', href: '/flocage-textile-alsace' },
+          { title: 'Notre savoir-faire flocage', description: 'Flocage en Alsace.', href: '/flocage-textile-alsace' },
           { title: 'Textile pour clubs & associations', description: 'Le réassort à la demande pour les structures.', href: '/clubs-sportifs' },
           { title: 'Éviter les stocks dans une association', description: 'Notre article dédié sur le sujet.', href: '/blog/eviter-stocks-association-textile' },
         ]}
